@@ -1,0 +1,21 @@
+{
+  "name": "sass-play-ground",
+  "description": "SASS playground",
+  "main": "index.js",
+  "authors": [
+    "Lindon Camaj"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lindon88/sass-play-ground",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
