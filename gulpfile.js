@@ -1,10 +1,7 @@
-/**
- * Created by Lindon Camaj on 1/29/19.
- */
 'use strict';
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulpSass = require('gulp-sass')(require('sass'));
 var inject = require('gulp-inject');
 var connect = require('gulp-connect');
 var runSequence = require('run-sequence');
@@ -15,31 +12,31 @@ var cors = require('cors');
 
 // package config
 var config = JSON.parse(fs.readFileSync('./package.json'));
+
+// Sass-related paths
 var paths = {
-    sass:[
+    sass: [
         './src/sass/**/*.scss',
     ]
 };
 
-// transform used by gulp inject
-var transform = function(path) {
+// This transform function is used by gulp-inject to append a cache-busting param
+var transform = function (filepath) {
     var version = new Date().getTime().toString();
-    if (path.slice(-4) === '.css') {
-        return '<link rel="stylesheet" href="' + path + '?v=' + version + '"/>';
+    if (filepath.slice(-4) === '.css') {
+        return '<link rel="stylesheet" href="' + filepath + '?v=' + version + '"/>';
     }
-    path += '?v=' + version;
-    // return inject.transform.apply(inject.transform, arguments);
-    return '<script type="text/javascript" src="' + path + '"></script>';
+    return '<script type="text/javascript" src="' + filepath + '?v=' + version + '"></script>';
 };
 
-// clean task
+// Clean task
 gulp.task('clean', function() {
     return gulp.src('./dist/*', { read: false })
         .pipe(clean());
 });
 
 /**
- * Inject sass files to main sass file
+ * Inject SASS file references into main.scss
  */
 gulp.task('inject-sass', function() {
     return gulp.src('./main.scss')
@@ -47,27 +44,27 @@ gulp.task('inject-sass', function() {
             addRootSlash: false,
             name: 'sass'
         }))
-        //.pipe(rename('main.scss'))
         .pipe(gulp.dest('./'));
 });
 
 /**
- * Sass task
+ * Compile SASS -> CSS (using Dart Sass)
  */
 gulp.task('sass', ['inject-sass'], function(done) {
     gulp.src('./main.scss')
-        .pipe(sass({
+        .pipe(gulpSass({
             outputStyle: 'compressed'
-        }))
+        }).on('error', gulpSass.logError))
         .pipe(gulp.dest('./dist/css/'))
         .pipe(connect.reload())
         .on('end', done);
 });
 
-// inject dev files to json
+/**
+ * Inject dev CSS/JS files (including Bower) into index.html
+ */
 gulp.task('inject-dev', function() {
-
-    gulp.src('./index.html')
+    return gulp.src('./index.html')
         .pipe(inject(gulp.src(['./dist/**/*.css'], { read: false }), {
             relative: true,
             name: 'app',
@@ -88,13 +85,18 @@ gulp.task('html', function(){
         .pipe(connect.reload());
 });
 
-// watch task
+/**
+ * Watch task
+ */
 gulp.task('watch', function() {
+    // Re-run SASS and inject-dev whenever SCSS changes
     gulp.watch(paths.sass, ['sass', 'inject-dev']);
-    //gulp.watch('./*.html', ['html']);
+    // gulp.watch('./*.html', ['html']); // If you want to watch HTML changes
 });
 
-// run local web server, that will be used to serve angular files
+/**
+ * Run local web server
+ */
 gulp.task('webserver', function() {
     connect.server({
         name: config.name,
@@ -107,14 +109,19 @@ gulp.task('webserver', function() {
     });
 });
 
-// build dev
+/**
+ * Build task
+ */
 gulp.task('build', function() {
     runSequence('clean', 'sass', 'inject-dev');
 });
 
-// build dev and start local server
+/**
+ * Serve task (build + watch + local server)
+ */
 gulp.task('serve', function() {
     runSequence('build', 'webserver', 'watch');
 });
 
+// Default
 gulp.task('default', ['build', 'webserver', 'watch']);
