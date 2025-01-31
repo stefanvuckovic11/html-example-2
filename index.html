@@ -6,6 +6,7 @@
     <!-- app:css -->
     <link rel="stylesheet" href="dist/css/main.css?v=1548800917231"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <!-- endinject -->
 </head>
 <body>
@@ -64,7 +65,6 @@
         <div class="accordion-header">
             <i class="fa fa-th-large"></i> Kupuj po kategoriji
         </div>
-
         <div class="accordion-item">
             <div class="accordion-title">BIJELA TEHNIKA <span class="icon">+</span></div>
             <div class="accordion-content">
@@ -77,7 +77,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="accordion-item">
             <div class="accordion-title">UGRADNA TEHNIKA <span class="icon">+</span></div>
             <div class="accordion-content">
@@ -89,11 +88,9 @@
                 </ul>
             </div>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">KLIMATIZACIJA I GRIJANJE</a>
         </div>
-
         <div class="accordion-item">
             <div class="accordion-title">MALI KUĆNI APARATI <span class="icon">+</span></div>
             <div class="accordion-content">
@@ -105,7 +102,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="accordion-item">
             <div class="accordion-title">TV I VIDEO <span class="icon">+</span></div>
             <div class="accordion-content">
@@ -116,7 +112,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="accordion-item">
             <div class="accordion-title">AUDIO <span class="icon">+</span></div>
             <div class="accordion-content">
@@ -127,7 +122,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="accordion-item">
             <div class="accordion-title">TELEFONIJA <span class="icon">+</span></div>
             <div class="accordion-content">
@@ -138,52 +132,60 @@
                 </ul>
             </div>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">KAMERE I FOTO APARATI</a>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">AUTO TEHNIKA</a>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">RAČUNARI I PERIFERIJE</a>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">KONZOLE I IGRICE</a>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">POSTELJINE</a>
         </div>
-
         <div class="accordion-item">
             <a href="#" class="accordion-title">KUPOVINA PREKO T-COMA</a>
         </div>
     </div>
 
-
     <div class="slider">
-        <div class="slider-container"></div>
+        <img src="src/images/sega.jpg" alt="">
+        <img src="src/images/sega.jpg" alt="">
+        <img src="src/images/sega.jpg" alt="">
     </div>
+
+
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- vendor:js -->
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js?v=1548800917235">
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".slider").bxSlider({
+            slideWidth: 400, // Limit slide width
+            adaptiveHeight: true, // Adjust height dynamically
+            mode: 'horizontal', // Sliding effect
+            auto: true, // Auto-play slides
+            controls: true, // Enable navigation arrows
+            pager: true, // Enable bottom dots
+            minSlides: 1, // Ensure at least 1 slide is visible
+            maxSlides: 1, // Prevent multiple images from appearing
+            moveSlides: 1 // Move one slide at a time
+        });
+    });
+
+
+</script>
+
+
 <!-- end inject -->
 </body>
 </html>

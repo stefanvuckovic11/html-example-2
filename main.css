@@ -147,11 +147,13 @@
 .navflex-container2 .flex-centrometal-search {
   position: relative;
   flex: 1;
-  max-width: 400px;
+  max-width: 450px;
+  max-height: 100px;
   padding-right: 1%;
 }
 .navflex-container2 .flex-centrometal-search .fa-search {
   position: absolute;
+  padding-right: 1%;
   right: 20px;
   top: 49%;
   transform: translateY(-50%);
@@ -163,8 +165,8 @@
 }
 .navflex-container2 .flex-centrometal-search input {
   width: 100%;
-  height: 40px;
-  padding: 10px 10px 10px 10px;
+  height: 50px;
+  padding: 10px 15px 10px 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
@@ -340,10 +342,9 @@ body {
 .accordion {
   display: flex;
   flex-direction: column;
-  margin-left: 5.5%;
-  margin-top: 2%;
   width: 22%;
   background: grey;
+  margin-right: 3%;
   font-family: Arial, sans-serif;
   border: 1px solid rgba(128, 128, 128, 0.2);
   overflow: hidden;
@@ -407,6 +408,30 @@ body {
 }
 .accordion .accordion-item .accordion-content ul li:last-child {
   border-bottom: none;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  margin-left: 5.5%;
+}
+
+.bx-wrapper {
+  max-width: 1200px !important;
+  max-height: 500px !important;
+  width: 1175px !important;
+  height: 425px;
+  padding: 0px !important;
+}
+
+.bg-viewport {
+  height: 50vh !important;
+}
+
+.slider .img {
+  height: 425px;
+  width: 1175px !important;
 }
 
 /*# sourceMappingURL=main.css.map */

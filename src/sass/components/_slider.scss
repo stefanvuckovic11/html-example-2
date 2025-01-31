@@ -1,0 +1,24 @@
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/fonts";
+
+
+.bx-wrapper{
+  max-width: 1200px !important;
+  max-height: 500px !important;
+  width:1175px !important;
+  height: 425px;
+  padding: 0px !important;
+}
+
+.bg-viewport{
+  height: 50vh !important;
+}
+
+.slider{
+  .img{
+    height: 425px;
+    width:1175px !important;
+  }
+}
+
