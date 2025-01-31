@@ -1,0 +1,79 @@
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/fonts";
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  background: grey;
+  margin-right: 3%;
+  font-family: Arial, sans-serif;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  overflow: hidden;
+  .accordion-header {
+    background: $navbar-dark-blue;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    i {
+      font-size: 20px;
+    }
+  }
+  .accordion-item {
+    border-bottom: 1px solid grey;
+    .accordion-title {
+      background: white;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 15px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s ease-in-out;
+    }
+    a{
+      text-decoration: none;
+    }
+    .accordion-content {
+      display: none;
+      background: white;
+      padding: 10px 0;
+      font-size: 14px;
+      border-top: 1px solid grey;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          padding: 12px 20px;
+          font-size: 14px;
+          border-bottom: 1px solid grey;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out;
+          &:hover {
+            background: $cyan-hover;
+          }
+          &:hover{
+            background-color: rgba(128, 128, 128, 0.43);
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slider{
+  .slider-container{
+  }
+}
