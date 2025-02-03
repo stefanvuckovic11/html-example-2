@@ -2,23 +2,116 @@
 @import "../base/variables";
 @import "../base/fonts";
 
-
-.bx-wrapper{
-  max-width: 1200px !important;
-  max-height: 500px !important;
-  width:1175px !important;
-  height: 425px;
-  padding: 0px !important;
+.bx-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  max-width: 1150px !important;
+  height: 45vh;
+  max-height: 100%;
+  padding: 0;
+  border-bottom: 4px solid #ccc;
+  overflow: hidden;
+}
+.bx-wrapper .bx-viewport,
+.bx-wrapper .bxslider,
+.bx-wrapper .bxslider li {
+  height: 100%;
+}
+.bx-wrapper .bxslider li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.bg-viewport{
-  height: 50vh !important;
+.bxslider li {
+  position: relative;
 }
 
-.slider{
-  .img{
-    height: 425px;
-    width:1175px !important;
-  }
+.slide-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  z-index: 2;
 }
 
+.slide-label {
+  background: white;
+  padding: 25px 35px;
+  display: inline-block;
+  border: 1px solid $base-grey;
+}
+
+.slide-label .label-text {
+  width:30vh;
+  justify-self: start;
+  padding-bottom: 10px;
+  display: block;
+  font-size: 56px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.product-button {
+  background: $general-cyan;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 16px;
+  text-decoration: none;
+  justify-self: center;
+  border-radius: 4px;
+}
+
+.product-button:hover {
+  background: $general-cyan;
+}
+
+.bx-wrapper .bx-pager {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item a {
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  transition: background 0.3s, color 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item a.active {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid $general-cyan;
+  border-radius: 50%;
+  background: $general-cyan;
+  text-shadow: none;
+}
+
+.bx-wrapper .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: $general-cyan;
+  width: 0;
+  transition: width 0.3s ease;
+}

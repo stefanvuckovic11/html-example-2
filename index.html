@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Example app</title>
     <!-- app:css -->
-    <link rel="stylesheet" href="dist/css/main.css?v=1548800917231"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="dist/css/main.css?v=1548800917231"/>
     <!-- endinject -->
 </head>
 <body>
@@ -26,7 +25,7 @@
     </div>
     <div class="navflex-container2">
         <div class="flex-item-centrometal">
-            <p id="centrometal-text"><em>CENTRO</em>METAL</p>
+            <p id="centrometal-text">CENTRO<span>METAL</span></p>
         </div>
         <div class="flex-centrometal-search">
             <span class="fa fa-search"></span>
@@ -151,41 +150,74 @@
             <a href="#" class="accordion-title">KUPOVINA PREKO T-COMA</a>
         </div>
     </div>
+    <ul class="bxslider">
+        <li>
+            <img src="src/images/sega.jpg" alt="Slide 1">
+            <div class="slide-overlay">
+                <div class="slide-label">
+                    <span class="label-text">Motorna <br><b>Šega</b></span>
+                    <a href="#" class="product-button">VIDI PROIZVOD</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="src/images/sega.jpg" alt="Slide 2">
+            <div class="slide-overlay">
+                <div class="slide-label">
+                    <span class="label-text">Motorna <br><b>Šega</b></span>
+                    <a href="#" class="product-button">VIDI PROIZVOD</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="src/images/sega.jpg" alt="Slide 3">
+            <div class="slide-overlay">
+                <div class="slide-label">
+                    <span class="label-text">Motorna <br><b>Šega</b></span>
+                    <a href="#" class="product-button">VIDI PROIZVOD</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <img src="src/images/sega.jpg" alt="Slide 4">
+            <div class="slide-overlay">
+                <div class="slide-label">
+                    <span class="label-text">Motorna <br><b>Šega</b></span>
+                    <a href="#" class="product-button">VIDI PROIZVOD</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="progress-bar"></div>
 
-    <div class="slider">
-        <img src="src/images/sega.jpg" alt="">
-        <img src="src/images/sega.jpg" alt="">
-        <img src="src/images/sega.jpg" alt="">
-    </div>
 
 
 </main>
 <!-- vendor:js -->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.js?v=1548800917235">
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 <script>
     $(document).ready(function(){
-        $(".slider").bxSlider({
-            slideWidth: 400, // Limit slide width
-            adaptiveHeight: true, // Adjust height dynamically
-            mode: 'horizontal', // Sliding effect
-            auto: true, // Auto-play slides
-            controls: true, // Enable navigation arrows
-            pager: true, // Enable bottom dots
-            minSlides: 1, // Ensure at least 1 slide is visible
-            maxSlides: 1, // Prevent multiple images from appearing
-            moveSlides: 1 // Move one slide at a time
+        var totalSlides = $('.bxslider li').length;
+        var slider = $('.bxslider').bxSlider({
+            slideWidth: 1180,
+            adaptiveHeight: true,
+            pager: true,
+            buildPager: function(slideIndex) {
+                return slideIndex + 1;
+            },
+            onSlideAfter: function($slideElement, oldIndex, newIndex) {
+                var percentage = ((newIndex + 1) / totalSlides) * 100;
+                $('.bx-wrapper .progress-bar').css('width', percentage + '%');
+            }
         });
+        if ($('.bx-wrapper .progress-bar').length === 0) {
+            $('.bx-wrapper').append('<div class="progress-bar"></div>');
+        }
+        $('.bx-wrapper .progress-bar').css('width', (100 / totalSlides) + '%');
     });
 
-
 </script>
-
-
 <!-- end inject -->
 </body>
 </html>
