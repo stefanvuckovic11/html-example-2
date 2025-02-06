@@ -5,12 +5,12 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 100%;
   background: grey;
-  margin-right: 1.25%;
   font-family: Arial, sans-serif;
   border: 1px solid rgba(128, 128, 128, 0.2);
   overflow: hidden;
+  margin-bottom: 3.5%;
   .accordion-header {
     background: $navbar-dark-blue;
     color: white;
