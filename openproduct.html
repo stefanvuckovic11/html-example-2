@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example app</title>
+    <!-- app:css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/main.css?v=1548800917231"/>
+    <!-- endinject -->
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="navflex-container1">
+            <div class="flex-item1">
+                <a href="#">Engleski</a>
+                <a href="#">Crnogorski</a>
+                <p>Svakog dana od 8:00 do 21:00 h, osim nedjeljom | Tel: +382 20 656 772</p>
+            </div>
+            <div class="flex-item2">
+                <a href="#">On-line podrska</a>
+                <a href="#">Registracija</a>
+                <a href="#">Prijava</a>
+            </div>
+        </div>
+        <div class="navflex-container2">
+            <div class="flex-item-centrometal">
+                <p id="centrometal-text">CENTRO<span>METAL</span></p>
+            </div>
+            <div class="flex-centrometal-search">
+                <span class="fa fa-search"></span>
+                <input type="text" placeholder="Unesite šifru ili pojam pretraživanja">
+            </div>
+            <i class="fa fa-facebook-f"></i>
+            <div class="flex-centrometal-cart">
+                <p>MOJA KORPA</p>
+                <p>0.00€</p>
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+        </div>
+        <div class="navflex-container3">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <div>
+                <label for="nav-toggle" class="burger" style="display: none">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#"><i class="fa fa-home"></i></a></li>
+                <li><a href="#">Akcija</a></li>
+                <li><a href="#">Rasprodaja</a></li>
+                <li><a href="#">Katalozi</a></li>
+                <li><a href="#">Novosti</a></li>
+                <li><a href="#">O nama</a></li>
+                <li><a href="#">Uradi sam</a></li>
+                <li><a href="#">Vip kartica</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Informacije</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <div class="open-product">
+        <h1 class="path">NASLOVNA / PROIZVODI / GRUPA ROBE</h1>
+        <div class="product-container">
+            <div class="product-slider">
+                <ul class="bxslider">
+                    <li><img src="src/images/1.png" alt="Product Image 1"></li>
+                    <li><img src="src/images/2.png" alt="Product Image 2"></li>
+                    <li><img src="src/images/3.png" alt="Product Image 3"></li>
+                    <li><img src="src/images/frizider.png" alt="Product Image 1"></li>
+                    <li><img src="src/images/makita.jpg" alt="Product Image 2"></li>
+                    <li><img src="src/images/cipele.png" alt="Product Image 3"></li>
+                </ul>
+                <div class="product-slider-thumb">
+                    <a href="#" class="slider-prev-product">❮</a>
+                    <a href="#" class="slider-next-product">❯</a>
+                    <div id="bx-pager">
+                        <a><img src="src/images/1.png" alt="Thumbnail 1"></a>
+                        <a><img src="src/images/2.png" alt="Thumbnail 2"></a>
+                        <a><img src="src/images/3.png" alt="Thumbnail 3"></a>
+                        <a><img src="src/images/frizider.png" alt="Thumbnail 4"></a>
+                        <a><img src="src/images/makita.jpg" alt="Thumbnail 5"></a>
+                        <a><img src="src/images/cipele.png" alt="Thumbnail 6"></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="product-info">
+                <div class="product-info-naziv">
+                    <h1>Gorenje WD 95140 Mašina za pranje i sušenje</h1>
+                </div>
+                <div class="product-info-cijena-sifra">
+                    <h2>554€</h2>
+                    <h3><span>123 476 889</span> <br>
+                        Sifra artikla</h3>
+                </div>
+                <div class="product-info-general">
+                    <span>Šifra artikla: 7248 </span> <br>
+                    Broj okretaja centrifuge: 1400,00 okr/min <br>
+                    Elektronsko upravljanje: DA <br>
+                    Samostojeći: DA <br>
+                    Punjenje sprijeda: DA <br>
+                    Kapacitet pranja: 9 kg <br>
+                    Kapacitet sušenja: 7 kg <br>
+                    Kapacitet nečeg: 7 kg <br>
+                </div>
+                <div class="product-slider-cart">
+                    <div class="product-cart">
+                        <div class="upper-part">
+                            <div class="num-of-products">
+                                <p>Kolicina:</p>
+                                <input type="number" id="numInput" value="0" min="0" max="100">
+                                <button onclick="increase()">+</button>
+                            </div>
+                            <div class="share-container">
+                                <div class="icon"><i class="fa fa-plus"></i></div>
+                                <span class="share-text">Share: </span>
+                                <div class="icon fb"><i class="fa fa-facebook-f"></i></div>
+                                <div class="icon tw"><i class="fa fa-twitter"></i></div>
+                                <div class="icon mail"><i class="fa fa-envelope"></i></div>
+                                <div class="icon gmail"><i class="fa fa-google"></i></div>
+                            </div>
+                        </div>
+                        <div class="lower-part">
+                            <div class="dodaj">
+                                <button><i class="fa fa-shopping-cart"></i> Dodaj u korpu</button>
+                            </div>
+                            <div class="pregledaj">
+                                <button>Pregledaj korpu</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="product-additional">
+            <div class="tabs">
+                <button class="tab active" data-tab="proizvodna-lista">PROIZVODNA LISTA</button>
+                <button class="tab" data-tab="uputstvo">UPUTSTVO ZA RUKOVANJE</button>
+                <button class="tab" data-tab="ocjena">OCJENA</button>
+                <button class="tab" data-tab="email">E-MAIL</button>
+            </div>
+            <div class="tab-content active" id="proizvodna-lista">
+                <ul>
+                    <li>Samostojeći: DA</li>
+                    <li>Punjenje sprijeda: DA</li>
+                    <li>Elektronsko upravljanje: DA</li>
+                    <li>Kapacitet pranja: 9 kg</li>
+                    <li>Kapacitet sušenja: 7 kg</li>
+                    <li>Broj okretaja centrifuge: 1400,00 okr/min</li>
+                    <li>Podešavanje centrifuge: DA</li>
+                    <li>Isključivanje centrifugiranja: DA</li>
+                    <li>Fuzzy logic: DA</li>
+                    <li>Automatsko prilagođ. potrošnje vode: DA</li>
+                    <li>Senzorsko sušenje: DA</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="uputstvo">
+                <ul>
+                    <li>Odgoda početka rada: DA</li>
+                    <li>Rućni program: DA</li>
+                    <li>Brzi program: DA</li>
+                    <li>Energetski razred: A</li>
+                    <li>Učinkovitost pranja: A</li>
+                    <li>Učinkovitost centrifugiranja: A</li>
+                    <li>Potrošnja vode za sušenje i pranje: 148,00 l</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="ocjena">
+                <ul>
+                    <li>Razina buke: 41,00 dB (re 1pW)</li>
+                    <li>Razina buke centrifuge: 64,00 dB (re 1pW)</li>
+                    <li>Visina: 85,00 cm</li>
+                    <li>Širina: 60,00 cm</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="email">
+                <p>Kontaktirajte nas za više informacija.</p>
+            </div>
+        </div>
+        <div class="similar-products">
+            <div class="similar-product-heading">
+                <h2>SLIČNI PROIZVODI</h2>
+            </div>
+            <div class="product-list-vruca-ponuda">
+                <div class="product">
+                    <span class="discount">70%</span>
+                    <img src="src/images/frizider.png" alt="Frižider 1">
+                    <h3>Ugradni set frižider Gorenje</h3>
+                    <p class="timer">10 dan 6 sat 15 min 10 sek</p>
+                    <p class="price"><span class="old-price">€135.00</span> <span class="new-price">€90.00</span></p>
+                </div>
+                <div class="product">
+                    <span class="discount">20%</span>
+                    <img src="src/images/1.png" alt="Ledomat">
+                    <h3>Ugradni set frižider Gorenje</h3>
+                    <p class="timer">10 dan 6 sat 15 min 10 sek</p>
+                    <p class="price"><span class="old-price">€135.00</span> <span class="new-price">€90.00</span></p>
+                </div>
+                <div class="product">
+                    <span class="discount">40%</span>
+                    <img src="src/images/2.png" alt="Frižider 2">
+                    <h3>Ugradni set frižider Gorenje</h3>
+                    <p class="timer">10 dan 6 sat 15 min 10 sek</p>
+                    <p class="price"><span class="old-price">€135.00</span> <span class="new-price">€90.00</span></p>
+                </div>
+
+                <div class="product">
+                    <span class="discount">30%</span>
+                    <img src="src/images/3.png" alt="Mikrotalasna">
+                    <h3>Ugradni set frižider Gorenje</h3>
+                    <p class="timer">10 dan 6 sat 15 min 10 sek</p>
+                    <p class="price"><span class="old-price">€135.00</span> <span class="new-price">€90.00</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-bar">
+        <div class="box video-box">
+            <div class="video-wrapper">
+                <img src="src/images/cat1.png" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="play-button"></div>
+                <video class="video-content" src="src/videos/cat1.mp4" loop style="display: none;" muted>
+                </video>
+            </div>
+        </div>
+        <div class="box video-box">
+            <div class="video-wrapper">
+                <img src="src/images/cat2.png" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="play-button"></div>
+                <video class="video-content" src="src/videos/cat2.mp4" loop style="display: none;" muted>
+                </video>
+            </div>
+        </div>
+        <div class="news">
+            <div class="newsletter">
+                <div class="newsletter-header">
+                    <i class="fa fa-envelope"></i> PRIJAVI SE NA NEWSLETTER
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="E-mail">
+                    <input type="text" placeholder="Ime i prezime">
+                    <button type="submit">PRIJAVI SE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="bx-wrapper">
+        <ul class="bxslider-second">
+            <li><img src="src/images/sony.png" alt="Slide A"></li>
+            <li><img src="src/images/panasonic.png" alt="Slide B"></li>
+            <li><img src="src/images/gorenje.png" alt="Slide C"></li>
+            <li><img src="src/images/samsung.png" alt="Slide A"></li>
+            <li><img src="src/images/indesit.png" alt="Slide B"></li>
+            <li><img src="src/images/sony.png" alt="Slide A"></li>
+            <li><img src="src/images/panasonic.png" alt="Slide B"></li>
+            <li><img src="src/images/gorenje.png" alt="Slide C"></li>
+            <li><img src="src/images/samsung.png" alt="Slide A"></li>
+            <li><img src="src/images/indesit.png" alt="Slide B"></li>
+            <li><img src="src/images/sony.png" alt="Slide A"></li>
+            <li><img src="src/images/panasonic.png" alt="Slide B"></li>
+            <li><img src="src/images/gorenje.png" alt="Slide C"></li>
+            <li><img src="src/images/samsung.png" alt="Slide A"></li>
+            <li><img src="src/images/indesit.png" alt="Slide B"></li>
+        </ul>
+        <div class="slider-controls">
+            <a href="#" class="slider-prev">❮</a>
+            <a href="#" class="slider-next">❯</a>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="bottom-column">
+            <h3>Informacije</h3>
+            <a href="#">O nama</a>
+            <a href="#">Gdje kupiti</a>
+            <a href="#">Zapošljavanje</a>
+            <a href="#">Aktivnosti</a>
+        </div>
+        <div class="bottom-column">
+            <h3>Aktivnosti</h3>
+            <a href="#">Akcije</a>
+            <a href="#">Noviteti</a>
+            <a href="#">Rasprodaja</a>
+            <a href="#">Marketing</a>
+        </div>
+        <div class="bottom-column">
+            <h3>Moja strana</h3>
+            <a href="#">Registracija</a>
+            <a href="#">Prijava</a>
+            <a href="#">Korisnička strana</a>
+            <a href="#">Korpa</a>
+        </div>
+        <div class="bottom-column">
+            <h3>Plaćanje i dostava</h3>
+            <a href="#">Načini plaćanja</a>
+            <a href="#">Sigurnost plaćanja</a>
+            <a href="#">Brza i pouzdana dostava</a>
+            <a href="#">Odaberite datum dostave</a>
+        </div>
+        <div class="bottom-column">
+            <h3>Povrat i zamjena</h3>
+            <a href="#">Servis</a>
+            <a href="#">Reklamacije</a>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        © 2016 Copyright by <a href="#">centrometal.me</a> All Rights Reserved.
+    </div>
+
+</footer>
+<!-- vendor:js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var sliderSecond = $('.bxslider-second').bxSlider({
+            nextText: '',
+            prevText: '',
+            minSlides: 5,
+            maxSlides: 5,
+            moveSlides: 1,
+            slideWidth: '200%',
+            slideMargin: 0,
+            auto: false,
+            controls: true,
+            pager: false,
+            infiniteLoop: true
+        });
+
+        $('.slider-prev').click(function(e){
+            e.preventDefault();
+            sliderSecond.goToPrevSlide();
+        });
+
+        $('.slider-next').click(function(e){
+            e.preventDefault();
+            sliderSecond.goToNextSlide();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        var productSlider = $('.product-slider .bxslider').bxSlider({
+            auto: false,
+            controls: false,
+            pager: false,
+            infiniteLoop: true,
+            adaptiveHeight: false,
+            responsive: false,
+            touchEnabled: false,
+            useCSS: false,
+
+        });
+
+        var thumbSlider = $('#bx-pager').bxSlider({
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideWidth: 400,
+            slideMargin: 0,
+            auto: false,
+            pager: false,
+            controls: false,
+            infiniteLoop: false
+        });
+
+        $('.slider-prev-product').click(function(e){
+            e.preventDefault();
+            thumbSlider.goToPrevSlide();
+        });
+
+        $('.slider-next-product').click(function(e){
+            e.preventDefault();
+            thumbSlider.goToNextSlide();
+        });
+
+        $('#bx-pager a').click(function(e) {
+            e.preventDefault();
+            var index = $(this).index();
+            productSlider.goToSlide(index);
+        });
+    });
+</script>
+<script>
+    function increase() {
+        let input = document.getElementById("numInput");
+        input.value = parseInt(input.value) + 1;
+    }
+</script>
+<script>
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+
+            this.classList.add('active');
+            document.getElementById(this.dataset.tab).classList.add('active');
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.video-box').forEach(function (box) {
+            var playButton = box.querySelector('.play-button');
+            if (playButton) {
+                playButton.addEventListener('click', function () {
+                    var thumbnail = box.querySelector('.video-thumbnail');
+                    var video = box.querySelector('.video-content');
+                    if (thumbnail) {
+                        thumbnail.style.display = 'none';
+                    }
+                    playButton.style.display = 'none';
+                    if (video) {
+                        video.style.display = 'block';
+                        video.play();
+                    }
+                });
+            }
+        });
+    });
+</script>
+<!-- end inject -->
+</body>
+</html>
