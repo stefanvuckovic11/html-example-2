@@ -1,0 +1,40 @@
+footer {
+  .bottom {
+    background-color: $general-cyan;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 2px 8%;
+
+    &-column {
+      flex: 1;
+      max-width: 200px;
+      border-right: 1px solid $base-grey;
+      padding-left: 10px;
+
+      h3 {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        margin-bottom: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:first-child {
+        border-left: 1px solid $base-grey;
+        padding: 1px 4%;
+      }
+    }
+  }
+}
+@include responsive-footer;

@@ -30,7 +30,9 @@
             </div>
             <div class="flex-centrometal-search">
                 <span class="fa fa-search"></span>
+                <div>
                 <input type="text" placeholder="Unesite šifru ili pojam pretraživanja">
+                </div>
             </div>
             <i class="fa fa-facebook-f"></i>
             <div class="flex-centrometal-cart">
@@ -40,6 +42,12 @@
             </div>
         </div>
         <div class="navflex-container3">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <div>
+                <label for="nav-toggle" class="burger" style="display: none">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
             <ul class="nav-menu">
                 <li><a href="#"><i class="fa fa-home"></i></a></li>
                 <li><a href="#">Akcija</a></li>
@@ -652,6 +660,20 @@
             });
         });
     });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll(".nav-menu li");
+
+        navItems.forEach((item) => {
+            item.addEventListener("click", function () {
+                navItems.forEach((li) => li.classList.remove("active"));
+
+                this.classList.add("active");
+            });
+        });
+    });
+
 </script>
 <!-- end inject -->
 </body>
