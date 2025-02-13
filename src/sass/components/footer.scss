@@ -1,5 +1,5 @@
-footer {
-  .bottom {
+.footer {
+  &__bottom {
     background-color: $general-cyan;
     color: white;
     display: flex;
@@ -7,13 +7,13 @@ footer {
     text-align: left;
     padding: 2px 8%;
 
-    &__columns {
+    .bottom__columns {
       display: flex;
       width: 100%;
       margin-left: 10%;
     }
 
-    &__column {
+    .bottom__column {
       flex: 1;
       max-width: 200px;
       border-right: 1px solid $base-grey;
@@ -22,15 +22,16 @@ footer {
       &:first-child {
         border-left: 1px solid $base-grey;
         padding: 1px 4%;
+        margin-left: 2%;
       }
     }
 
-    &__title {
+    .bottom__title {
       font-size: 12px;
       margin-bottom: 10px;
     }
 
-    &__link {
+    .bottom__link {
       display: block;
       color: white;
       text-decoration: none;
@@ -43,14 +44,14 @@ footer {
     }
   }
 
-  .bottom-footer {
+  &__bottom-footer {
     background-color: #004C75;
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
 
-    &__link {
+    .bottom-footer__link {
       color: #B3E5FC;
       text-decoration: none;
 
@@ -60,6 +61,58 @@ footer {
     }
   }
 }
-@include responsive-footer;
 
+@media screen and (max-width: 1300px) {
+  .footer {
+    &__bottom {
+      background-color: $general-cyan;
+      color: white;
+      display: flex;
+      text-align: center;
+      justify-content: center !important;
+      flex-direction: column !important;
 
+      .bottom__columns {
+        margin: auto !important;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+      }
+
+      .bottom__column {
+        flex: 1;
+        max-width: 200px;
+        border-right: none !important;
+        padding-left: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.68);
+
+        &:first-child {
+          border-left: none;
+          padding: 0 !important;
+          margin-left: 2% !important;
+        }
+      }
+
+      .bottom__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .bottom__link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin-bottom: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__bottom-footer {
+      font-size: 40px;
+    }
+  }
+}

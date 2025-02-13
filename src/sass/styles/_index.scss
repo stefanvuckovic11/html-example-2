@@ -1,5 +1,3 @@
-
-
 .index {
   display: flex;
   justify-content: center;
@@ -26,7 +24,7 @@
           font-size: 16px;
           font-weight: bold;
 
-          i {
+          .fa-envelope {
             margin-right: 5%;
           }
         }
@@ -36,13 +34,13 @@
           justify-content: center;
           margin-top: 10px;
 
-          input {
+          .brand__search-input {
             width: 80%;
             padding: 10px;
             border: none;
           }
 
-          button {
+          .brand__search-button {
             background-color: white;
             border: none;
             padding: 8px;
@@ -56,12 +54,11 @@
       }
     }
 
-    // BRAND PROMO – HTML: <div class="index__brand-promo brand-promo">…</div>
     .brand-promo {
       margin-top: 50px;
       position: relative;
 
-      img {
+      .brand-promo__img {
         width: 100%;
         height: 400px;
         display: block;
@@ -99,7 +96,8 @@
           flex-direction: column;
           width: 100%;
 
-          input {
+          .newsletter__input-email,
+          .newsletter__input-name {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -114,7 +112,7 @@
             }
           }
 
-          button {
+          .newsletter__button-submit {
             background-color: $general-cyan;
             color: white;
             padding: 12px;
@@ -137,7 +135,7 @@
       background-color: white;
       overflow: hidden;
 
-      img {
+      .product-card__img {
         width: 100%;
         display: block;
       }
@@ -145,20 +143,20 @@
       .product-card__info {
         padding: 15px;
 
-        h3 {
+        .product-card__title {
           font-size: 18px;
           font-weight: bold;
           color: black;
           margin-bottom: 10px;
         }
 
-        p {
+        .product-card__description {
           font-size: 14px;
           color: grey;
           margin-bottom: 15px;
         }
 
-        .btn-primary {
+        .product-card__button {
           background-color: $general-cyan;
           color: white;
           border: none;
@@ -176,6 +174,7 @@
       }
     }
   }
+
   &__right {
     width: 850px;
     flex-shrink: 0;
@@ -183,9 +182,7 @@
     max-width: 85%;
     flex-wrap: wrap;
 
-
-    .trapezoid-vruca-ponuda,
-    .index__trapezoid-vruca-ponuda {
+    .index__trapezoid-hot-offer {
       margin: 20px auto 3%;
       width: 95%;
       display: flex;
@@ -197,7 +194,7 @@
       border-bottom: 50px solid $navbar-dark-blue;
       transform: rotateX(180deg);
 
-      p {
+      .trapezoid-hot-paragraph {
         margin-top: 70px;
         transform: rotateX(180deg);
         color: white;
@@ -206,14 +203,13 @@
         align-items: center;
         justify-content: center;
 
-        i {
+        .fa-fire {
           margin-right: 10px;
         }
       }
     }
 
-    .product-list-vruca-ponuda,
-    .index__product-list-vruca-ponuda {
+    .index__product-list-hot-offer {
       width: 95%;
       display: flex;
       justify-content: center;
@@ -226,7 +222,7 @@
         text-align: center;
         max-width: 300px;
 
-        img {
+        .product__img {
           width: 100%;
           max-width: 150px;
           aspect-ratio: 1/1.25;
@@ -256,7 +252,7 @@
           }
         }
 
-        h3 {
+        .product__title {
           font-size: 16px;
         }
 
@@ -285,14 +281,13 @@
       }
     }
 
-    .products-button-vruca-ponuda,
-    .index__products-button-vruca-ponuda {
+    .index__products-button-hot-offer {
       display: flex;
       justify-content: center;
       align-items: center;
       width: calc(100% - 60px);
 
-      button {
+      .index__button-hot-offer {
         padding: 10px 50px;
         border: 3px solid $general-cyan;
         background-color: transparent;
@@ -304,8 +299,7 @@
       }
     }
 
-    .trapezoid-akcija,
-    .index__trapezoid-akcija {
+    .index__trapezoid-action {
       margin: 20px auto 3%;
       width: 95%;
       display: flex;
@@ -317,7 +311,7 @@
       border-bottom: 50px solid $general-cyan;
       transform: rotateX(180deg);
 
-      p {
+      .trapezoid-action__text {
         margin-top: 70px;
         transform: rotateX(180deg);
         color: white;
@@ -332,8 +326,7 @@
       }
     }
 
-    .product-list-akcija,
-    .index__product-list-akcija {
+    .index__product-list-action {
       width: 95%;
       display: flex;
       justify-content: center;
@@ -349,7 +342,7 @@
         flex-basis: calc(25% - 40px);
         box-sizing: border-box;
 
-        img {
+        .product__img {
           width: 100%;
           max-width: 150px;
           aspect-ratio: 1/1.25;
@@ -379,7 +372,7 @@
           }
         }
 
-        h3 {
+        .product__title {
           font-size: 16px;
         }
 
@@ -408,14 +401,13 @@
       }
     }
 
-    .products-button-akcija,
-    .index__products-button-akcija {
+    .index__products-button-action {
       display: flex;
       justify-content: center;
       align-items: center;
       width: calc(100% - 60px);
 
-      button {
+      .index__button-action {
         padding: 10px 50px;
         border: 3px solid $general-cyan;
         background-color: transparent;
@@ -427,8 +419,7 @@
       }
     }
 
-    .trapezoid-preporucujemo,
-    .index__trapezoid-preporucujemo {
+    .index__trapezoid-recommended {
       margin: 20px auto 3%;
       width: 95%;
       display: flex;
@@ -440,7 +431,7 @@
       border-bottom: 50px solid $general-cyan;
       transform: rotateX(180deg);
 
-      p {
+      .trapezoid-recommended__text {
         margin-top: 70px;
         transform: rotateX(180deg);
         color: white;
@@ -455,8 +446,7 @@
       }
     }
 
-    .product-list-preporucujemo,
-    .index__product-list-preporucujemo {
+    .index__product-list-recommended {
       width: 95%;
       display: flex;
       justify-content: center;
@@ -469,7 +459,7 @@
         text-align: center;
         max-width: 300px;
 
-        img {
+        .product__img {
           width: 100%;
           max-width: 150px;
           aspect-ratio: 1/1.25;
@@ -499,7 +489,7 @@
           }
         }
 
-        h3 {
+        .product__title {
           font-size: 16px;
         }
 
@@ -528,14 +518,13 @@
       }
     }
 
-    .products-button-preporucujemo,
-    .index__products-button-preporucujemo {
+    .index__products-button-recommended {
       display: flex;
       justify-content: center;
       align-items: center;
       width: calc(100% - 60px);
 
-      button {
+      .index__button-recommended {
         padding: 10px 50px;
         border: 3px solid $general-cyan;
         background-color: transparent;
@@ -547,8 +536,7 @@
       }
     }
 
-    .trapezoid-novo,
-    .index__trapezoid-novo {
+    .index__trapezoid-new {
       margin: 20px auto 3%;
       width: 95%;
       display: flex;
@@ -560,7 +548,7 @@
       border-bottom: 50px solid $general-cyan;
       transform: rotateX(180deg);
 
-      p {
+      .trapezoid-new__text {
         margin-top: 70px;
         transform: rotateX(180deg);
         color: white;
@@ -575,8 +563,7 @@
       }
     }
 
-    .product-list-novo,
-    .index__product-list-novo {
+    .index__product-list-new {
       width: 95%;
       display: flex;
       justify-content: center;
@@ -589,7 +576,7 @@
         text-align: center;
         max-width: 300px;
 
-        img {
+        .product__img {
           width: 100%;
           max-width: 150px;
           aspect-ratio: 1/1.25;
@@ -619,7 +606,7 @@
           }
         }
 
-        h3 {
+        .product__title {
           font-size: 16px;
         }
 
@@ -648,14 +635,13 @@
       }
     }
 
-    .products-button-novo,
-    .index__products-button-novo {
+    .index__products-button-new {
       display: flex;
       justify-content: center;
       align-items: center;
       width: calc(100% - 60px);
 
-      button {
+      .index__button-new {
         padding: 10px 50px;
         border: 3px solid $general-cyan;
         background-color: transparent;
@@ -667,8 +653,7 @@
       }
     }
 
-    .trapezoid-rasprodaja,
-    .index__trapezoid-rasprodaja {
+    .index__trapezoid-sale {
       margin: 20px auto 3%;
       width: 95%;
       display: flex;
@@ -680,7 +665,7 @@
       border-bottom: 50px solid orange;
       transform: rotateX(180deg);
 
-      p {
+      .trapezoid-sale__text {
         margin-top: 70px;
         transform: rotateX(180deg);
         color: white;
@@ -695,8 +680,7 @@
       }
     }
 
-    .product-list-rasprodaja,
-    .index__product-list-rasprodaja {
+    .index__product-list-sale {
       width: 95%;
       display: flex;
       justify-content: center;
@@ -709,7 +693,7 @@
         text-align: center;
         max-width: 300px;
 
-        img {
+        .product__img {
           width: 100%;
           max-width: 150px;
           aspect-ratio: 1/1.25;
@@ -739,7 +723,7 @@
           }
         }
 
-        h3 {
+        .product__title {
           font-size: 16px;
         }
 
@@ -768,14 +752,13 @@
       }
     }
 
-    .products-button-rasprodaja,
-    .index__products-button-rasprodaja {
+    .index__products-button-sale {
       display: flex;
       justify-content: center;
       align-items: center;
       width: calc(100% - 60px);
 
-      button {
+      .index__button-sale {
         padding: 10px 50px;
         border: 3px solid orange;
         background-color: transparent;
@@ -810,13 +793,13 @@
           justify-content: center;
           margin-top: 40px;
 
-          input {
+          .brand__search-input {
             width: 100%;
             padding: 15px;
             border: none;
           }
 
-          button {
+          .brand__search-button {
             background-color: white;
             border: none;
             padding: 15px;
@@ -858,7 +841,8 @@
           flex-direction: column;
           width: 100%;
 
-          input {
+          .newsletter__input-email,
+          .newsletter__input-name {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -873,7 +857,7 @@
             }
           }
 
-          button {
+          .newsletter__button-submit {
             background-color: $general-cyan;
             color: white;
             padding: 12px;
@@ -890,8 +874,208 @@
         }
       }
     }
+    .index__brand{
+      display: none;
+    }
+
+    .index__news{
+      display: none;
+    }
   }
 
+
+  @media screen and (max-width: 1240px) {
+    .index {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-width: 100%;
+      margin: auto;
+    }
+    .slider-wrapper {
+      margin-left: 7% !important;
+    }
+    .index__left .brand-promo .brand-promo__img {
+      display: none;
+    }
+
+    .index__section {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      flex-shrink: 1;
+      margin: 0;
+
+      &--left,
+      &--right {
+        display: flex;
+        justify-content: center;
+      }
+
+      .product-card {
+        position: relative;
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 300px;
+
+        .product-card__img {
+          width: 10%;
+          max-width: 10px;
+          aspect-ratio: 1/1.25;
+        }
+
+        .product-card__title {
+          font-size: 16px;
+        }
+        .product-card__timer {
+          color: gray;
+          font-size: 12px;
+        }
+        .product-card__price {
+          border-top: 1px solid $base-grey;
+          border-bottom: 1px solid $base-grey;
+          font-size: 18px;
+          font-weight: bold;
+
+          .product-card__old-price {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 14px;
+          }
+
+          .product-card__new-price {
+            color: $general-cyan;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .index__brand,
+    .index__promo,
+    .index__news,
+    .product-card {
+      display: none;
+    }
+
+    .product-list {
+      margin-left: 20%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &--akcija,
+      &--hot-deal,
+      &--rasprodaja,
+      &--novo,
+      &--preporucujemo {
+        .product-card {
+          box-sizing: border-box;
+
+          .product-card__title {
+            font-size: 10px;
+          }
+          .product-card__timer {
+            font-size: 8px;
+          }
+          .product-card__old-price {
+            font-size: 10px;
+          }
+          .product-card__new-price {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .index__news .newsletter__header {
+      font-size: 30px;
+    }
+
+    .index__news .newsletter__form .newsletter__input-email,
+    .index__news .newsletter__form .newsletter__input-name,
+    .index__brand .brand__search-box .brand__search-input {
+      font-size: 24px !important;
+    }
+
+    .slider-wrapper {
+      max-width: 800px;
+      margin-left: 20%;
+    }
+
+    .accordion {
+      width: 800px;
+      margin-left: -80%;
+      &__header {
+        font-size: 34px;
+      }
+      &__item {
+        &__title {
+          font-size: 30px;
+        }
+        &__content ul li {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .index__right .product-list-vruca-ponuda,
+    .index__right .index__product-list-vruca-ponuda,
+    .index__product-list-akcija,
+    .index__product-list-novo,
+    .index__product-list-preporucujemo,
+    .index__product-list-rasprodaja {
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 1240px) {
+    .index__right {
+      display: flex !important;
+    }
+    .index__right{
+      .brand{
+        display: flex !important;
+      }
+    }
+    .index_news{
+      display: flex !important;
+    }
+    .index__left {
+      display: none !important;
+    }
+
+    .index__right .news .newsletter {
+      display: flex;
+    }
+    .index__right .brand .brand__search {
+      display: flex;
+    }
+
+    .index__brand,
+    .index__news {
+      display: flex;
+      width: 1000px;
+    }
+    .index__right .brand .brand__search {
+      padding: 40px 210px 100px !important;
+      margin: 2% !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #005574;
+      color: white;
+      text-align: center;
+      width: 100%;
+      .brand__search-box .brand__search-input {
+        width: 400px;
+      }
+    }
+  }
 }
 footer .slider-controls a {
   margin-left: 90px;

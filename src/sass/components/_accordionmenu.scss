@@ -1,4 +1,3 @@
-@import "../base/mixins";
 @import "../base/variables";
 @import "../base/fonts";
 
@@ -31,7 +30,6 @@
   &__item {
     border-bottom: 1px solid grey;
 
-    // The title for each item (and its optional icon)
     .accordion__title {
       background: white;
       color: black;
@@ -44,18 +42,14 @@
       align-items: center;
       transition: background 0.3s ease-in-out;
 
-      // Optional icon element inside the title
       .accordion__icon {
-        /* Add any specific styles for the icon here */
       }
     }
 
-    // Remove default link styling if a title is an anchor
     a {
       text-decoration: none;
     }
 
-    // The collapsible content of each item
     .accordion__content {
       display: none;
       background: white;
@@ -78,7 +72,6 @@
           &:hover {
             background: $cyan-hover;
           }
-          // You can remove or merge duplicate hover rules if desired:
           &:hover {
             background-color: rgba(128, 128, 128, 0.43);
           }
