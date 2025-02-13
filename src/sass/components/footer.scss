@@ -7,34 +7,59 @@ footer {
     text-align: left;
     padding: 2px 8%;
 
-    &-column {
+    &__columns {
+      display: flex;
+      width: 100%;
+      margin-left: 10%;
+    }
+
+    &__column {
       flex: 1;
       max-width: 200px;
       border-right: 1px solid $base-grey;
       padding-left: 10px;
-
-      h3 {
-        font-size: 12px;
-        margin-bottom: 10px;
-      }
-
-      a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        margin-bottom: 5px;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
 
       &:first-child {
         border-left: 1px solid $base-grey;
         padding: 1px 4%;
       }
     }
+
+    &__title {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 10px;
+      margin-bottom: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .bottom-footer {
+    background-color: #004C75;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+
+    &__link {
+      color: #B3E5FC;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 @include responsive-footer;
+
+

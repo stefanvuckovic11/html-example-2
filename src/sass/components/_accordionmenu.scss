@@ -11,7 +11,8 @@
   border: 1px solid rgba(128, 128, 128, 0.2);
   overflow: hidden;
   margin-bottom: 3.5%;
-  .accordion-header {
+
+  &__header {
     background: $navbar-dark-blue;
     color: white;
     font-size: 18px;
@@ -21,13 +22,17 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+
     i {
       font-size: 20px;
     }
   }
-  .accordion-item {
+
+  &__item {
     border-bottom: 1px solid grey;
-    .accordion-title {
+
+    // The title for each item (and its optional icon)
+    .accordion__title {
       background: white;
       color: black;
       font-size: 16px;
@@ -38,32 +43,46 @@
       justify-content: space-between;
       align-items: center;
       transition: background 0.3s ease-in-out;
+
+      // Optional icon element inside the title
+      .accordion__icon {
+        /* Add any specific styles for the icon here */
+      }
     }
-    a{
+
+    // Remove default link styling if a title is an anchor
+    a {
       text-decoration: none;
     }
-    .accordion-content {
+
+    // The collapsible content of each item
+    .accordion__content {
       display: none;
       background: white;
       padding: 10px 0;
       font-size: 14px;
       border-top: 1px solid grey;
+
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
+
         li {
           padding: 12px 20px;
           font-size: 14px;
           border-bottom: 1px solid grey;
           cursor: pointer;
           transition: background 0.3s ease-in-out;
+
           &:hover {
             background: $cyan-hover;
           }
-          &:hover{
+          // You can remove or merge duplicate hover rules if desired:
+          &:hover {
             background-color: rgba(128, 128, 128, 0.43);
           }
+
           &:last-child {
             border-bottom: none;
           }
@@ -73,7 +92,7 @@
   }
 }
 
-.slider{
-  .slider-container{
+.slider {
+  .slider-container {
   }
 }

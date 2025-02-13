@@ -10,53 +10,58 @@
 </head>
 <body>
 
+
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="navflex-container1">
-            <div class="flex-item1">
+    <div class="navbar__container">
+        <div class="navbar__top">
+            <div class="navbar__languages">
                 <a href="#">Engleski</a>
                 <a href="#">Crnogorski</a>
                 <p>Svakog dana od 8:00 do 21:00 h, osim nedjeljom | Tel: +382 20 656 772</p>
             </div>
-            <div class="flex-item2">
+            <div class="navbar__account">
                 <a href="#">On-line podrska</a>
                 <a href="#">Registracija</a>
                 <a href="#">Prijava</a>
             </div>
         </div>
-        <div class="navflex-container2">
-            <div class="flex-item-centrometal">
+        <div class="navbar__middle">
+            <div class="navbar__logo">
                 <p id="centrometal-text">CENTRO<span>METAL</span></p>
             </div>
-            <div class="flex-centrometal-search">
+            <div class="navbar__search">
                 <span class="fa fa-search"></span>
-                <input type="text" placeholder="Unesite šifru ili pojam pretraživanja">
+                <div>
+                    <input type="text" placeholder="Unesite šifru ili pojam pretraživanja">
+                </div>
             </div>
-            <i class="fa fa-facebook-f"></i>
-            <div class="flex-centrometal-cart">
+            <div class="navbar__social">
+                <i class="fa fa-facebook-f"></i>
+            </div>
+            <div class="navbar__cart">
                 <p>MOJA KORPA</p>
                 <p>0.00€</p>
                 <i class="fa fa-shopping-cart"></i>
             </div>
         </div>
-        <div class="navflex-container3">
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="navbar__bottom">
+            <input type="checkbox" id="nav-toggle" class="navbar__toggle">
             <div>
-                <label for="nav-toggle" class="burger" style="display: none">
+                <label for="nav-toggle" class="navbar__burger" style="display: none">
                     <i class="fa fa-bars"></i>
                 </label>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#"><i class="fa fa-home"></i></a></li>
-                <li><a href="#">Akcija</a></li>
-                <li><a href="#">Rasprodaja</a></li>
-                <li><a href="#">Katalozi</a></li>
-                <li><a href="#">Novosti</a></li>
-                <li><a href="#">O nama</a></li>
-                <li><a href="#">Uradi sam</a></li>
-                <li><a href="#">Vip kartica</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Informacije</a></li>
+            <ul class="navbar__menu">
+                <li class="navbar__menu-item"><a href="#"><i class="fa fa-home"></i></a></li>
+                <li class="navbar__menu-item"><a href="#">Akcija</a></li>
+                <li class="navbar__menu-item"><a href="#">Rasprodaja</a></li>
+                <li class="navbar__menu-item"><a href="#">Katalozi</a></li>
+                <li class="navbar__menu-item"><a href="#">Novosti</a></li>
+                <li class="navbar__menu-item"><a href="#">O nama</a></li>
+                <li class="navbar__menu-item"><a href="#">Uradi sam</a></li>
+                <li class="navbar__menu-item"><a href="#">Vip kartica</a></li>
+                <li class="navbar__menu-item"><a href="#">Kontakt</a></li>
+                <li class="navbar__menu-item"><a href="#">Informacije</a></li>
             </ul>
         </div>
     </div>
@@ -68,23 +73,26 @@
         <div class="product-container">
             <div class="product-slider">
                 <ul class="bxslider">
-                    <li><img src="src/images/1.png" alt="Product Image 1"></li>
-                    <li><img src="src/images/2.png" alt="Product Image 2"></li>
-                    <li><img src="src/images/3.png" alt="Product Image 3"></li>
-                    <li><img src="src/images/frizider.png" alt="Product Image 1"></li>
-                    <li><img src="src/images/makita.jpg" alt="Product Image 2"></li>
-                    <li><img src="src/images/cipele.png" alt="Product Image 3"></li>
+                    <li><img src="src/images/2.png" alt="Product Image 1"></li>
+                    <li><img src="src/images/3.png" alt="Product Image 2"></li>
+                    <li><img src="src/images/2.png" alt="Product Image 3"></li>
+                    <li><img src="src/images/2.png" alt="Product Image 1"></li>
+                    <li><img src="src/images/3.png" alt="Product Image 2"></li>
+                    <li><img src="src/images/2.png" alt="Product Image 3"></li>
+
                 </ul>
                 <div class="product-slider-thumb">
                     <a href="#" class="slider-prev-product">❮</a>
                     <a href="#" class="slider-next-product">❯</a>
                     <div id="bx-pager">
-                        <a><img src="src/images/1.png" alt="Thumbnail 1"></a>
                         <a><img src="src/images/2.png" alt="Thumbnail 2"></a>
                         <a><img src="src/images/3.png" alt="Thumbnail 3"></a>
-                        <a><img src="src/images/frizider.png" alt="Thumbnail 4"></a>
-                        <a><img src="src/images/makita.jpg" alt="Thumbnail 5"></a>
-                        <a><img src="src/images/cipele.png" alt="Thumbnail 6"></a>
+                        <a><img src="src/images/2.png" alt="Thumbnail 2"></a>
+                        <a><img src="src/images/2.png" alt="Thumbnail 2"></a>
+                        <a><img src="src/images/3.png" alt="Thumbnail 3"></a>
+                        <a><img src="src/images/2.png" alt="Thumbnail 2"></a>
+
+
                     </div>
                 </div>
 
@@ -225,40 +233,36 @@
         </div>
     </div>
     <div class="right-bar">
-        <div class="box video-box">
-            <div class="video-wrapper">
-                <img src="src/images/cat1.png" alt="Video Thumbnail" class="video-thumbnail">
-                <div class="play-button"></div>
-                <video class="video-content" src="src/videos/cat1.mp4" loop style="display: none;" muted>
-                </video>
+        <div class="video-box">
+            <div class="video-box__wrapper">
+                <img src="src/images/cat1.png" alt="Video Thumbnail" class="video-box__thumbnail">
+                <div class="video-box__play-button"></div>
+                <video class="video-box__content" src="src/videos/cat1.mp4" loop style="display: none;" muted></video>
             </div>
         </div>
-        <div class="box video-box">
-            <div class="video-wrapper">
-                <img src="src/images/cat2.png" alt="Video Thumbnail" class="video-thumbnail">
-                <div class="play-button"></div>
-                <video class="video-content" src="src/videos/cat2.mp4" loop style="display: none;" muted>
-                </video>
+        <div class="video-box">
+            <div class="video-box__wrapper">
+                <img src="src/images/cat2.png" alt="Video Thumbnail" class="video-box__thumbnail">
+                <div class="video-box__play-button"></div>
+                <video class="video-box__content" src="src/videos/cat2.mp4" loop style="display: none;" muted></video>
             </div>
         </div>
         <div class="news">
-            <div class="newsletter">
-                <div class="newsletter-header">
-                    <i class="fa fa-envelope"></i> PRIJAVI SE NA NEWSLETTER
+            <div class="news__inner">
+                <div class="news__header">
+                    <i class="news__icon fa fa-envelope"></i> PRIJAVI SE NA NEWSLETTER
                 </div>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="E-mail">
-                    <input type="text" placeholder="Ime i prezime">
-                    <button type="submit">PRIJAVI SE</button>
+                <form class="news__form">
+                    <input type="email" class="news__input" placeholder="E-mail">
+                    <input type="text" class="news__input" placeholder="Ime i prezime">
+                    <button type="submit" class="news__button">PRIJAVI SE</button>
                 </form>
             </div>
         </div>
-    </div>
-</div>
+    </div></div>
 
 
 <footer>
-    <div class="bx-wrapper">
         <ul class="bxslider-second">
             <li><img src="src/images/sony.png" alt="Slide A"></li>
             <li><img src="src/images/panasonic.png" alt="Slide B"></li>
@@ -280,47 +284,46 @@
             <a href="#" class="slider-prev">❮</a>
             <a href="#" class="slider-next">❯</a>
         </div>
-    </div>
-
     <div class="bottom">
-        <div class="bottom-column">
-            <h3>Informacije</h3>
-            <a href="#">O nama</a>
-            <a href="#">Gdje kupiti</a>
-            <a href="#">Zapošljavanje</a>
-            <a href="#">Aktivnosti</a>
-        </div>
-        <div class="bottom-column">
-            <h3>Aktivnosti</h3>
-            <a href="#">Akcije</a>
-            <a href="#">Noviteti</a>
-            <a href="#">Rasprodaja</a>
-            <a href="#">Marketing</a>
-        </div>
-        <div class="bottom-column">
-            <h3>Moja strana</h3>
-            <a href="#">Registracija</a>
-            <a href="#">Prijava</a>
-            <a href="#">Korisnička strana</a>
-            <a href="#">Korpa</a>
-        </div>
-        <div class="bottom-column">
-            <h3>Plaćanje i dostava</h3>
-            <a href="#">Načini plaćanja</a>
-            <a href="#">Sigurnost plaćanja</a>
-            <a href="#">Brza i pouzdana dostava</a>
-            <a href="#">Odaberite datum dostave</a>
-        </div>
-        <div class="bottom-column">
-            <h3>Povrat i zamjena</h3>
-            <a href="#">Servis</a>
-            <a href="#">Reklamacije</a>
+        <div class="bottom__columns">
+            <div class="bottom__column">
+                <h3 class="bottom__title">Informacije</h3>
+                <a href="#" class="bottom__link">O nama</a>
+                <a href="#" class="bottom__link">Gdje kupiti</a>
+                <a href="#" class="bottom__link">Zapošljavanje</a>
+                <a href="#" class="bottom__link">Aktivnosti</a>
+            </div>
+            <div class="bottom__column">
+                <h3 class="bottom__title">Aktivnosti</h3>
+                <a href="#" class="bottom__link">Akcije</a>
+                <a href="#" class="bottom__link">Noviteti</a>
+                <a href="#" class="bottom__link">Rasprodaja</a>
+                <a href="#" class="bottom__link">Marketing</a>
+            </div>
+            <div class="bottom__column">
+                <h3 class="bottom__title">Moja strana</h3>
+                <a href="#" class="bottom__link">Registracija</a>
+                <a href="#" class="bottom__link">Prijava</a>
+                <a href="#" class="bottom__link">Korisnička strana</a>
+                <a href="#" class="bottom__link">Korpa</a>
+            </div>
+            <div class="bottom__column">
+                <h3 class="bottom__title">Plaćanje i dostava</h3>
+                <a href="#" class="bottom__link">Načini plaćanja</a>
+                <a href="#" class="bottom__link">Sigurnost plaćanja</a>
+                <a href="#" class="bottom__link">Brza i pouzdana dostava</a>
+                <a href="#" class="bottom__link">Odaberite datum dostave</a>
+            </div>
+            <div class="bottom__column">
+                <h3 class="bottom__title">Povrat i zamjena</h3>
+                <a href="#" class="bottom__link">Servis</a>
+                <a href="#" class="bottom__link">Reklamacije</a>
+            </div>
         </div>
     </div>
     <div class="bottom-footer">
-        © 2016 Copyright by <a href="#">centrometal.me</a> All Rights Reserved.
+        © 2016 Copyright by <a href="#" class="bottom-footer__link">centrometal.me</a> All Rights Reserved.
     </div>
-
 </footer>
 <!-- vendor:js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -330,15 +333,18 @@
         var sliderSecond = $('.bxslider-second').bxSlider({
             nextText: '',
             prevText: '',
-            minSlides: 5,
-            maxSlides: 5,
+            minSlides: 3,
+            maxSlides: 3,
             moveSlides: 1,
-            slideWidth: '200%',
+            slideWidth: '100%',
             slideMargin: 0,
             auto: false,
             controls: true,
             pager: false,
-            infiniteLoop: true
+            infiniteLoop: true,
+            adaptiveHeight: false,
+            maxWidth:1,
+
         });
 
         $('.slider-prev').click(function(e){
@@ -415,11 +421,11 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.video-box').forEach(function (box) {
-            var playButton = box.querySelector('.play-button');
+            var playButton = box.querySelector('.video-box__play-button');
             if (playButton) {
                 playButton.addEventListener('click', function () {
-                    var thumbnail = box.querySelector('.video-thumbnail');
-                    var video = box.querySelector('.video-content');
+                    var thumbnail = box.querySelector('.video-box__thumbnail');
+                    var video = box.querySelector('.video-box__content');
                     if (thumbnail) {
                         thumbnail.style.display = 'none';
                     }
