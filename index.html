@@ -26,40 +26,38 @@
                 <a href="#" class="navbar__account-link">Prijava</a>
             </div>
         </div>
+
         <div class="navbar__middle">
             <div class="navbar__logo">
                 <p class="navbar__logo-text" id="centrometal-text">
                     CENTRO<span class="navbar__logo-highlight">METAL</span>
                 </p>
             </div>
+
             <div class="navbar__search">
                 <span class="navbar__search-icon fa fa-search"></span>
-                <div class="navbar__search-box">
-                    <input
-                            type="text"
-                            class="navbar__search-input"
-                            placeholder="Unesite šifru ili pojam pretraživanja"
-                    >
-                </div>
+                <input type="text" class="navbar__search-input" placeholder="Unesite šifru ili pojam pretraživanja">
             </div>
+
             <div class="navbar__social">
                 <i class="navbar__social-icon fa fa-facebook-f"></i>
             </div>
+
             <div class="navbar__cart">
                 <p class="navbar__cart-text">MOJA KORPA</p>
                 <p class="navbar__cart-price">0.00€</p>
                 <i class="navbar__cart-icon fa fa-shopping-cart"></i>
             </div>
         </div>
+
         <div class="navbar__bottom">
             <input type="checkbox" id="nav-toggle" class="navbar__toggle">
-            <div class="navbar__burger-wrapper">
-                <label for="nav-toggle" class="navbar__burger" style="display: none">
-                    <i class="navbar__burger-icon fa fa-bars"></i>
-                </label>
-            </div>
+            <label for="nav-toggle" class="navbar__burger">
+                <i class="navbar__burger-icon fa fa-bars"></i>
+            </label>
+
             <ul class="navbar__menu">
-                <li class="navbar__menu-item">
+                <li class="navbar__menu-item navbar__menu-item--home">
                     <a href="#" class="navbar__menu-link">
                         <i class="navbar__menu-icon fa fa-home"></i>
                     </a>
@@ -97,7 +95,7 @@
 </nav>
 <main class="index">
     <div class="index__left">
-        <div class="index__accordion accordion">
+        <div class="index__accordion">
             <div class="accordion__header">
                 <i class="fa fa-th-large"></i>
                 <span class="accordion__header-text">Kupuj po kategoriji</span>
@@ -200,7 +198,7 @@
                 <a href="#" class="accordion__title">KUPOVINA PREKO T-COMA</a>
             </div>
         </div>
-        <div class="index__brand brand">
+        <div class="brand index__brand">
             <div class="brand__search">
                 <div class="brand__search-header">
                     <i class="fa fa-envelope"></i>
@@ -214,62 +212,49 @@
                 </div>
             </div>
         </div>
-        <div class="index__brand-promo brand-promo">
+        <div class="brand-promo index__brand-promo">
             <img src="src/images/cipele.png" alt="Veneno Shoes" class="brand-promo__img">
         </div>
-        <div class="index__news news">
-            <div class="newsletter">
-                <div class="newsletter__header">
-                    <i class="fa fa-envelope"></i>
-                    <span class="newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
-                </div>
-                <form class="newsletter__form">
-                    <input type="email" class="newsletter__input-email" placeholder="E-mail">
-                    <input type="text" class="newsletter__input-name" placeholder="Ime i prezime">
-                    <button type="submit" class="newsletter__button-submit">PRIJAVI SE</button>
-                </form>
+        <div class="newsletter index__news">
+            <div class="newsletter__header">
+                <i class="fa fa-envelope"></i>
+                <span class="newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
             </div>
+            <form class="newsletter__form">
+                <input type="email" class="newsletter__input-email" placeholder="E-mail">
+                <input type="text" class="newsletter__input-name" placeholder="Ime i prezime">
+                <button type="submit" class="newsletter__button-submit">PRIJAVI SE</button>
+            </form>
         </div>
-        <div class="index__product-card product-card">
+        <div class="product-card index__product-card">
             <img src="src/images/makita.jpg" alt="Makita alat" class="product-card__img">
             <div class="product-card__info">
-                <h3 class="product-card__title">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h3>
-                <p class="product-card__description">
-                    Etiam dolor tortor, facilisis id ante id, blandit convallis quam.
-                    Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.
-                </p>
+                <h3 class="product-card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                <p class="product-card__description">Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.</p>
                 <button class="btn-primary product-card__button">OPŠIRNIJE</button>
             </div>
         </div>
-        <div class="index__product-card product-card">
+        <div class="product-card index__product-card">
             <img src="src/images/raznecipele.png" alt="Radne cipele" class="product-card__img">
             <div class="product-card__info">
                 <h3 class="product-card__title">Lorem ipsum dolor sit amet,</h3>
-                <p class="product-card__description">
-                    Etiam dolor tortor, facilisis id ante id, blandit convallis quam.
-                    Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.
-                </p>
+                <p class="product-card__description">Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.</p>
                 <button class="btn-primary product-card__button">OPŠIRNIJE</button>
             </div>
         </div>
-        <div class="index__brand-promo brand-promo">
+        <div class="brand-promo index__brand-promo">
             <img src="src/images/cipele.png" alt="Veneno Shoes" class="brand-promo__img">
         </div>
     </div>
-
     <div class="index__right">
-        <div class="index__slider-wrapper slider-wrapper">
+        <div class="index__slider-wrapper">
             <div class="bx-wrapper">
                 <ul class="bxslider">
                     <li class="slider__item">
                         <img src="src/images/sega.jpg" alt="Slide 1" class="slider__img">
                         <div class="slider__overlay">
                             <div class="slider__label">
-                <span class="slider__label-text">
-                  Motorna <br><b class="slider__label-bold">Šega</b>
-                </span>
+                                <span class="slider__label-text">Motorna <br><b class="slider__label-bold">Šega</b></span>
                                 <a href="#" class="slider__product-button">VIDI PROIZVOD</a>
                             </div>
                         </div>
@@ -278,9 +263,7 @@
                         <img src="src/images/sega.jpg" alt="Slide 2" class="slider__img">
                         <div class="slider__overlay">
                             <div class="slider__label">
-                <span class="slider__label-text">
-                  Motorna <br><b class="slider__label-bold">Šega</b>
-                </span>
+                                <span class="slider__label-text">Motorna <br><b class="slider__label-bold">Šega</b></span>
                                 <a href="#" class="slider__product-button">VIDI PROIZVOD</a>
                             </div>
                         </div>
@@ -289,9 +272,7 @@
                         <img src="src/images/sega.jpg" alt="Slide 3" class="slider__img">
                         <div class="slider__overlay">
                             <div class="slider__label">
-                <span class="slider__label-text">
-                  Motorna <br><b class="slider__label-bold">Šega</b>
-                </span>
+                                <span class="slider__label-text">Motorna <br><b class="slider__label-bold">Šega</b></span>
                                 <a href="#" class="slider__product-button">VIDI PROIZVOD</a>
                             </div>
                         </div>
@@ -300,19 +281,16 @@
                         <img src="src/images/sega.jpg" alt="Slide 4" class="slider__img">
                         <div class="slider__overlay">
                             <div class="slider__label">
-                <span class="slider__label-text">
-                  Motorna <br><b class="slider__label-bold">Šega</b>
-                </span>
+                                <span class="slider__label-text">Motorna <br><b class="slider__label-bold">Šega</b></span>
                                 <a href="#" class="slider__product-button">VIDI PROIZVOD</a>
                             </div>
                         </div>
                     </li>
                 </ul>
-                <div class="index__progress-bar progress-bar"></div>
+                <div class="progress-bar index__progress-bar"></div>
             </div>
         </div>
-
-        <div class="index__trapezoid-hot-offer">
+        <div class="trapezoid-hot index__trapezoid-hot-offer">
             <p class="trapezoid-hot-paragraph">
                 <i class="fa fa-fire"></i>
                 <span class="trapezoid-hot-text">VRUĆA PONUDA</span>
@@ -361,11 +339,9 @@
             </div>
         </div>
         <div class="index__products-button-hot-offer">
-            <button class="index__button-hot-offer">
-                POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
-            </button>
+            <button class="index__button-hot-offer">POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE</button>
         </div>
-        <div class="index__trapezoid-action">
+        <div class="trapezoid-action index__trapezoid-action">
             <p class="trapezoid-action__text">
                 <i class="fa fa-tag"></i>
                 <span class="trapezoid-action__text-content">AKCIJA - POPUSTI</span>
@@ -414,11 +390,9 @@
             </div>
         </div>
         <div class="index__products-button-action">
-            <button class="index__button-action">
-                POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
-            </button>
+            <button class="index__button-action">POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE</button>
         </div>
-        <div class="index__trapezoid-recommended">
+        <div class="trapezoid-recommended index__trapezoid-recommended">
             <p class="trapezoid-recommended__text">
                 <i class="fa fa-star"></i>
                 <span class="trapezoid-recommended__text-content">PREPORUČUJEMO</span>
@@ -467,11 +441,9 @@
             </div>
         </div>
         <div class="index__products-button-recommended">
-            <button class="index__button-recommended">
-                POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
-            </button>
+            <button class="index__button-recommended">POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE</button>
         </div>
-        <div class="index__trapezoid-new">
+        <div class="trapezoid-new index__trapezoid-new">
             <p class="trapezoid-new__text">
                 <i class="fa fa-heart"></i>
                 <span class="trapezoid-new__text-content">NOVO U PONUDI</span>
@@ -520,11 +492,9 @@
             </div>
         </div>
         <div class="index__products-button-new">
-            <button class="index__button-new">
-                POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
-            </button>
+            <button class="index__button-new">POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE</button>
         </div>
-        <div class="index__trapezoid-sale">
+        <div class="trapezoid-sale index__trapezoid-sale">
             <p class="trapezoid-sale__text">
                 <i class="fa fa-percent"></i>
                 <span class="trapezoid-sale__text-content">RASPRODAJA</span>
@@ -573,12 +543,9 @@
             </div>
         </div>
         <div class="index__products-button-sale">
-            <button class="index__button-sale">
-                POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
-            </button>
+            <button class="index__button-sale">POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE</button>
         </div>
-
-        <div class="index__brand brand">
+        <div class="brand index__brand">
             <div class="brand__search">
                 <div class="brand__search-header">
                     <i class="fa fa-envelope"></i>
@@ -592,18 +559,16 @@
                 </div>
             </div>
         </div>
-        <div class="index__news news">
-            <div class="newsletter">
-                <div class="newsletter__header">
-                    <i class="fa fa-envelope"></i>
-                    <span class="newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
-                </div>
-                <form class="newsletter__form">
-                    <input type="email" class="newsletter__input-email" placeholder="E-mail">
-                    <input type="text" class="newsletter__input-name" placeholder="Ime i prezime">
-                    <button type="submit" class="newsletter__button-submit">PRIJAVI SE</button>
-                </form>
+        <div class="newsletter index__news">
+            <div class="newsletter__header">
+                <i class="fa fa-envelope"></i>
+                <span class="newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
             </div>
+            <form class="newsletter__form">
+                <input type="email" class="newsletter__input-email" placeholder="E-mail">
+                <input type="text" class="newsletter__input-name" placeholder="Ime i prezime">
+                <button type="submit" class="newsletter__button-submit">PRIJAVI SE</button>
+            </form>
         </div>
     </div>
 </main>
