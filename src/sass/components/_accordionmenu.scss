@@ -1,15 +1,18 @@
 @import "../base/variables";
 @import "../base/fonts";
 
-.accordion {
+.index__left__accordion {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background: grey;
+  width: 500%;
   font-family: Arial, sans-serif;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: 3.5%;
+  @media screen and (max-width: 1240px) {
+    max-width: 850px;
+    margin-left: -290px;
+    margin-top: 40px;
+  }
 
   &__header {
     background: $navbar-dark-blue;
@@ -21,16 +24,40 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
-
+    @media screen and (max-width: 1240px) {
+      width: 60px;
+      margin-left: 455px;
+      margin-top: -105px;
+      height: 50px;
+      background: $general-cyan;
+      position: relative;
+      z-index: 999999;
+      margin-bottom: 40px;
+    }
     i {
-      font-size: 20px;
+      font-size:30px;
+      @media screen and (max-width: 1240px) {
+        display: flex;
+        font-size:40px;
+        position: relative;
+        z-index: 999999;
+      }
+    }
+
+  }
+  &__header-text{
+    @media screen and (max-width: 1240px) {
+      display: none;
     }
   }
 
   &__item {
     border-bottom: 1px solid grey;
+    @media screen and (max-width: 1240px) {
+      width: 880px;
+    }
 
-    .accordion__title {
+    .index__left__accordion__title {
       background: white;
       color: black;
       font-size: 16px;
@@ -41,28 +68,33 @@
       justify-content: space-between;
       align-items: center;
       transition: background 0.3s ease-in-out;
-
-      .accordion__icon {
+      @media screen and (max-width: 1240px) {
+        color: white;
+        background-color: $general-cyan;
       }
+
     }
 
     a {
       text-decoration: none;
     }
 
-    .accordion__content {
+    .index__left__accordion__content {
       display: none;
       background: white;
       padding: 10px 0;
       font-size: 14px;
       border-top: 1px solid grey;
 
-      ul {
+      .index__left__accordion__list {
+
         list-style: none;
         padding: 0;
         margin: 0;
 
-        li {
+
+        .index__left__accordion__list-item {
+
           padding: 12px 20px;
           font-size: 14px;
           border-bottom: 1px solid grey;
