@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="dist/css/main.css?v=1548800917231"/>
     <!-- endinject -->
 </head>
-<body>
+<body id="open-product-page">
 
 
 <nav class="navbar">
@@ -48,12 +48,12 @@
             </div>
         </div>
 
-        <div class="navbar__bottom">
+        <div class="navbar__bottom" id="open-product">
             <input type="checkbox" id="nav-toggle" class="navbar__bottom__toggle">
             <label for="nav-toggle" class="navbar__bottom__burger">
-                <i class="navbar__bottom__burger__icon fa fa-bars"></i>
+                <i class="navbar__bottom__burger__icon fa fa-bars" id="open-product-burger"></i>
             </label>
-            <ul class="navbar__bottom__menu">
+            <ul class="navbar__bottom__menu ">
                 <li class="navbar__bottom__menu__item navbar__bottom__menu__item--home">
                     <a href="#" class="navbar__bottom__menu__link">
                         <i class="navbar__bottom__menu__link__icon fa fa-home"></i>
@@ -93,28 +93,28 @@
 
 <main class="product-detail">
     <div class="product-detail__content">
-        <h1 class="product-detail__breadcrumb">NASLOVNA / PROIZVODI / GRUPA ROBE</h1>
+        <h1 class="product-detail__breadcrumb">
+            NASLOVNA / PROIZVODI /
+            <span class="product-detail__breadcrumb__current"> GRUPA ROBE </span>
+        </h1>
         <div class="product-detail__body">
             <div class="product-detail__gallery">
                 <div class="product-detail__gallery__slider">
                     <ul class="bxslider product-detail__slider__list">
                         <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/2.png" alt="Product Image 1">
+                            <img class="product-detail__slider__list-item__img" src="src/images/microwave2.jpg" alt="Product Image 1">
                         </li>
                         <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/3.png" alt="Product Image 2">
+                            <img class="product-detail__slider__list-item__img" src="src/images/microwave1.jpg" alt="Product Image 2">
                         </li>
                         <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/2.png" alt="Product Image 3">
+                            <img class="product-detail__slider__list-item__img" src="src/images/microwave3.jpg" alt="Product Image 3">
                         </li>
                         <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/2.png" alt="Product Image 1">
+                            <img class="product-detail__slider__list-item__img" src="src/images/microwave4.jpg" alt="Product Image 1">
                         </li>
                         <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/3.png" alt="Product Image 2">
-                        </li>
-                        <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/2.png" alt="Product Image 3">
+                            <img class="product-detail__slider__list-item__img" src="src/images/microwave5.jpg" alt="Product Image 2">
                         </li>
                     </ul>
                 </div>
@@ -123,29 +123,26 @@
                     <a href="#" class="product-detail__gallery__thumbs__next">❯</a>
                     <div id="bx-pager" class="product-detail__gallery__thumbs__list">
                         <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/2.png" alt="Thumbnail 2">
+                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave2.jpg" alt="Thumbnail 2">
                         </a>
                         <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/3.png" alt="Thumbnail 3">
+                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave1.jpg" alt="Thumbnail 3">
                         </a>
                         <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/2.png" alt="Thumbnail 2">
+                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave3.jpg" alt="Thumbnail 2">
                         </a>
                         <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/2.png" alt="Thumbnail 2">
+                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave4.jpg" alt="Thumbnail 2">
                         </a>
                         <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/3.png" alt="Thumbnail 3">
-                        </a>
-                        <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/2.png" alt="Thumbnail 2">
+                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave5.jpg" alt="Thumbnail 3">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="product-detail__info">
                 <div class="product-detail__info__name">
-                    <h1 class="product-detail__info__name__title">Gorenje WD 95140 Mašina za pranje i sušenje</h1>
+                    <h1 class="product-detail__info__name__title">SHARP WD 95140 Mikrotalasna</h1>
                 </div>
                 <div class="product-detail__info__price-code">
                     <h2 class="product-detail__info__price-code__price">554€</h2>
@@ -157,13 +154,12 @@
                 </div>
                 <div class="product-detail__info__general">
                     <span class="product-detail__info__general__spec">Šifra artikla: 7248</span><br>
-                    <span class="product-detail__info__general__spec">Broj okretaja centrifuge: 1400,00 okr/min</span><br>
-                    <span class="product-detail__info__general__spec">Elektronsko upravljanje: DA</span><br>
-                    <span class="product-detail__info__general__spec">Samostojeći: DA</span><br>
-                    <span class="product-detail__info__general__spec">Punjenje sprijeda: DA</span><br>
-                    <span class="product-detail__info__general__spec">Kapacitet pranja: 9 kg</span><br>
-                    <span class="product-detail__info__general__spec">Kapacitet sušenja: 7 kg</span><br>
-                    <span class="product-detail__info__general__spec">Kapacitet nečeg: 7 kg</span>
+                    <span class="product-detail__info__general__spec">Snaga: 900 W</span><br>
+                    <span class="product-detail__info__general__spec">Kapacitet: 20 L</span><br>
+                    <span class="product-detail__info__general__spec">Defrost funkcija: DA</span><br>
+                    <span class="product-detail__info__general__spec">Grill funkcija: DA</span><br>
+                    <span class="product-detail__info__general__spec">Sensor kuhanje: DA</span><br>
+                    <span class="product-detail__info__general__spec">Digitalno upravljanje: DA</span>
                 </div>
                 <div class="product-detail__info__slider-cart">
                     <div class="product-detail__info__slider-cart__cart">
@@ -310,34 +306,38 @@
         </div>
     </div>
     <aside class="product-detail__sidebar">
-        <div class="video-box">
-            <div class="video-box__wrapper">
-                <img class="video-box__thumbnail" src="src/images/cat1.png" alt="Video Thumbnail">
-                <div class="video-box__play-button"></div>
-                <video class="video-box__content" src="src/videos/cat1.mp4" loop style="display: none;" muted></video>
+        <div class="product-detail__sidebar__video-box">
+            <div class="product-detail__sidebar__video-box__wrapper">
+                <img class="product-detail__sidebar__video-box__thumbnail" src="src/images/cat1.png" alt="Video Thumbnail">
+                <div class="product-detail__sidebar__video-box__play-button"></div>
+                <video class="product-detail__sidebar__video-box__content" src="src/videos/cat1.mp4" loop style="display: none;" muted></video>
             </div>
         </div>
-        <div class="video-box">
-            <div class="video-box__wrapper">
-                <img class="video-box__thumbnail" src="src/images/cat2.png" alt="Video Thumbnail">
-                <div class="video-box__play-button"></div>
-                <video class="video-box__content" src="src/videos/cat2.mp4" loop style="display: none;" muted></video>
+        <div class="product-detail__sidebar__video-box">
+            <div class="product-detail__sidebar__video-box__wrapper">
+                <img class="product-detail__sidebar__video-box__thumbnail" src="src/images/cat2.png" alt="Video Thumbnail">
+                <div class="product-detail__sidebar__video-box__play-button"></div>
+                <video class="product-detail__sidebar__video-box__content" src="src/videos/cat2.mp4" loop style="display: none;" muted></video>
             </div>
         </div>
-        <div class="news">
-            <div class="news__inner">
-                <div class="news__header">
-                    <i class="news__icon fa fa-envelope"></i>
-                    <span class="news__header-text">PRIJAVI SE NA NEWSLETTER</span>
+        <div class="product-detail__sidebar__news">
+            <div class="product-detail__sidebar__news__inner">
+                <div class="product-detail__sidebar__news__header">
+                    <i class="product-detail__sidebar__news__icon fa fa-envelope"></i>
+                    <span class="product-detail__sidebar__news__header-text">PRIJAVI SE NA NEWSLETTER</span>
                 </div>
-                <form class="news__form">
-                    <input type="email" class="news__input" placeholder="E-mail">
-                    <input type="text" class="news__input" placeholder="Ime i prezime">
-                    <button type="submit" class="news__button">PRIJAVI SE</button>
+                <form class="product-detail__sidebar__news__form">
+                    <input type="email" class="product-detail__sidebar__news__input" placeholder="E-mail">
+                    <input type="text" class="product-detail__sidebar__news__input" placeholder="Ime i prezime">
+                    <button type="submit" class="product-detail__sidebar__news__button">PRIJAVI SE</button>
                 </form>
             </div>
         </div>
     </aside>
+    <div class="product-detail__modal" id="imageModal">
+        <button class="product-detail__modal__close">&times;</button>
+        <img class="product-detail__modal__image" id="modalImage" src="" alt="Full Screen Image">
+    </div>
 </main>
 
 <footer class="footer">
@@ -410,6 +410,7 @@
         </p>
     </div>
 </footer>
+
 <!-- vendor:js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>

@@ -35,7 +35,8 @@ $(document).ready(function() {
         adaptiveHeight: true,
         responsive: false,
         touchEnabled: false,
-        useCSS: false,
+        useCSS: true,
+        maxSlides:1,
     });
 
     var thumbSlider = $('#bx-pager').bxSlider({
@@ -107,3 +108,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+$('.product-detail__slider__list-item__img').on('click', function () {
+    var src = $(this).attr('src');
+    $('#modalImage').attr('src', src);
+    $('#imageModal').fadeIn();
+});
+
+$('.modal__close').on('click', function () {
+    $('#imageModal').fadeOut();
+});
+
+$('#imageModal').on('click', function (e) {
+    if (!$(e.target).is('.modal__image') && !$(e.target).is('.modal__close')) {
+        $(this).fadeOut();
+    }
+});
+

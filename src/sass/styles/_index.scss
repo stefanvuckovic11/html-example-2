@@ -4,28 +4,24 @@
 .index {
   display: flex;
   justify-content: center;
-  width: 1000px;
+  align-items: flex-start;
+  flex-wrap: wrap;
   margin: 1.5% auto 0;
-  min-width: 100%;
-
   &__left {
     margin: 1% 3% 0;
-    width: 300px;
+    width: 80% !important;
     flex-shrink: 0;
     min-width: 300px;
     max-width: 300px;
-
     &__accordion {
       width: 100%;
     }
-
     &__brand {
       &__search {
         margin-top: 50px;
         background-color: $navbar-dark-blue;
         padding: 10px 25px 40px;
         color: white;
-
         &__header {
           &--text {
             justify-content: flex-start;
@@ -36,18 +32,15 @@
             margin-right: 5%;
           }
         }
-
         &__search-box {
           display: flex;
           justify-content: center;
           margin-top: 10px;
-
           &__input {
             width: 80%;
             padding: 10px;
             border: none;
           }
-
           &__button {
             background-color: white;
             border: none;
@@ -63,7 +56,6 @@
         display: none;
       }
     }
-
     &__brand-promo {
       margin-top: 50px;
       position: relative;
@@ -73,7 +65,6 @@
         display: block;
       }
     }
-
     &__newsletter {
       margin-top: 50px;
       display: flex;
@@ -84,7 +75,6 @@
       text-align: center;
       width: 100%;
       padding: 30px;
-
       &__header {
         font-size: 16px;
         font-weight: bold;
@@ -97,7 +87,6 @@
           margin: 0 10px;
         }
       }
-
       &__form {
         display: flex;
         flex-direction: column;
@@ -134,7 +123,6 @@
         display: none;
       }
     }
-
     &__product-card {
       margin: 50px 0 20px;
       background-color: white;
@@ -172,14 +160,12 @@
       }
     }
   }
-
   &__right {
-    width: 850px;
+    width: 20%;
     flex-shrink: 0;
     min-width: 900px;
     max-width: 85%;
     flex-wrap: wrap;
-
     &__hot-offer {
       &__header {
         margin: 20px auto 5%;
@@ -289,7 +275,6 @@
         }
       }
     }
-
     &__action {
       &__header {
         margin: 20px auto 3%;
@@ -402,7 +387,6 @@
         }
       }
     }
-
     &__recommended {
       &__header {
         margin: 20px auto 3%;
@@ -515,7 +499,6 @@
         }
       }
     }
-
     &__new {
       &__header {
         margin: 20px auto 3%;
@@ -628,7 +611,6 @@
         }
       }
     }
-
     &__sale {
       &__header {
         margin: 20px auto 3%;
@@ -741,7 +723,6 @@
         }
       }
     }
-
     &__brand {
       display: none;
       &__brand {
@@ -750,37 +731,31 @@
           background-color: $navbar-dark-blue;
           padding: 10px 25px 40px;
           color: white;
-
           &__header {
             &--text {
               justify-content: flex-start;
               font-size: 16px;
               font-weight: bold;
             }
-
             .fa-envelope {
               margin-right: 5%;
             }
           }
-
           &__search-box {
             display: flex;
             justify-content: center;
             margin-top: 10px;
           }
-
           &__input {
             width: 80%;
             padding: 10px;
             border: none;
           }
-
           &__button {
             background-color: white;
             border: none;
             padding: 8px;
             cursor: pointer;
-
             i {
               color: $general-cyan;
             }
@@ -788,7 +763,6 @@
         }
       }
     }
-
     &__newsletter {
       margin-top: 50px;
       display: none;
@@ -850,61 +824,6 @@
     }
   }
 }
-
-@media screen and (max-width: 1240px) {
-  .index__right__brand {
-    display: block;
-    &__search {
-    margin-top: 50px;
-    background-color: $navbar-dark-blue;
-    padding: 50px 50px 50px;
-    color: white;
-    display: block;
-    width: 300px;
-    justify-content: center !important;
-    justify-items: center;
-    margin-left: 300px;
-
-    &__header {
-      &--text {
-        justify-content: flex-start;
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      .fa-envelope {
-        margin-right: 5%;
-      }
-    }
-
-    &__box {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-
-      .index__right__brand__search__input {
-        width: 80%;
-        padding: 10px;
-        border: none;
-      }
-
-      .index__right__brand__search__button {
-        background-color: white;
-        border: none;
-        padding: 8px;
-        cursor: pointer;
-
-        i {
-          color: $general-cyan;
-        }
-      }
-    }
-  }
-  }
-}
-
-
-
 footer .slider-controls a {
   margin-left: 90px;
   align-self: center;
@@ -921,6 +840,52 @@ footer .slider-controls a {
 }
 
 @media screen and (max-width: 1240px) {
+  .index__right__brand {
+    display: block;
+    &__search {
+      margin: 50px auto;
+      background-color: $navbar-dark-blue;
+      padding: 50px;
+      color: white;
+      display: block;
+      width: 300px;
+      justify-content: center !important;
+      justify-items: center;
+      &__header {
+        &--text {
+          justify-content: flex-start;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .fa-envelope {
+          margin-right: 5%;
+        }
+      }
+      &__box {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        .index__right__brand__search__input {
+          width: 80%;
+          padding: 10px;
+          border: none;
+        }
+        .index__right__brand__search__button {
+          background-color: white;
+          border: none;
+          padding: 8px;
+          cursor: pointer;
+          i {
+            color: $general-cyan;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1240px) {
   .index {
     flex-direction: column;
     align-items: center;
@@ -934,11 +899,9 @@ footer .slider-controls a {
   .index__left__brand-promo__img {
     display: none;
   }
-  .index__left__product-card{
+  .index__left__product-card {
     display: none;
   }
-
-
   .index__left__accordion {
     width: 100%;
     max-width: 1200px;
@@ -957,7 +920,6 @@ footer .slider-controls a {
       }
     }
   }
-
   .index__right__hot-offer__product-list,
   .index__right__action__product-list,
   .index__right__recommended__product-list,
@@ -965,7 +927,17 @@ footer .slider-controls a {
   .index__right__sale__product-list {
     width: 100%;
   }
+  .index__right__hot-offer__footer-button,
+  .index__right__action__footer-button,
+  .index__right__recommended__footer-button,
+  .index__right__new__footer-button,
+  .index__right__sale__footer-button {
+    font-size: large;
+    margin-left: 10%;
+    justify-self: center;
+  }
 
-
+  .product-detail .product-detail__info__slider-cart .product-detail__info__slider-cart__cart__lower {
+    margin-left: 25%;
+  }
 }
-
