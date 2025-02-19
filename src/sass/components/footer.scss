@@ -25,7 +25,7 @@
     pointer-events: none;
   }
 
-  .footer__slider-controls a {
+  &__slider-controls a {
     pointer-events: auto;
     width: 40px;
     height: 40px;
@@ -41,17 +41,21 @@
     cursor: pointer;
   }
 
-  &__slider-prev::before {
-    content: "❮";
+  &__slider-prev {
+    &::before {
+      content: "❮";
+    }
   }
 
-  &__slider-next::before {
-    content: "❯";
+  &__slider-next{
+    &::before {
+      content: "❯";
+    }
   }
 
   &__slider-prev:hover,
   &__slider-next:hover {
-    background: rgba(140, 140, 140, 0.6); //   &::after
+    background: rgba(140, 140, 140, 0.6);
   }
 
   &__bottom {
