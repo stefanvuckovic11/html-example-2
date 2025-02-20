@@ -360,7 +360,7 @@ footer {
   gap: 10px;
   cursor: pointer;
 }
-.index__left__accordion__header .icon {
+.index__left__accordion__header__header-icon {
   font-size: 30px;
 }
 .index__left__accordion__item {
@@ -425,7 +425,7 @@ footer {
     z-index: 999999;
     margin-bottom: 40px;
   }
-  .index__left__accordion__header .icon {
+  .index__left__accordion__header-icon {
     display: flex;
     font-size: 40px;
     position: relative;
@@ -501,11 +501,56 @@ footer {
 .index__left__brand-promo {
   margin-top: 50px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.index__left__brand-promo__img {
+.index__left__brand-promo__commercial {
+  position: relative;
   width: 100%;
-  height: 400px;
+  max-width: 400px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.index__left__brand-promo__commercial-image {
+  width: 100%;
   display: block;
+  border-radius: 5px;
+}
+.index__left__brand-promo__commercial-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+.index__left__brand-promo__commercial-fashion, .index__left__brand-promo__commercial-shoes {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 400;
+}
+.index__left__brand-promo__commercial-veneno {
+  font-family: "Arial", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.index__left__brand-promo__commercial-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.index__left__brand-promo__commercial-close:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 .index__left__newsletter {
   margin-top: 50px;
@@ -1271,8 +1316,51 @@ footer .slider-controls a {
     min-width: 100%;
     margin: auto;
   }
-  .index__left__brand-promo__img {
+  .index__left__brand-promo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
     display: none;
+    z-index: 99999999;
+  }
+  .index__left__brand-promo--visible {
+    display: block;
+  }
+  .index__left__brand-promo__commercial {
+    width: 100%;
+    text-align: center;
+  }
+  .index__left__brand-promo__commercial-image {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .index__left__brand-promo__commercial-text {
+    font-size: 18px;
+  }
+  .index__left__brand-promo__commercial-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  .index__left__brand-promo__commercial-close:hover {
+    background: rgba(0, 0, 0, 0.8);
   }
   .index__left__brand {
     display: none;
@@ -1675,7 +1763,7 @@ footer .slider-controls a:hover {
   color: grey;
   margin-top: 10px;
 }
-.product-detail__info__general span {
+.product-detail__info__general__spec {
   color: black;
 }
 .product-detail__info__slider-cart {
@@ -2112,13 +2200,13 @@ footer .slider-controls a:hover {
   .product-detail__info__price-code {
     align-self: center !important;
   }
-  .product-detail__info__price-code h2 {
+  .product-detail__info__price-code__price {
     font-size: 50px !important;
   }
-  .product-detail__info__price-code h3 {
+  .product-detail__info__price-code__sku {
     font-size: 40px !important;
   }
-  .product-detail__info__price-code h3 span {
+  .product-detail__info__price-code__sku__number {
     font-size: 40px !important;
   }
   .product-detail__info__general {

@@ -173,7 +173,7 @@
       color: grey;
       margin-top: 10px;
 
-      span {//nestovati
+      &__spec {//nestovati
         color: black;
       }
     }
@@ -672,14 +672,14 @@
       &__price-code {
         align-self: center !important;
 
-        h2 {
+        &__price {
           font-size: 50px !important;
         }
 
-        h3 {
+        &__sku {
           font-size: 40px !important;
 
-          span {
+          &__number {
             font-size: 40px !important;
           }
         }
