@@ -28,7 +28,7 @@
             font-size: 16px;
             font-weight: bold;
           }
-          .fa-envelope {
+          &__envelope {
             margin-right: 5%;
           }
         }
@@ -46,7 +46,7 @@
             border: none;
             padding: 8px;
             cursor: pointer;
-            i {
+            &__search-icon {
               color: $general-cyan;
             }
           }
@@ -134,7 +134,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        .fa-envelope {
+        &__news-icon {
           margin: 0 10px;
         }
       }
@@ -226,15 +226,15 @@
         border-right: 25px solid transparent;
         border-bottom: 50px solid $navbar-dark-blue;
         transform: rotateX(180deg);
-        .fa-fire {
-          margin-right: 10px;
-          align-self: center;
-          justify-self: center;
-          transform: rotateX(180deg);
-          color: white;
-          font-size: 30px;
-          margin-bottom: -50px;
-        }
+      }
+      &__fire-icon {
+        margin-right: 10px;
+        align-self: center;
+        justify-self: center;
+        transform: rotateX(180deg);
+        color: white;
+        font-size: 30px;
+        margin-bottom: -50px;
       }
       &__header-text {
         margin-top: 50px;
@@ -312,7 +312,7 @@
         justify-content: center;
         align-items: center;
         width: calc(100% - 60px);
-        &-button {
+        &__button {
           padding: 10px 50px;
           border: 3px solid $general-cyan;
           background-color: transparent;
@@ -335,15 +335,15 @@
         border-right: 25px solid transparent;
         border-bottom: 50px solid $general-cyan;
         transform: rotateX(180deg);
-        i {
-          margin-right: 10px;
-          align-self: center;
-          justify-self: center;
-          transform: rotateX(180deg);
-          color: white;
-          font-size: 30px;
-          margin-bottom: -50px;
-        }
+      }
+      &__action-icon {
+        margin-right: 10px;
+        align-self: center;
+        justify-self: center;
+        transform: rotateX(180deg);
+        color: white;
+        font-size: 30px;
+        margin-bottom: -50px;
       }
       &__header-text {
         margin-top: 50px;
@@ -424,7 +424,7 @@
         justify-content: center;
         align-items: center;
         width: calc(100% - 60px);
-        &-button {
+        &__button {
           padding: 10px 50px;
           border: 3px solid $general-cyan;
           background-color: transparent;
@@ -447,15 +447,15 @@
         border-right: 25px solid transparent;
         border-bottom: 50px solid $general-cyan;
         transform: rotateX(180deg);
-        i {
-          margin-right: 10px;
-          align-self: center;
-          justify-self: center;
-          transform: rotateX(180deg);
-          color: white;
-          font-size: 30px;
-          margin-bottom: -50px;
-        }
+      }
+      &__recommended-icon{
+        margin-right: 10px;
+        align-self: center;
+        justify-self: center;
+        transform: rotateX(180deg);
+        color: white;
+        font-size: 30px;
+        margin-bottom: -50px;
       }
       &__header-text {
         margin-top: 50px;
@@ -536,7 +536,7 @@
         justify-content: center;
         align-items: center;
         width: calc(100% - 60px);
-        &-button {
+        &__button {
           padding: 10px 50px;
           border: 3px solid $general-cyan;
           background-color: transparent;
@@ -559,15 +559,15 @@
         border-right: 25px solid transparent;
         border-bottom: 50px solid $general-cyan;
         transform: rotateX(180deg);
-        i {
-          margin-right: 10px;
-          align-self: center;
-          justify-self: center;
-          transform: rotateX(180deg);
-          color: white;
-          font-size: 30px;
-          margin-bottom: -50px;
-        }
+      }
+      &__news-icon {
+        margin-right: 10px;
+        align-self: center;
+        justify-self: center;
+        transform: rotateX(180deg);
+        color: white;
+        font-size: 30px;
+        margin-bottom: -50px;
       }
       &__header-text {
         margin-top: 50px;
@@ -648,7 +648,7 @@
         justify-content: center;
         align-items: center;
         width: calc(100% - 60px);
-        &-button {
+        &__button {
           padding: 10px 50px;
           border: 3px solid $general-cyan;
           background-color: transparent;
@@ -671,15 +671,15 @@
         border-right: 25px solid transparent;
         border-bottom: 50px solid orange;
         transform: rotateX(180deg);
-        i {
-          margin-right: 10px;
-          align-self: center;
-          justify-self: center;
-          transform: rotateX(180deg);
-          color: white;
-          font-size: 30px;
-          margin-bottom: -50px;
-        }
+      }
+      &__sale-icon {
+        margin-right: 10px;
+        align-self: center;
+        justify-self: center;
+        transform: rotateX(180deg);
+        color: white;
+        font-size: 30px;
+        margin-bottom: -50px;
       }
       &__header-text {
         margin-top: 50px;
@@ -689,9 +689,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        i {
-          margin-right: 10px;
-        }
       }
       &__product-list {
         width: 95%;
@@ -760,7 +757,7 @@
         justify-content: center;
         align-items: center;
         width: calc(100% - 60px);
-        &-button {
+        &__button {
           padding: 10px 50px;
           border: 3px solid orange;
           background-color: transparent;
@@ -785,7 +782,7 @@
               font-size: 16px;
               font-weight: bold;
             }
-            .fa-envelope {
+            &__envelope {
               margin-right: 5%;
             }
           }
@@ -804,9 +801,6 @@
             border: none;
             padding: 8px;
             cursor: pointer;
-            i {
-              color: $general-cyan;
-            }
           }
         }
       }
@@ -822,9 +816,6 @@
       width: 90%;
       padding: 30px;
       margin-left: 50px;
-      @media screen and (max-width: 1240px) {
-        display: flex;
-      }
       &__header {
         font-size: 16px;
         font-weight: bold;
@@ -833,7 +824,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        .fa-envelope {
+        &__envelope {
           margin: 0 10px;
         }
       }
@@ -995,7 +986,7 @@ footer .slider-controls a {
               font-size: 16px;
               font-weight: bold;
             }
-            .fa-envelope {
+            &__envelope {
               margin-right: 5%;
             }
           }
@@ -1013,12 +1004,17 @@ footer .slider-controls a {
               border: none;
               padding: 8px;
               cursor: pointer;
-              i {
+
+              &__search-icon{
                 color: $general-cyan;
+                font-size: 20px;
               }
             }
           }
         }
+      }
+      &__newsletter{
+        display: flex;
       }
 
       &__hot-offer__product-list,
