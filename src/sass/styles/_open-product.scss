@@ -45,12 +45,21 @@
         width: 100% !important;
         overflow: hidden !important;
       }
-      .product-detail__slider__list-item__img { //nestovati
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain;
-        display: block;
-        box-sizing: border-box;
+
+      .bxslider{
+        .product-detail{
+          &__slider{
+            &__list-item{
+              &__img {
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain;
+                display: block;
+                box-sizing: border-box;
+              }
+            }
+          }
+        }
       }
     }
 
@@ -173,7 +182,7 @@
       color: grey;
       margin-top: 10px;
 
-      span {//nestovati
+      &__spec {
         color: black;
       }
     }
@@ -266,23 +275,25 @@
             width: 150px;
             height: 50px;
             &__btn {
+              height: 50px;
+              width: 150px;
+              border-radius: 75px;
+              border: none;
               background-color: lightgray;
               color: white;
             }
           }
-          &__add {
+          &__view {
             width: 150px;
             height: 70px;
             &__btn {
+              height: 50px;
+              width: 150px;
+              border-radius: 75px;
+              border: none;
               background-color: $general-cyan;
               color: white;
             }
-          }
-          button {
-            height: 50px;
-            width: 150px;
-            border-radius: 75px;
-            border: none;
           }
         }
       }
@@ -520,7 +531,7 @@
         }
       }
     }
-    &__news { //unutar product details
+    &__news {
       margin-top: 50px;
       background-color: $navbar-dark-blue;
       padding: 20px;
@@ -672,14 +683,14 @@
       &__price-code {
         align-self: center !important;
 
-        h2 {
+        &__price {
           font-size: 50px !important;
         }
 
-        h3 {
+        &__sku {
           font-size: 40px !important;
 
-          span {
+          &__number {
             font-size: 40px !important;
           }
         }
@@ -712,7 +723,7 @@
                 height: 60px;
                 width: 60px;
 
-                .icon {
+                &__icon {
                   display: flex;
                   width: 60px;
                   height: 60px;
@@ -753,11 +764,6 @@
             margin-top: 10px !important;
             flex-direction: column !important;
 
-            button {
-              width: 250px;
-              font-size: large;
-            }
-
             &__add,
             &__view {
               width: 300px !important;
@@ -772,11 +778,6 @@
               height: 100%;
             }
 
-            button {
-              font-size: 24px !important;
-              width: 300px !important;
-              height: 80px !important;
-            }
           }
 
           &__upper__share {

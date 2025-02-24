@@ -93,7 +93,7 @@
     <div class="index__left">
         <div class="index__left__accordion">
             <div class="index__left__accordion__header">
-                <i class="icon fa fa-th-large"></i>
+                <i class="index__left__accordion__header-icon fa fa-th-large"></i>
                 <span class="index__left__accordion__header-text">Kupuj po kategoriji</span>
             </div>
             <div class="index__left__accordion__item">
@@ -197,23 +197,31 @@
         <div class="index__left__brand">
             <div class="index__left__brand__search">
                 <div class="index__left__brand__search__header">
-                    <i class="fa fa-envelope"></i>
+                    <i class="index__left__brand__search__header__envelope fa fa-envelope"></i>
                     <span class="index__left__brand__search__header--text">PRETRAGA PO BRENDU</span>
                 </div>
                 <div class="index__left__brand__search__search-box">
                     <input type="text" class="index__left__brand__search__search-box__input" placeholder="Unesite naziv brenda">
                     <button type="submit" class="index__left__brand__search__search-box__button">
-                        <i class="fa fa-search"></i>
+                        <i class="index__left__brand__search__search-box__button__search-icon fa fa-search"></i>
                     </button>
                 </div>
             </div>
         </div>
         <div class="index__left__brand-promo">
-            <img class="index__left__brand-promo__img" src="src/images/cipele.png" alt="Veneno Shoes">
+            <div class="index__left__brand-promo__commercial">
+                <button class="index__left__brand-promo__commercial-close">&times;</button>
+                <img src="https://picsum.photos/400/600" alt="Fashion Shoes" class="index__left__brand-promo__commercial-image">
+                <div class="index__left__brand-promo__commercial-text">
+                    <span class="index__left__brand-promo__commercial-fashion">Fashion</span>
+                    <span class="index__left__brand-promo__commercial-shoes">shoes</span><br>
+                    <span class="index__left__brand-promo__commercial-veneno">VENENO</span>
+                </div>
+            </div>
         </div>
         <div class="index__left__newsletter">
             <div class="index__left__newsletter__header">
-                <i class="fa fa-envelope"></i>
+                <i class="index__left__newsletter__header__news-icon fa fa-envelope"></i>
                 <span class="index__left__newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
             </div>
             <form class="index__left__newsletter__form">
@@ -241,12 +249,21 @@
                 <p class="index__left__product-card__description">
                     Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.
                 </p>
-                <button class="btn-primary index__left__product-card__button">OPŠIRNIJE</button>
+                <button class="btn-primary index__left__product-card__info__button">OPŠIRNIJE</button>
             </div>
         </div>
         <div class="index__left__brand-promo">
-            <img src="src/images/cipele.png" alt="Veneno Shoes" class="index__left__brand-promo__img">
+            <div class="index__left__brand-promo__commercial">
+                <button class="index__left__brand-promo__commercial-close">&times;</button>
+                <img src="https://picsum.photos/400/600" alt="Fashion Shoes" class="index__left__brand-promo__commercial-image">
+                <div class="index__left__brand-promo__commercial-text">
+                    <span class="index__left__brand-promo__commercial-fashion">Fashion</span>
+                    <span class="index__left__brand-promo__commercial-shoes">shoes</span><br>
+                    <span class="index__left__brand-promo__commercial-veneno">VENENO</span>
+                </div>
+            </div>
         </div>
+
     </div>
     <div class="index__right">
         <div class="slider">
@@ -307,7 +324,7 @@
         </div>
         <div class="index__right__hot-offer">
             <div class="index__right__hot-offer__header">
-                <i class="fa fa-fire"></i>
+                <i class="index__right__hot-offer__fire-icon fa fa-fire"></i>
                 <span class="index__right__hot-offer__header-text">VRUĆA PONUDA</span>
             </div>
             <div class="index__right__hot-offer__product-list">
@@ -354,7 +371,7 @@
             </div>
 
             <div class="index__right__hot-offer__footer">
-                <button class="index__right__hot-offer__footer-button">
+                <button class="index__right__hot-offer__footer__button">
                     POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
                 </button>
             </div>
@@ -362,7 +379,7 @@
 
         <div class="index__right__action">
             <div class="index__right__action__header">
-                <i class="fa fa-tag"></i>
+                <i class="index__right__action__action-icon fa fa-tag"></i>
                 <span class="index__right__action__header-text">AKCIJA - POPUSTI</span>
             </div>
             <div class="index__right__action__product-list">
@@ -408,7 +425,7 @@
                 </div>
             </div>
             <div class="index__right__action__footer">
-                <button class="index__right__action__footer-button">
+                <button class="index__right__action__footer__button">
                     POGLEDAJTE SVE PROIZVODE IZ AKCIJE
                 </button>
             </div>
@@ -416,7 +433,7 @@
 
         <div class="index__right__recommended">
             <div class="index__right__recommended__header">
-                <i class="fa fa-star"></i>
+                <i class="index__right__recommended__recommended-icon fa fa-star"></i>
                 <span class="index__right__recommended__header-text">PREPORUČUJEMO</span>
             </div>
             <div class="index__right__recommended__product-list">
@@ -462,7 +479,7 @@
                 </div>
             </div>
             <div class="index__right__recommended__footer">
-                <button class="index__right__recommended__footer-button">
+                <button class="index__right__recommended__footer__button">
                     POGLEDAJTE SVE PROIZVODE IZ PREPORUČENIH
                 </button>
             </div>
@@ -470,7 +487,7 @@
 
         <div class="index__right__new">
             <div class="index__right__new__header">
-                <i class="fa fa-heart"></i>
+                <i class="index__right__new__news-icon fa fa-heart"></i>
                 <span class="index__right__new__header-text">NOVO U PONUDI</span>
             </div>
             <div class="index__right__new__product-list">
@@ -516,7 +533,7 @@
                 </div>
             </div>
             <div class="index__right__new__footer">
-                <button class="index__right__new__footer-button">
+                <button class="index__right__new__footer__button">
                     POGLEDAJTE SVE PROIZVODE IZ NOVIH
                 </button>
             </div>
@@ -524,7 +541,7 @@
 
         <div class="index__right__sale">
             <div class="index__right__sale__header">
-                <i class="fa fa-percent"></i>
+                <i class="index__right__sale__sale-icon fa fa-percent"></i>
                 <span class="index__right__sale__header-text">RASPRODAJA</span>
             </div>
             <div class="index__right__sale__product-list">
@@ -570,7 +587,7 @@
                 </div>
             </div>
             <div class="index__right__sale__footer">
-                <button class="index__right__sale__footer-button">
+                <button class="index__right__sale__footer__button">
                     POGLEDAJTE SVE PROIZVODE IZ RASPRODAJE
                 </button>
             </div>
@@ -583,9 +600,9 @@
                     <span class="index__right__brand__search__header-text">PRETRAGA PO BRENDU</span>
                 </div>
                 <div class="index__right__brand__search__box">
-                    <input type="text" class="index__right__brand__search__input" placeholder="Unesite naziv brenda">
-                    <button type="submit" class="index__right__brand__search__button">
-                        <i class="fa fa-search"></i>
+                    <input type="text" class="index__right__brand__search__box__input" placeholder="Unesite naziv brenda">
+                    <button type="submit" class="index__right__brand__search__box__button">
+                        <i class="index__right__brand__search__box__button__search-icon fa fa-search"></i>
                     </button>
                 </div>
             </div>
@@ -593,7 +610,7 @@
 
         <div class="index__right__newsletter">
             <div class="index__right__newsletter__header">
-                <i class="fa fa-envelope"></i>
+                <i class="index__right__newsletter__header__envelope fa fa-envelope"></i>
                 <span class="index__right__newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
             </div>
             <form class="index__right__newsletter__form">

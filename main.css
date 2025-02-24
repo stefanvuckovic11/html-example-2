@@ -360,7 +360,7 @@ footer {
   gap: 10px;
   cursor: pointer;
 }
-.index__left__accordion__header .icon {
+.index__left__accordion__header__header-icon {
   font-size: 30px;
 }
 .index__left__accordion__item {
@@ -425,7 +425,7 @@ footer {
     z-index: 999999;
     margin-bottom: 40px;
   }
-  .index__left__accordion__header .icon {
+  .index__left__accordion__header-icon {
     display: flex;
     font-size: 40px;
     position: relative;
@@ -476,7 +476,7 @@ footer {
   font-size: 16px;
   font-weight: bold;
 }
-.index__left__brand__search__header .fa-envelope {
+.index__left__brand__search__header__envelope {
   margin-right: 5%;
 }
 .index__left__brand__search__search-box {
@@ -495,17 +495,62 @@ footer {
   padding: 8px;
   cursor: pointer;
 }
-.index__left__brand__search__search-box__button i {
+.index__left__brand__search__search-box__button__search-icon {
   color: rgb(1, 173, 239);
 }
 .index__left__brand-promo {
   margin-top: 50px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.index__left__brand-promo__img {
+.index__left__brand-promo__commercial {
+  position: relative;
   width: 100%;
-  height: 400px;
+  max-width: 400px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.index__left__brand-promo__commercial-image {
+  width: 100%;
   display: block;
+  border-radius: 5px;
+}
+.index__left__brand-promo__commercial-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+.index__left__brand-promo__commercial-fashion, .index__left__brand-promo__commercial-shoes {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 400;
+}
+.index__left__brand-promo__commercial-veneno {
+  font-family: "Arial", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.index__left__brand-promo__commercial-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.index__left__brand-promo__commercial-close:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 .index__left__newsletter {
   margin-top: 50px;
@@ -527,7 +572,7 @@ footer {
   align-items: center;
   gap: 10px;
 }
-.index__left__newsletter__header .fa-envelope {
+.index__left__newsletter__header__news-icon {
   margin: 0 10px;
 }
 .index__left__newsletter__form {
@@ -616,7 +661,7 @@ footer {
   border-bottom: 50px solid #005574;
   transform: rotateX(180deg);
 }
-.index__right__hot-offer__header .fa-fire {
+.index__right__hot-offer__fire-icon {
   margin-right: 10px;
   align-self: center;
   justify-self: center;
@@ -702,13 +747,13 @@ footer {
   align-items: center;
   width: calc(100% - 60px);
 }
-.index__right__hot-offer__footer-button {
+.index__right__hot-offer__footer__button {
   padding: 10px 50px;
   border: 3px solid rgb(1, 173, 239);
   background-color: transparent;
   cursor: pointer;
 }
-.index__right__hot-offer__footer-button:hover {
+.index__right__hot-offer__footer__button:hover {
   background-color: rgba(1, 173, 239, 0.2);
 }
 .index__right__action__header {
@@ -723,7 +768,7 @@ footer {
   border-bottom: 50px solid rgb(1, 173, 239);
   transform: rotateX(180deg);
 }
-.index__right__action__header i {
+.index__right__action__action-icon {
   margin-right: 10px;
   align-self: center;
   justify-self: center;
@@ -812,13 +857,13 @@ footer {
   align-items: center;
   width: calc(100% - 60px);
 }
-.index__right__action__footer-button {
+.index__right__action__footer__button {
   padding: 10px 50px;
   border: 3px solid rgb(1, 173, 239);
   background-color: transparent;
   cursor: pointer;
 }
-.index__right__action__footer-button:hover {
+.index__right__action__footer__button:hover {
   background-color: rgba(1, 173, 239, 0.2);
 }
 .index__right__recommended__header {
@@ -833,7 +878,7 @@ footer {
   border-bottom: 50px solid rgb(1, 173, 239);
   transform: rotateX(180deg);
 }
-.index__right__recommended__header i {
+.index__right__recommended__recommended-icon {
   margin-right: 10px;
   align-self: center;
   justify-self: center;
@@ -922,13 +967,13 @@ footer {
   align-items: center;
   width: calc(100% - 60px);
 }
-.index__right__recommended__footer-button {
+.index__right__recommended__footer__button {
   padding: 10px 50px;
   border: 3px solid rgb(1, 173, 239);
   background-color: transparent;
   cursor: pointer;
 }
-.index__right__recommended__footer-button:hover {
+.index__right__recommended__footer__button:hover {
   background-color: rgba(1, 173, 239, 0.2);
 }
 .index__right__new__header {
@@ -943,7 +988,7 @@ footer {
   border-bottom: 50px solid rgb(1, 173, 239);
   transform: rotateX(180deg);
 }
-.index__right__new__header i {
+.index__right__new__news-icon {
   margin-right: 10px;
   align-self: center;
   justify-self: center;
@@ -1032,13 +1077,13 @@ footer {
   align-items: center;
   width: calc(100% - 60px);
 }
-.index__right__new__footer-button {
+.index__right__new__footer__button {
   padding: 10px 50px;
   border: 3px solid rgb(1, 173, 239);
   background-color: transparent;
   cursor: pointer;
 }
-.index__right__new__footer-button:hover {
+.index__right__new__footer__button:hover {
   background-color: rgba(1, 173, 239, 0.2);
 }
 .index__right__sale__header {
@@ -1053,7 +1098,7 @@ footer {
   border-bottom: 50px solid orange;
   transform: rotateX(180deg);
 }
-.index__right__sale__header i {
+.index__right__sale__sale-icon {
   margin-right: 10px;
   align-self: center;
   justify-self: center;
@@ -1070,9 +1115,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.index__right__sale__header-text i {
-  margin-right: 10px;
 }
 .index__right__sale__product-list {
   width: 95%;
@@ -1142,13 +1184,13 @@ footer {
   align-items: center;
   width: calc(100% - 60px);
 }
-.index__right__sale__footer-button {
+.index__right__sale__footer__button {
   padding: 10px 50px;
   border: 3px solid orange;
   background-color: transparent;
   cursor: pointer;
 }
-.index__right__sale__footer-button:hover {
+.index__right__sale__footer__button:hover {
   background-color: rgba(1, 173, 239, 0.2);
 }
 .index__right__brand {
@@ -1165,7 +1207,7 @@ footer {
   font-size: 16px;
   font-weight: bold;
 }
-.index__right__brand__brand__search__header .fa-envelope {
+.index__right__brand__brand__search__header__envelope {
   margin-right: 5%;
 }
 .index__right__brand__brand__search__search-box {
@@ -1184,9 +1226,6 @@ footer {
   padding: 8px;
   cursor: pointer;
 }
-.index__right__brand__brand__search__button i {
-  color: rgb(1, 173, 239);
-}
 .index__right__newsletter {
   margin-top: 50px;
   display: none;
@@ -1199,11 +1238,6 @@ footer {
   padding: 30px;
   margin-left: 50px;
 }
-@media screen and (max-width: 1240px) {
-  .index__right__newsletter {
-    display: flex;
-  }
-}
 .index__right__newsletter__header {
   font-size: 16px;
   font-weight: bold;
@@ -1213,7 +1247,7 @@ footer {
   align-items: center;
   gap: 10px;
 }
-.index__right__newsletter__header .fa-envelope {
+.index__right__newsletter__header__envelope {
   margin: 0 10px;
 }
 .index__right__newsletter__form {
@@ -1271,8 +1305,51 @@ footer .slider-controls a {
     min-width: 100%;
     margin: auto;
   }
-  .index__left__brand-promo__img {
+  .index__left__brand-promo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
     display: none;
+    z-index: 99999999;
+  }
+  .index__left__brand-promo--visible {
+    display: block;
+  }
+  .index__left__brand-promo__commercial {
+    width: 100%;
+    text-align: center;
+  }
+  .index__left__brand-promo__commercial-image {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .index__left__brand-promo__commercial-text {
+    font-size: 18px;
+  }
+  .index__left__brand-promo__commercial-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  .index__left__brand-promo__commercial-close:hover {
+    background: rgba(0, 0, 0, 0.8);
   }
   .index__left__brand {
     display: none;
@@ -1315,7 +1392,7 @@ footer .slider-controls a {
     font-size: 16px;
     font-weight: bold;
   }
-  .index__right__brand__search__header .fa-envelope {
+  .index__right__brand__search__header__envelope {
     margin-right: 5%;
   }
   .index__right__brand__search__box {
@@ -1334,8 +1411,12 @@ footer .slider-controls a {
     padding: 8px;
     cursor: pointer;
   }
-  .index__right__brand__search__box__button i {
+  .index__right__brand__search__box__button__search-icon {
     color: rgb(1, 173, 239);
+    font-size: 20px;
+  }
+  .index__right__newsletter {
+    display: flex;
   }
   .index__right__hot-offer__product-list, .index__right__action__product-list, .index__right__recommended__product-list, .index__right__new__product-list, .index__right__sale__product-list {
     width: 100%;
@@ -1562,7 +1643,7 @@ footer .slider-controls a:hover {
   width: 100% !important;
   overflow: hidden !important;
 }
-.product-detail__gallery__slider .product-detail__slider__list-item__img {
+.product-detail__gallery__slider .bxslider .product-detail__slider__list-item__img {
   width: 100% !important;
   height: auto !important;
   object-fit: contain;
@@ -1675,7 +1756,7 @@ footer .slider-controls a:hover {
   color: grey;
   margin-top: 10px;
 }
-.product-detail__info__general span {
+.product-detail__info__general__spec {
   color: black;
 }
 .product-detail__info__slider-cart {
@@ -1761,22 +1842,24 @@ footer .slider-controls a:hover {
   height: 50px;
 }
 .product-detail__info__slider-cart__cart__lower__add__btn {
-  background-color: lightgray;
-  color: white;
-}
-.product-detail__info__slider-cart__cart__lower__add {
-  width: 150px;
-  height: 70px;
-}
-.product-detail__info__slider-cart__cart__lower__add__btn {
-  background-color: rgb(1, 173, 239);
-  color: white;
-}
-.product-detail__info__slider-cart__cart__lower button {
   height: 50px;
   width: 150px;
   border-radius: 75px;
   border: none;
+  background-color: lightgray;
+  color: white;
+}
+.product-detail__info__slider-cart__cart__lower__view {
+  width: 150px;
+  height: 70px;
+}
+.product-detail__info__slider-cart__cart__lower__view__btn {
+  height: 50px;
+  width: 150px;
+  border-radius: 75px;
+  border: none;
+  background-color: rgb(1, 173, 239);
+  color: white;
 }
 .product-detail__additional {
   background: #fff;
@@ -2112,13 +2195,13 @@ footer .slider-controls a:hover {
   .product-detail__info__price-code {
     align-self: center !important;
   }
-  .product-detail__info__price-code h2 {
+  .product-detail__info__price-code__price {
     font-size: 50px !important;
   }
-  .product-detail__info__price-code h3 {
+  .product-detail__info__price-code__sku {
     font-size: 40px !important;
   }
-  .product-detail__info__price-code h3 span {
+  .product-detail__info__price-code__sku__number {
     font-size: 40px !important;
   }
   .product-detail__info__general {
@@ -2147,7 +2230,7 @@ footer .slider-controls a:hover {
     height: 60px;
     width: 60px;
   }
-  .product-detail__info__slider-cart__cart__upper__share__icon .icon {
+  .product-detail__info__slider-cart__cart__upper__share__icon__icon {
     display: flex;
     width: 60px;
     height: 60px;
@@ -2180,10 +2263,6 @@ footer .slider-controls a:hover {
     margin-top: 10px !important;
     flex-direction: column !important;
   }
-  .product-detail__info__slider-cart__cart__lower button {
-    width: 250px;
-    font-size: large;
-  }
   .product-detail__info__slider-cart__cart__lower__add, .product-detail__info__slider-cart__cart__lower__view {
     width: 300px !important;
     height: 80px !important;
@@ -2193,11 +2272,6 @@ footer .slider-controls a:hover {
     font-size: 24px !important;
     width: 100%;
     height: 100%;
-  }
-  .product-detail__info__slider-cart__cart__lower button {
-    font-size: 24px !important;
-    width: 300px !important;
-    height: 80px !important;
   }
   .product-detail__info__slider-cart__cart__upper__share {
     order: 3;

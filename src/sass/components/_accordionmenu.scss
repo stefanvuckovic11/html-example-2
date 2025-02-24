@@ -23,7 +23,7 @@
     gap: 10px;
     cursor: pointer;
 
-    .icon {
+    &__header-icon {
       font-size: 30px;
     }
   }
@@ -101,13 +101,13 @@
           position: relative;
           z-index: 999999;
           margin-bottom: 40px;
+        }
 
-          .icon {
-            display: flex;
-            font-size: 40px;
-            position: relative;
-            z-index: 999999;
-          }
+        &__header-icon {
+          display: flex;
+          font-size: 40px;
+          position: relative;
+          z-index: 999999;
         }
 
         &__header-text {
