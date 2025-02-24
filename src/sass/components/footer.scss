@@ -3,68 +3,13 @@
 .footer {
   position: relative;
 
-  &__slider {
-  }
-
-  &__slider-item {
-  }
-
-  &__slider-img {
-  }
-
-  &__slider-controls {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
-    pointer-events: none;
-  }
-
-  &__slider-controls a {
-    pointer-events: auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(140, 140, 140, 0.31);
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s;
-    cursor: pointer;
-  }
-
-  &__slider-prev {
-    &::before {
-      content: "❮";
-    }
-  }
-
-  &__slider-next{
-    &::before {
-      content: "❯";
-    }
-  }
-
-  &__slider-prev:hover,
-  &__slider-next:hover {
-    background: rgba(140, 140, 140, 0.6);
-  }
-
   &__bottom {
     background-color: $general-cyan;
     color: white;
     display: flex;
     justify-content: space-around;
     text-align: left;
-    padding: 2px 8%;
+    padding: 2px 4%;
 
     &-columns {
       display: flex;

@@ -43,6 +43,24 @@ if (slider) {
 
 
 // SECOND SLIDER
+var footerSlider = document.querySelector('.slider');
+if (footerSlider) {
+    const sliderTrack = document.querySelector('.footer__slider-track');
+    const prevBtn = document.querySelector('.footer__buttons__slider-prev');
+    const nextBtn = document.querySelector('.footer__buttons__slider-next');
+
+    prevBtn.addEventListener('click', function () {
+        const firstSlide = sliderTrack.firstElementChild;
+        sliderTrack.appendChild(firstSlide);
+    })
+
+    nextBtn.addEventListener('click', function () {
+        const lastSlide = sliderTrack.lastElementChild;
+        sliderTrack.insertBefore(lastSlide, sliderTrack.firstElementChild);
+    })
+
+}
+
 
 
 
