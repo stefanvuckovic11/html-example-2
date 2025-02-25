@@ -55,7 +55,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #007bff;
+    background-color: $general-cyan;
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -63,7 +63,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: $general-cyan;
     }
   }
 
@@ -91,7 +91,7 @@
       user-select: none;
 
       &--active {
-        background-color: #007bff;
+        background-color: $general-cyan;
         color: #fff;
       }
     }
@@ -100,44 +100,47 @@
 
 
 //SECOND SLIDER//
-.footer__slider {
-  width: 980px;
-  margin: 0 auto 20px;
-  position: relative;
-
-  &-inner {
-    width: 100%;
-    overflow: hidden;
+.footer {
+  &__slider {
+    width: 980px;
+    margin: 0 auto 20px;
     position: relative;
-  }
 
-  &-track {
-    display: flex;
-    white-space: nowrap;
-    transition: transform 0.5s ease-in-out;
-  }
+    &-inner {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
 
-  &-slide {
-    flex: 0 0 auto;
-    width: 20%;
-    flex-shrink: 0;
-    text-align: center;
-    box-sizing: border-box;
-    transition: transform 0.5s ease-in-out;
+    &-track {
+      display: flex;
+      white-space: nowrap;
+      transition: transform 0.5s ease-in-out;
+    }
 
-  }
+    &-slide {
+      flex: 0 0 auto;
+      width: 20%;
+      flex-shrink: 0;
+      text-align: center;
+      box-sizing: border-box;
+      transition: transform 0.5s ease-in-out;
 
-  &-img {
-    width: 100%;
-    height: auto;
-    max-height: 60px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
+    }
 
+    &-img {
+      width: 100%;
+      height: auto;
+      max-height: 60px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+
+    }
   }
 }
+
 .footer__buttons {
   position: absolute;
   top: 20%;

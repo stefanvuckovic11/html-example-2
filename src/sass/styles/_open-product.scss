@@ -468,9 +468,8 @@
       max-height: 90%;
       border-radius: 4px;
       width: 400px;
-      height: 400px;
-      margin: auto;
-      margin-top: 10%;
+      height: auto;
+      margin: 15% auto auto;
 
       transform: scale(2);
       transform-origin: center center;
@@ -912,6 +911,14 @@
     &__similar-products {
       &__title {
         font-size: 30px !important;
+      }
+    }
+
+    &__modal{
+
+      &__image{
+        height: auto;
+        margin-top: 50%;
       }
     }
   }

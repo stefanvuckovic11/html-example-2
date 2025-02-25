@@ -126,4 +126,37 @@ $('#imageModal').on('click', function (e) {
 });
 
 
+//footer slider//
+document.addEventListener("DOMContentLoaded", function() {
+    var sliderTrack = document.querySelector('.footer__slider-track');
+    var prevBtn = document.querySelector('.footer__buttons__slider-prev');
+    var nextBtn = document.querySelector('.footer__buttons__slider-next');
+
+    var slideWidth = document.querySelector('.footer__slider-inner').offsetWidth * 0.2;
+
+    prevBtn.addEventListener('click', function() {
+        sliderTrack.style.transition = "transform 0.2s ease-in-out";
+        sliderTrack.style.transform = "translateX(-" + slideWidth + "px)";
+        sliderTrack.addEventListener('transitionend', function handler() {
+            sliderTrack.appendChild(sliderTrack.firstElementChild);
+            sliderTrack.style.transition = "none";
+            sliderTrack.style.transform = "translateX(0)";
+            sliderTrack.offsetHeight;
+            sliderTrack.style.transition = "transform 0.2s ease-in-out";
+            sliderTrack.addEventListener('transitionend', function handler() {
+                console.log('zavrsila se animacija')
+            })
+            sliderTrack.removeEventListener('transitionend', handler);
+        });
+    });
+
+    nextBtn.addEventListener('click', function() {
+        sliderTrack.style.transition = "none";
+        sliderTrack.insertBefore(sliderTrack.lastElementChild, sliderTrack.firstElementChild);
+        sliderTrack.style.transform = "translateX(-" + slideWidth + "px)";
+        sliderTrack.offsetHeight;
+        sliderTrack.style.transition = "transform 0.2s ease-in-out";
+        sliderTrack.style.transform = "translateX(0)";
+    });
+});
 

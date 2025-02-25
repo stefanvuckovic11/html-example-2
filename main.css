@@ -1380,16 +1380,17 @@ footer .slider-controls a {
   .index__right__brand__search {
     margin: 50px auto;
     background-color: #005574;
-    padding: 50px;
+    padding: 40px;
     color: white;
     display: block;
     width: 300px;
     justify-content: center !important;
     justify-items: center;
+    font-size: 25px;
   }
   .index__right__brand__search__header--text {
     justify-content: flex-start;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
   }
   .index__right__brand__search__header__envelope {
@@ -1401,9 +1402,10 @@ footer .slider-controls a {
     margin-top: 10px;
   }
   .index__right__brand__search__box__input {
-    width: 80%;
-    padding: 10px;
+    width: 95%;
+    padding: 20px;
     border: none;
+    font-size: 20px;
   }
   .index__right__brand__search__box__button {
     background-color: white;
@@ -1418,16 +1420,36 @@ footer .slider-controls a {
   .index__right__newsletter {
     display: flex;
   }
+  .index__right__newsletter__header {
+    font-size: 25px;
+  }
   .index__right__hot-offer__product-list, .index__right__action__product-list, .index__right__recommended__product-list, .index__right__new__product-list, .index__right__sale__product-list {
     width: 100%;
   }
-  .index__right__hot-offer__footer-button, .index__right__action__footer-button, .index__right__recommended__footer-button, .index__right__new__footer-button, .index__right__sale__footer-button {
-    font-size: large;
+  .index__right__hot-offer__footer-button__footer__button, .index__right__action__footer-button__footer__button, .index__right__recommended__footer-button__footer__button, .index__right__new__footer-button__footer__button, .index__right__sale__footer__button {
+    font-size: 40px;
     margin-left: 10%;
     justify-self: center;
   }
-  .slider-wrapper {
-    margin-left: 7% !important;
+  .index__right__recommended__footer__button {
+    font-size: 40px;
+    margin-left: 10%;
+    justify-self: center;
+  }
+  .index__right__action__footer__button {
+    font-size: 40px;
+    margin-left: 10%;
+    justify-self: center;
+  }
+  .index__right__hot-offer__footer__button {
+    font-size: 40px;
+    margin-left: 10%;
+    justify-self: center;
+  }
+  .index__right__new__footer__button {
+    font-size: 40px;
+    margin-left: 10%;
+    justify-self: center;
   }
 }
 .slider {
@@ -1477,7 +1499,7 @@ footer .slider-controls a {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 20px;
-  background-color: #007bff;
+  background-color: rgb(1, 173, 239);
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
@@ -1485,7 +1507,7 @@ footer .slider-controls a {
   transition: background-color 0.3s ease;
 }
 .slider__button:hover {
-  background-color: #0056b3;
+  background-color: rgb(1, 173, 239);
 }
 .slider__pagination {
   position: absolute;
@@ -1511,7 +1533,7 @@ footer .slider-controls a {
   user-select: none;
 }
 .slider__pagination-item--active {
-  background-color: #007bff;
+  background-color: rgb(1, 173, 239);
   color: #fff;
 }
 
@@ -2003,9 +2025,8 @@ footer .slider-controls a {
   max-height: 90%;
   border-radius: 4px;
   width: 400px;
-  height: 400px;
-  margin: auto;
-  margin-top: 10%;
+  height: auto;
+  margin: 15% auto auto;
   transform: scale(2);
   transform-origin: center center;
 }
@@ -2337,6 +2358,10 @@ footer .slider-controls a {
   .product-detail__similar-products__title {
     font-size: 30px !important;
   }
+  .product-detail__modal__image {
+    height: auto;
+    margin-top: 50%;
+  }
 }
 .footer {
   position: relative;
@@ -2432,7 +2457,7 @@ footer .slider-controls a {
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 5px;
   }
   .footer__bottom-link:hover {
