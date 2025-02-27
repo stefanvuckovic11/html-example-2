@@ -8,7 +8,7 @@ if (slider) {
 
     pagination.innerHTML = '';
 
-    for (var i = 0; i < totalSlides; i++) {
+    for (var i = 0; i < totalSlides; i++) { //definisati default vrijednost za prvi button
         var button = document.createElement('span');
         if (i === 0) {   //postavljam slajd na indexu 0 kao default aktivni slajd
             button.className = 'slider__pagination-item slider__pagination-item--active';
@@ -47,6 +47,7 @@ if (footerSlider) {
     var nextBtn = document.querySelector('.footer__buttons__slider-next');
     var slideWidth = document.querySelector('.footer__slider-inner').offsetWidth * 0.2;
 
+    //kreirati objekat za varijable
     prevBtn.addEventListener('click', function() {
         sliderTrack.style.transition = "transform 0.2s ease-in-out";
         sliderTrack.style.transform = "translateX(-" + slideWidth + "px)";
@@ -78,7 +79,7 @@ if (footerSlider) {
     var autoSlideInterval = null;
 
     function updateStylesMediaQuery() {
-        if (window.innerWidth <= 1300) {
+        if (window.innerWidth <= 1300) { //napraviti funkciju
             prevBtn.style.opacity = '0';
             nextBtn.style.opacity = '0';
             if (!autoSlideInterval) {
@@ -99,6 +100,58 @@ if (footerSlider) {
     updateStylesMediaQuery();
     window.addEventListener('resize', updateStylesMediaQuery);
 }
+
+
+
+
+// BRAND PROMO
+document.addEventListener("DOMContentLoaded", function () {
+    var brandPromos = document.querySelectorAll(".index__left__brand-promo");
+    var closeAds = document.querySelectorAll(".index__left__brand-promo__commercial-close");
+    if (window.innerWidth <= 1300) {
+        brandPromos[0].classList.add("index__left__brand-promo--visible");
+        setTimeout(() => brandPromos[1].classList.add("index__left__brand-promo--visible"), 15000)
+        //posle 15 sekundi provedenih na stranici prikazi drugu reklamu
+    }
+    for (var i = 0; i < brandPromos.length; i++) {
+        if (closeAds[i]) {
+            closeAds[i].addEventListener("click", function (event) {
+                var promo = event.target.closest(".index__left__brand-promo");
+                if (promo) {
+                    promo.style.opacity = "0";
+                    setTimeout(function () {
+                        promo.style.display = "none";
+                    }, 300);
+                }
+            });
+        }
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,30 +208,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })(mainCategories[i]);
     }
 });
-
-// BRAND PROMO
-document.addEventListener("DOMContentLoaded", function () {
-    var brandPromos = document.querySelectorAll(".index__left__brand-promo");
-    var closeAds = document.querySelectorAll(".index__left__brand-promo__commercial-close");
-    if (window.innerWidth <= 1300) {
-        brandPromos[0].classList.add("index__left__brand-promo--visible");
-        setTimeout(() => brandPromos[1].classList.add("index__left__brand-promo--visible"), 15000)
-        //posle 15 sekundi provedenih na stranici prikazi drugu reklamu
-    }
-    for (var i = 0; i < brandPromos.length; i++) {
-        if (closeAds[i]) {
-            closeAds[i].addEventListener("click", function (event) {
-                var promo = event.target.closest(".index__left__brand-promo");
-                if (promo) {
-                    promo.style.opacity = "0";
-                    setTimeout(function () {
-                        promo.style.display = "none";
-                    }, 300);
-                }
-            });
-        }
-    }
-});
-
-
 

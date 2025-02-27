@@ -66,13 +66,14 @@ if (videoBox) {
     var playButton = document.querySelectorAll('.product-detail__sidebar__video-box__play-button');
     var video = document.querySelectorAll('.product-detail__sidebar__video-box__content');
     var thumbnail = document.querySelectorAll('.product-detail__sidebar__video-box__thumbnail');
+    //napraviti objekat
+    //napraviti play-stop funkciju
     playButton[0].addEventListener('click', function() {
         if (video[0].paused === true){
+            video[0].play();
             video[0].style.display = 'block'
             thumbnail[0].style.display = 'none'
             playButton[0].style.display = 'none'
-            video[0].play();
-
         } else {
             video[0].pause();
         }
