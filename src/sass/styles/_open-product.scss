@@ -252,6 +252,7 @@
               }
             }
 
+
             &__icon--fb {
               background-color: #3b5998;
             }
@@ -719,8 +720,8 @@
               margin-top: 50%;
 
               &__icon {
-                height: 60px;
-                width: 60px;
+                height: 100px;
+                width: 100px;
 
                 &__icon {
                   display: flex;
@@ -738,6 +739,7 @@
               display: flex;
               align-items: center;
               gap: 10px;
+              margin-left: 20%;
 
               &__label {
                 font-size: 40px !important;
@@ -921,7 +923,24 @@
         margin-top: 50%;
       }
     }
-  }
+    &__info{
+      &__slider-cart{
+        &__cart{
+          &__upper{
+            &__share{
+              &__icon{
+                .icon {
+                  font-size: 30px !important;
+                }
+              }
+            }
+          }
+          }
+        }
+      }
+      font-size: 14px;
+    }
+
 }
 
 

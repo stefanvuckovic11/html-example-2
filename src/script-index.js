@@ -39,11 +39,12 @@ if (slider) {
 }
 
 // SECOND SLIDER
-document.addEventListener("DOMContentLoaded", function() {
+
+var footerSlider = document.querySelector('.footer__slider');
+if (footerSlider) {
     var sliderTrack = document.querySelector('.footer__slider-track');
     var prevBtn = document.querySelector('.footer__buttons__slider-prev');
     var nextBtn = document.querySelector('.footer__buttons__slider-next');
-
     var slideWidth = document.querySelector('.footer__slider-inner').offsetWidth * 0.2;
 
     prevBtn.addEventListener('click', function() {
@@ -55,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function() {
             sliderTrack.style.transform = "translateX(0)";
             sliderTrack.offsetHeight;
             sliderTrack.style.transition = "transform 0.2s ease-in-out";
-            sliderTrack.addEventListener('transitionend', function handler() {
-                console.log('zavrsila se animacija')
-            })
+            sliderTrack.addEventListener('transitionend', function innerHandler() {
+                console.log('Izvrsava se prevBtn animacija');
+            });
             sliderTrack.removeEventListener('transitionend', handler);
         });
     });
@@ -68,9 +69,39 @@ document.addEventListener("DOMContentLoaded", function() {
         sliderTrack.style.transform = "translateX(-" + slideWidth + "px)";
         sliderTrack.offsetHeight;
         sliderTrack.style.transition = "transform 0.2s ease-in-out";
+        sliderTrack.addEventListener('transitionend', function innerHandler() {
+            console.log('Izvrsava se nextBtn animacija');
+        });
         sliderTrack.style.transform = "translateX(0)";
     });
-});
+
+    var autoSlideInterval = null;
+
+    function updateStylesMediaQuery() {
+        if (window.innerWidth <= 1300) {
+            prevBtn.style.opacity = '0';
+            nextBtn.style.opacity = '0';
+            if (!autoSlideInterval) {
+                autoSlideInterval = setInterval(function() {
+                    prevBtn.click();
+                }, 1000);
+            }
+        } else {
+            prevBtn.style.opacity = '1';
+            nextBtn.style.opacity = '1';
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+            }
+        }
+    }
+
+    updateStylesMediaQuery();
+    window.addEventListener('resize', updateStylesMediaQuery);
+}
+
+
+
 
 // ACCORDION
 document.addEventListener("DOMContentLoaded", function () {
