@@ -939,19 +939,24 @@ footer .slider-controls a {
           }
         }
       }
-      &__brand{
+
+      &__brand {
         display: none;
       }
-      &__newsletter{
+
+      &__newsletter {
         display: none;
       }
+
       &__product-card {
         display: none;
       }
+
       &__accordion {
         width: 100%;
         max-width: 1200px;
         overflow: visible;
+
         &__item {
           &__title {
             margin-top: 0;
@@ -959,6 +964,7 @@ footer .slider-controls a {
             color: #fff6f6;
             font-size: 24px;
           }
+
           &__list {
             &__list-item {
               font-size: 24px;
@@ -971,41 +977,49 @@ footer .slider-controls a {
     &__right {
       &__brand {
         display: block;
+
         &__search {
           margin: 50px auto;
           background-color: $navbar-dark-blue;
-          padding: 50px;
+          padding: 40px;
           color: white;
           display: block;
           width: 300px;
           justify-content: center !important;
           justify-items: center;
+          font-size: 25px;
+
           &__header {
             &--text {
               justify-content: flex-start;
-              font-size: 16px;
+              font-size: 20px;
               font-weight: bold;
             }
+
             &__envelope {
               margin-right: 5%;
             }
           }
+
           &__box {
             display: flex;
             justify-content: center;
             margin-top: 10px;
+
             &__input {
-              width: 80%;
-              padding: 10px;
+              width: 95%;
+              padding: 20px;
               border: none;
+              font-size: 20px;
             }
+
             &__button {
               background-color: white;
               border: none;
               padding: 8px;
               cursor: pointer;
 
-              &__search-icon{
+              &__search-icon {
                 color: $general-cyan;
                 font-size: 20px;
               }
@@ -1013,10 +1027,13 @@ footer .slider-controls a {
           }
         }
       }
-      &__newsletter{
+      &__newsletter {
         display: flex;
-      }
 
+        &__header {
+          font-size: 25px;
+        }
+      }
       &__hot-offer__product-list,
       &__action__product-list,
       &__recommended__product-list,
@@ -1029,16 +1046,57 @@ footer .slider-controls a {
       &__action__footer-button,
       &__recommended__footer-button,
       &__new__footer-button,
-      &__sale__footer-button {
-        font-size: large;
-        margin-left: 10%;
-        justify-self: center;
+      &__sale {
+        &__footer {
+          &__button {
+            font-size: 20px;
+            margin-left: 10%;
+            justify-self: center;
+          }
+        }
+      }
+      &__recommended {
+        &__footer {
+          &__button {
+            font-size: 20px;
+            margin-left: 10%;
+            justify-self: center;
+          }
+        }
+      }
+      &__action {
+        &__footer {
+          &__button {
+            font-size: 20px;
+            margin-left: 10%;
+            justify-self: center;
+          }
+        }
+      }
+      &__hot-offer {
+        &__footer {
+          &__button {
+            font-size: 20px;
+            margin-left: 10%;
+            justify-self: center;
+          }
+        }
+      }
+      &__new {
+        &__footer {
+          &__button {
+            font-size: 20px;
+            margin-left: 10%;
+            justify-self: center;
+          }
+        }
       }
     }
   }
 
-  .slider-wrapper {
-    margin-left: 7% !important;
-  }
+
+
 }
+
+
 
