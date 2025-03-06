@@ -1,44 +1,3 @@
-$(document).ready(function() {
-    var productSlider = $('.product-detail__slider__list').bxSlider({
-        auto: false,
-        controls: false,
-        pager: false,
-        infiniteLoop: true,
-        adaptiveHeight: true,
-        responsive: false,
-        touchEnabled: false,
-        useCSS: true,
-        maxSlides:1,
-    });
-
-    var thumbSlider = $('#bx-pager').bxSlider({
-        slideWidth: 150,
-        slideHeight: 150,
-        minSlides: 3,
-        maxSlides: 3,
-        moveSlides: 1,
-        pager: false,
-        controls: false,
-        infiniteLoop: false,
-        shrinkItems: true
-    });
-
-    $('.product-detail__gallery__thumbs__prev').click(function(e){
-        e.preventDefault();
-        thumbSlider.goToPrevSlide();
-    });
-
-    $('.product-detail__gallery__thumbs__next').click(function(e){
-        e.preventDefault();
-        thumbSlider.goToNextSlide();
-    });
-
-    $('#bx-pager a').click(function(e) {
-        e.preventDefault();
-        var index = $(this).index();
-        productSlider.goToSlide(index);
-    });
-});
 
 function increase() {
     let input = document.getElementById("numInput");
@@ -46,18 +5,28 @@ function increase() {
 }
 
 
-document.querySelectorAll('.product-detail__additional__tabs__tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        document.querySelectorAll('.product-detail__additional__tabs__tab')
-            .forEach(t => t.classList.remove('product-detail__additional__tabs__tab--active'));
-        document.querySelectorAll('.product-detail__additional__tab-content')
-            .forEach(tc => tc.classList.remove('product-detail__additional__tab-content--active'));
+(function initAdditionalTabs() {
+    var tabsObj = {
+        tabs: document.querySelectorAll('.product-detail__additional__tabs__tab'),
+        tabContents: document.querySelectorAll('.product-detail__additional__tab-content')
+    };
 
-        this.classList.add('product-detail__additional__tabs__tab--active');
-        document.getElementById(this.dataset.tab)
-            .classList.add('product-detail__additional__tab-content--active');
+    tabsObj.tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            tabsObj.tabs.forEach(function(t) {
+                t.classList.remove('product-detail__additional__tabs__tab--active');
+            });
+            tabsObj.tabContents.forEach(function(tc) {
+                tc.classList.remove('product-detail__additional__tab-content--active');
+            });
+            this.classList.add('product-detail__additional__tabs__tab--active');
+            var content = document.getElementById(this.dataset.tab);
+            if (content) {
+                content.classList.add('product-detail__additional__tab-content--active');
+            }
+        });
     });
-});
+})();
 
 
 
@@ -185,6 +154,112 @@ if (footerSlider) {
     modal.addEventListener('click', function(e){
         if(e.target !== modalImg && e.target !== close){}
             modal.style.display = 'none'; });
+})();
+
+
+//slider
+var slider = document.querySelector(".product-detail__gallery__slider");
+if (slider) {
+    var sliderProperties = {
+        sliderTrack: document.querySelector(".product-detail__gallery__slider__track"),
+        sliderTrackSlides: document.querySelectorAll(".product-detail__gallery__slider__track-slide"),
+        activeSlide: document.querySelector(".product-detail__gallery__slider__track-slide--active"),
+
+        sliderThumbnails: document.querySelectorAll(".product-detail__gallery__slider__thumbnails-item"),
+        activeThumbnail: document.querySelector(".product-detail__gallery__slider__thumbnails-item--active"),
+
+        prevBtn: document.querySelector(".product-detail__gallery__slider__thumbnails-arrow--prev"),
+        nextBtn: document.querySelector(".product-detail__gallery__slider__thumbnails-arrow--next")
+    };
+    var thumbnailsArray = Array.from(sliderProperties.sliderThumbnails);
+    var activeIndex = thumbnailsArray.indexOf(sliderProperties.activeThumbnail);
+    var slidesArray = Array.from(sliderProperties.sliderTrackSlides);
+    function updateActiveSlide() {
+        slidesArray.forEach(function(slide) {
+            slide.classList.remove("product-detail__gallery__slider__track-slide--active");
+        });
+        slidesArray[activeIndex].classList.add("product-detail__gallery__slider__track-slide--active");
+    }
+    function thumbClick() {
+        for (let i = 0; i < thumbnailsArray.length; i++) {
+            thumbnailsArray[i].addEventListener("click", function() {
+                thumbnailsArray[activeIndex].classList.remove("product-detail__gallery__slider__thumbnails-item--active");
+                activeIndex = i;
+                thumbnailsArray[i].classList.add("product-detail__gallery__slider__thumbnails-item--active");
+                updateActiveSlide();
+            });
+        }
+    }
+    thumbClick();
+    sliderProperties.nextBtn.addEventListener("click", function() {
+        moveRightThumb();
+    });
+    sliderProperties.prevBtn.addEventListener("click", function() {
+        moveLeftThumb();
+    });
+    function moveRightThumb() {
+        if (activeIndex === thumbnailsArray.length - 1) {
+            thumbnailsArray[activeIndex].classList.remove("product-detail__gallery__slider__thumbnails-item--active");
+            activeIndex = 0;
+            thumbnailsArray[activeIndex].classList.add("product-detail__gallery__slider__thumbnails-item--active");
+        } else {
+            thumbnailsArray[activeIndex].classList.remove("product-detail__gallery__slider__thumbnails-item--active");
+            activeIndex++;
+            thumbnailsArray[activeIndex].classList.add("product-detail__gallery__slider__thumbnails-item--active");
+        }
+        updateActiveSlide();
+    }
+    function moveLeftThumb() {
+        if (activeIndex === 0) {
+            thumbnailsArray[activeIndex].classList.remove("product-detail__gallery__slider__thumbnails-item--active");
+            activeIndex = thumbnailsArray.length - 1;
+            thumbnailsArray[activeIndex].classList.add("product-detail__gallery__slider__thumbnails-item--active");
+        } else {
+            thumbnailsArray[activeIndex].classList.remove("product-detail__gallery__slider__thumbnails-item--active");
+            activeIndex--;
+            thumbnailsArray[activeIndex].classList.add("product-detail__gallery__slider__thumbnails-item--active");
+        }
+        updateActiveSlide();
+    }
+}
+
+//probati fetch
+(function() {
+    async function getData() {
+        try {
+            const response = await fetch('src/products.json');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+
+            const productsContainer = $('.index__right__hot-offer__product-list');
+            productsContainer.empty();
+
+            if (data.hotOffer && data.hotOffer.length > 0) {
+                data.hotOffer.forEach(function(product) {
+                    const productHTML = `
+            <div class="index__right__hot-offer__product">
+              <span class="index__right__hot-offer__product__discount">${product.discount}</span>
+              <img src="${product.image}" alt="${product.title}" class="index__right__hot-offer__product__img">
+              <h3 class="index__right__hot-offer__product__title">${product.title}</h3>
+              <p class="index__right__hot-offer__product__timer">${product.timer}</p>
+              <p class="index__right__hot-offer__product__price">
+                <span class="index__right__hot-offer__product__old-price">${product.oldPrice}</span>
+                <span class="index__right__hot-offer__product__new-price">${product.newPrice}</span>
+              </p>
+            </div>
+          `;
+                    productsContainer.append(productHTML);
+                });
+            } else {
+                console.log("No products found.");
+            }
+        } catch (error) {
+            console.error("Error fetching data: ", error);
+        }
+    }
+    getData();
 })();
 
 

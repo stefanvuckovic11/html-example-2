@@ -99,43 +99,33 @@
         <div class="product-detail__body">
             <div class="product-detail__gallery">
                 <div class="product-detail__gallery__slider">
-                    <ul class="bxslider product-detail__slider__list">
-                        <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/microwave2.jpg" alt="Product Image 1">
-                        </li>
-                        <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/microwave1.jpg" alt="Product Image 2">
-                        </li>
-                        <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/microwave3.jpg" alt="Product Image 3">
-                        </li>
-                        <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/microwave4.jpg" alt="Product Image 1">
-                        </li>
-                        <li class="product-detail__slider__list-item">
-                            <img class="product-detail__slider__list-item__img" src="src/images/microwave5.jpg" alt="Product Image 2">
-                        </li>
-                    </ul>
-                </div>
-                <div class="product-detail__gallery__thumbs">
-                    <a href="#" class="product-detail__gallery__thumbs__prev">❮</a>
-                    <a href="#" class="product-detail__gallery__thumbs__next">❯</a>
-                    <div id="bx-pager" class="product-detail__gallery__thumbs__list">
-                        <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave2.jpg" alt="Thumbnail 2">
-                        </a>
-                        <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave1.jpg" alt="Thumbnail 3">
-                        </a>
-                        <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave3.jpg" alt="Thumbnail 2">
-                        </a>
-                        <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave4.jpg" alt="Thumbnail 2">
-                        </a>
-                        <a class="product-detail__gallery__thumbs__list__thumb">
-                            <img class="product-detail__gallery__thumbs__list__thumb__img" src="src/images/microwave5.jpg" alt="Thumbnail 3">
-                        </a>
+                    <div class="product-detail__gallery__slider__track">
+                        <div class="product-detail__gallery__slider__track-slide product-detail__gallery__slider__track-slide--active">
+                            <img src="src/images/microwave2.jpg" alt="Microwave Front" class="product-detail__gallery__slider__track-slide-img" />
+                        </div>
+                        <div class="product-detail__gallery__slider__track-slide">
+                            <img src="src/images/microwave1.jpg" alt="Microwave Angle" class="product-detail__gallery__slider__track-slide-img" />
+                        </div>
+                        <div class="product-detail__gallery__slider__track-slide">
+                            <img src="src/images/microwave3.jpg" alt="Microwave Open" class="product-detail__gallery__slider__track-slide-img" />
+                        </div>
+                    </div>
+                    <div class="product-detail__gallery__slider__thumbnails">
+                        <button class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--prev" aria-label="Previous slide">
+                            &lt;
+                        </button>
+                        <div class="product-detail__gallery__slider__thumbnails-item product-detail__gallery__slider__thumbnails-item--active">
+                            <img src="src/images/microwave2.jpg" alt="Thumbnail 1" class="product-detail__gallery__slider__thumbnails-item-img" />
+                        </div>
+                        <div class="product-detail__gallery__slider__thumbnails-item">
+                            <img src="src/images/microwave1.jpg" alt="Thumbnail 2" class="product-detail__gallery__slider__thumbnails-item-img" />
+                        </div>
+                        <div class="product-detail__gallery__slider__thumbnails-item">
+                            <img src="src/images/microwave3.jpg" alt="Thumbnail 3" class="product-detail__gallery__slider__thumbnails-item-img" />
+                        </div>
+                        <button class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--next" aria-label="Next slide">
+                            &gt;
+                        </button>
                     </div>
                 </div>
             </div>
@@ -436,7 +426,6 @@
 
 <!-- vendor:js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 <script src="src/script-openproduct.js"></script>
 <!-- end inject -->
 </body>
