@@ -27,10 +27,9 @@
     "@boxslider/slider": "^2.12.1",
     "bxslider": "^4.2.17",
     "cors": "^2.8.5",
-    "gulp": "3.9.1",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
     "gulp-clean": "^0.4.0",
-    "gulp-connect": "^5.7.0",
-    "gulp-inject": "^5.0.2",
     "handlebars": "^4.7.8",
     "json-server": "^1.0.0-beta.3",
     "main-bower-files": "^2.13.1",
@@ -38,7 +37,8 @@
     "video.js": "^8.21.0"
   },
   "devDependencies": {
-    "gulp-sass": "^5.1.0",
+    "bower": "^1.8.14",
     "sass": "^1.83.4"
-  }
+  },
+  "keywords": []
 }
