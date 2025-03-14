@@ -1,0 +1,204 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "hotOffer",
+      "discount": "70%",
+      "image": "images/frizider.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€99999999.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 2,
+      "category": "hotOffer",
+      "discount": "20%",
+      "image": "images/1.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€696969.00"
+    },
+    {
+      "id": 3,
+      "category": "hotOffer",
+      "discount": "40%",
+      "image": "images/2.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 4,
+      "category": "hotOffer",
+      "discount": "30%",
+      "image": "images/microwave2.jpg",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 5,
+      "category": "action",
+      "discount": "70%",
+      "image": "images/frizider.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 6,
+      "category": "action",
+      "discount": "20%",
+      "image": "images/1.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 7,
+      "category": "action",
+      "discount": "40%",
+      "image": "images/2.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 8,
+      "category": "action",
+      "discount": "30%",
+      "image": "images/3.png",
+      "title": "Ugradni set frižider Gorenje",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 9,
+      "category": "recommended",
+      "discount": "70%",
+      "image": "images/frizider.png",
+      "title": "Recommended Product 1",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 10,
+      "category": "recommended",
+      "discount": "20%",
+      "image": "images/1.png",
+      "title": "Recommended Product 2",
+      "timer": "8 dan 5 sat 10 min 25 sek",
+      "oldPrice": "€150.00",
+      "newPrice": "€120.00"
+    },
+    {
+      "id": 11,
+      "category": "recommended",
+      "discount": "40%",
+      "image": "images/2.png",
+      "title": "Recommended Product 3",
+      "timer": "9 dan 3 sat 25 min 5 sek",
+      "oldPrice": "€160.00",
+      "newPrice": "€96.00"
+    },
+    {
+      "id": 12,
+      "category": "recommended",
+      "discount": "30%",
+      "image": "images/3.png",
+      "title": "Recommended Product 4",
+      "timer": "10 dan 2 sat 50 min 30 sek",
+      "oldPrice": "€140.00",
+      "newPrice": "€98.00"
+    },
+    {
+      "id": 13,
+      "category": "new",
+      "discount": "70%",
+      "image": "images/frizider.png",
+      "title": "New Product 1",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 14,
+      "category": "new",
+      "discount": "20%",
+      "image": "images/1.png",
+      "title": "New Product 2",
+      "timer": "9 dan 4 sat 20 min 15 sek",
+      "oldPrice": "€145.00",
+      "newPrice": "€116.00"
+    },
+    {
+      "id": 15,
+      "category": "new",
+      "discount": "40%",
+      "image": "images/2.png",
+      "title": "New Product 3",
+      "timer": "8 dan 7 sat 15 min 10 sek",
+      "oldPrice": "€130.00",
+      "newPrice": "€78.00"
+    },
+    {
+      "id": 16,
+      "category": "new",
+      "discount": "30%",
+      "image": "images/3.png",
+      "title": "New Product 4",
+      "timer": "7 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€120.00",
+      "newPrice": "€84.00"
+    },
+    {
+      "id": 17,
+      "category": "sale",
+      "discount": "70%",
+      "image": "images/frizider.png",
+      "title": "Sale Product 1",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 18,
+      "category": "sale",
+      "discount": "20%",
+      "image": "images/1.png",
+      "title": "Sale Product 2",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 19,
+      "category": "sale",
+      "discount": "40%",
+      "image": "images/2.png",
+      "title": "Sale Product 3",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    },
+    {
+      "id": 20,
+      "category": "sale",
+      "discount": "30%",
+      "image": "images/3.png",
+      "title": "Sale Product 4",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "oldPrice": "€135.00",
+      "newPrice": "€90.00"
+    }
+  ]
+}
