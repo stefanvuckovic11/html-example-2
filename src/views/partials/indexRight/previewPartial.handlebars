@@ -1,0 +1,22 @@
+<div class="index__right__{{section}}">
+    <div class="index__right__{{section}}__header" style="border-bottom-color: {{trapezoidColor}};">
+        <i class="index__right__{{section}}__icon fa {{iconClass}}"></i>
+        <span class="index__right__{{section}}__header-text">{{headerText}}</span>
+    </div>
+
+    <div class="index__right__{{section}}__product-list" id="{{section}}ProductList">
+        {{#each products}}
+            {{> general/productCard
+                    imgSrc=mainImage
+                    altText=altText
+                    title=title
+                    description=description}}
+        {{/each}}
+    </div>
+
+    <div class="index__right__{{section}}__footer">
+        <button class="index__right__{{section}}__footer__button" style="border-color: {{buttonBorderColor}};">
+            {{footerButtonText}}
+        </button>
+    </div>
+</div>

@@ -11,9 +11,10 @@
   "scripts": {
     "postinstall": "bower install && gulp build",
     "prestart": "npm install",
+    "sass": "sass --watch main.scss dist/css/main.css",
     "start": "gulp serve"
   },
-  "repository": {
+"repository": {
     "type": "git",
     "url": "git+https://github.com/lindon88/sass-play-ground.git"
   },
@@ -38,7 +39,7 @@
   },
   "devDependencies": {
     "bower": "^1.8.14",
-    "sass": "^1.83.4"
+    "sass": "^1.85.1"
   },
   "keywords": []
 }

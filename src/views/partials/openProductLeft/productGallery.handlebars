@@ -1,0 +1,35 @@
+<div class="product-detail__gallery">
+    <div class="product-detail__gallery__slider">
+        <div class="product-detail__gallery__slider__track">
+            {{#each product.images}}
+                <div class="product-detail__gallery__slider__track-slide
+                            {{#if @first}}product-detail__gallery__slider__track-slide--active{{/if}}">
+                    <img src="/{{this}}"
+                         alt="Image {{@index}} for {{../product.title}}"
+                         class="product-detail__gallery__slider__track-slide-img" />
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="product-detail__gallery__slider__thumbnails">
+            <button class="product-detail__gallery__slider__thumbnails-arrow
+                           product-detail__gallery__slider__thumbnails-arrow--prev"
+                    aria-label="Previous slide">
+                &lt;
+            </button>
+            {{#each product.images}}
+                <div class="product-detail__gallery__slider__thumbnails-item
+                           {{#if @first}}product-detail__gallery__slider__thumbnails-item--active{{/if}}">
+                    <img src="/{{this}}"
+                         alt="Thumbnail {{@index}}"
+                         class="product-detail__gallery__slider__thumbnails-item-img" />
+                </div>
+            {{/each}}
+            <button class="product-detail__gallery__slider__thumbnails-arrow
+                           product-detail__gallery__slider__thumbnails-arrow--next"
+                    aria-label="Next slide">
+                &gt;
+            </button>
+        </div>
+    </div>
+</div>

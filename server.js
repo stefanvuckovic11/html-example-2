@@ -1,22 +1,38 @@
-const express = require('express');
-const path = require('path');
-const exphbs = require('express-handlebars');
-const productRoutes = require('./src/routes/productRoutes');
+var express = require('express');
+var path = require('path');
+var exphbs = require('express-handlebars');
+var productRoutes = require('./src/routes/productRoutes');
+const productController = require('./src/controllers/productController');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// postavljamo handlebars kao view engine
-app.engine('handlebars', exphbs.engine({ defaultLayout: 'main', extname: '.handlebars' }));
+
+
+app.engine('handlebars', exphbs.engine({
+    defaultLayout: 'main',
+    extname: '.handlebars',
+    partialsDir: path.join(__dirname, 'src', 'views', 'partials')
+}));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'src', 'views'));
 
-// serviramo statičke fajlove iz "dist" foldera
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// koristimo rute
-app.use('/', productRoutes);
+app.use('/api', productRoutes);
+
+
+app.get('/products/:id', productController.getProductById);
+
+
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+app.get('/products/:id', (req, res) => {
+    res.render('openProduct');
+});
 
 app.listen(PORT, () => {
-    console.log(`server radi na http://localhost:${PORT}`);
+    console.log(`Server radi na http://localhost:${PORT}`);
 });

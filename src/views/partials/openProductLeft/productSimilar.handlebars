@@ -1,0 +1,19 @@
+<div class="product-detail__similar-products">
+    <h3 class="product-detail__similar-products__title">SLIČNI PROIZVODI</h3>
+    <div class="index__right__hot-offer__product-list">
+        {{#each similarProducts}}
+            <div class="index__right__hot-offer__product">
+                <span class="index__right__hot-offer__product__discount">{{discount}}</span>
+                <a href="/products/{{id}}">
+                    <img src="/{{mainImage}}" alt="{{title}}" class="index__right__hot-offer__product__img">
+                </a>
+                <h3 class="index__right__hot-offer__product__title">{{title}}</h3>
+                <p class="index__right__hot-offer__product__timer">{{timer}}</p>
+                <p class="index__right__hot-offer__product__price">
+                    <span class="index__right__hot-offer__product__old-price">{{price.old}}</span>
+                    <span class="index__right__hot-offer__product__new-price">{{price.new}}</span>
+                </p>
+            </div>
+        {{/each}}
+    </div>
+</div>
