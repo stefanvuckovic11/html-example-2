@@ -5,691 +5,74 @@
     <title>Example app</title>
     <!-- app:css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="dist/css/main.css?v=1548800917231"/>
+    <link rel="stylesheet" href="/css/main.css?v=1548800917231"/>
     <!-- endinject -->
 </head>
 <body>
-
-<nav class="navbar">
-    <div class="navbar__container">
-        <div class="navbar__top">
-            <div class="navbar__top__languages">
-                <a href="#" class="navbar__top__languages__link">Engleski</a>
-                <a href="#" class="navbar__top__languages__link">Crnogorski</a>
-                <p class="navbar__top__languages__info">
-                    Svakog dana od 8:00 do 21:00 h, osim nedjeljom | Tel: +382 20 656 772
-                </p>
-            </div>
-            <div class="navbar__top__account">
-                <a href="#" class="navbar__top__account__link">On-line podrska</a>
-                <a href="#" class="navbar__top__account__link">Registracija</a>
-                <a href="#" class="navbar__top__account__link">Prijava</a>
-            </div>
-        </div>
-
-        <div class="navbar__middle">
-            <div class="navbar__middle__logo">
-                <p class="navbar__middle__logo__text" id="centrometal-text">
-                    CENTRO<span class="navbar__middle__logo__highlight">METAL</span>
-                </p>
-            </div>
-            <div class="navbar__middle__search">
-                <span class="navbar__middle__search__icon fa fa-search"></span>
-                <input type="text" class="navbar__middle__search__input" placeholder="Unesite šifru ili pojam pretraživanja">
-            </div>
-            <div class="navbar__middle__social">
-                <i class="navbar__middle__social__icon fa fa-facebook-f"></i>
-            </div>
-            <div class="navbar__middle__cart">
-                <p class="navbar__middle__cart__text">MOJA KORPA</p>
-                <p class="navbar__middle__cart__price">0.00€</p>
-                <i class="navbar__middle__cart__icon fa fa-shopping-cart"></i>
-            </div>
-        </div>
-
-        <div class="navbar__bottom">
-            <input type="checkbox" id="nav-toggle" class="navbar__bottom__toggle">
-            <label for="nav-toggle" class="navbar__bottom__burger">
-                <i class="navbar__bottom__burger__icon fa fa-bars"></i>
-            </label>
-            <ul class="navbar__bottom__menu">
-                <li class="navbar__bottom__menu__item navbar__bottom__menu__item--home">
-                    <a href="#" class="navbar__bottom__menu__link">
-                        <i class="navbar__bottom__menu__link__icon fa fa-home"></i>
-                    </a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Akcija</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Rasprodaja</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Katalozi</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Novosti</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">O nama</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Uradi sam</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Vip kartica</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Kontakt</a>
-                </li>
-                <li class="navbar__bottom__menu__item">
-                    <a href="#" class="navbar__bottom__menu__link">Informacije</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<div id="loader" class="loader">
+    <div class="loader__spinner"></div>
+</div>
 
 <main class="index">
     <div class="index__left">
-        <!-- Left Column Content (Static) -->
-        <div class="index__left__accordion">
-            <div class="index__left__accordion__header">
-                <i class="index__left__accordion__header-icon fa fa-th-large"></i>
-                <span class="index__left__accordion__header-text">Kupuj po kategoriji</span>
-            </div>
-            <div class="index__left__accordion__item">
-                <div class="index__left__accordion__title">
-                    BIJELA TEHNIKA <span class="index__left__accordion__icon">+</span>
-                </div>
-                <div class="index__left__accordion__content">
-                    <ul class="index__left__accordion__list">
-                        <li class="index__left__accordion__list-item">Veš mašine</li>
-                        <li class="index__left__accordion__list-item">Sušilice</li>
-                        <li class="index__left__accordion__list-item">Frižideri</li>
-                        <li class="index__left__accordion__list-item">Štednjaci</li>
-                        <li class="index__left__accordion__list-item">Zamrzivači</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index__left__accordion__item">
-                <div class="index__left__accordion__title">
-                    UGRADNA TEHNIKA <span class="index__left__accordion__icon">+</span>
-                </div>
-                <div class="index__left__accordion__content">
-                    <ul class="index__left__accordion__list">
-                        <li class="index__left__accordion__list-item">Ugradbene rerne</li>
-                        <li class="index__left__accordion__list-item">Ugradbene ploče</li>
-                        <li class="index__left__accordion__list-item">Mašine za suđe</li>
-                        <li class="index__left__accordion__list-item">Aspiratori</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">KLIMATIZACIJA I GRIJANJE</a>
-            </div>
-            <div class="index__left__accordion__item">
-                <div class="index__left__accordion__title">
-                    MALI KUĆNI APARATI <span class="index__left__accordion__icon">+</span>
-                </div>
-                <div class="index__left__accordion__content">
-                    <ul class="index__left__accordion__list">
-                        <li class="index__left__accordion__list-item">Mikseri</li>
-                        <li class="index__left__accordion__list-item">Tosteri</li>
-                        <li class="index__left__accordion__list-item">Aparati za kafu</li>
-                        <li class="index__left__accordion__list-item">Usisivači</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index__left__accordion__item">
-                <div class="index__left__accordion__title">
-                    TV I VIDEO <span class="index__left__accordion__icon">+</span>
-                </div>
-                <div class="index__left__accordion__content">
-                    <ul class="index__left__accordion__list">
-                        <li class="index__left__accordion__list-item">LED televizori</li>
-                        <li class="index__left__accordion__list-item">Smart TV</li>
-                        <li class="index__left__accordion__list-item">Projektori</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index__left__accordion__item">
-                <div class="index__left__accordion__title">
-                    AUDIO <span class="index__left__accordion__icon">+</span>
-                </div>
-                <div class="index__left__accordion__content">
-                    <ul class="index__left__accordion__list">
-                        <li class="index__left__accordion__list-item">Zvučnici</li>
-                        <li class="index__left__accordion__list-item">Slušalice</li>
-                        <li class="index__left__accordion__list-item">Radio uređaji</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index__left__accordion__item">
-                <div class="index__left__accordion__title">
-                    TELEFONIJA <span class="index__left__accordion__icon">+</span>
-                </div>
-                <div class="index__left__accordion__content">
-                    <ul class="index__left__accordion__list">
-                        <li class="index__left__accordion__list-item">Mobilni telefoni</li>
-                        <li class="index__left__accordion__list-item">Fiksni telefoni</li>
-                        <li class="index__left__accordion__list-item">Dodaci za telefone</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">KAMERE I FOTO APARATI</a>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">AUTO TEHNIKA</a>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">RAČUNARI I PERIFERIJE</a>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">KONZOLE I IGRICE</a>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">POSTELJINE</a>
-            </div>
-            <div class="index__left__accordion__item">
-                <a href="#" class="index__left__accordion__title">KUPOVINA PREKO T-COMA</a>
-            </div>
-        </div>
-
-        <div class="index__left__brand">
-            <div class="index__left__brand__search">
-                <div class="index__left__brand__search__header">
-                    <i class="index__left__brand__search__header__envelope fa fa-envelope"></i>
-                    <span class="index__left__brand__search__header--text">PRETRAGA PO BRENDU</span>
-                </div>
-                <div class="index__left__brand__search__search-box">
-                    <input type="text" class="index__left__brand__search__search-box__input" placeholder="Unesite naziv brenda">
-                    <button type="submit" class="index__left__brand__search__search-box__button">
-                        <i class="index__left__brand__search__search-box__button__search-icon fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="index__left__brand-promo">
-            <div class="index__left__brand-promo__commercial">
-                <button class="index__left__brand-promo__commercial-close">&times;</button>
-                <img src="https://picsum.photos/400/600" alt="Fashion Shoes" class="index__left__brand-promo__commercial-image">
-                <div class="index__left__brand-promo__commercial-text">
-                    <span class="index__left__brand-promo__commercial-fashion">Fashion</span>
-                    <span class="index__left__brand-promo__commercial-shoes">shoes</span><br>
-                    <span class="index__left__brand-promo__commercial-veneno">VENENO</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="index__left__newsletter">
-            <div class="index__left__newsletter__header">
-                <i class="index__left__newsletter__header__news-icon fa fa-envelope"></i>
-                <span class="index__left__newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
-            </div>
-            <form class="index__left__newsletter__form">
-                <input type="email" class="index__left__newsletter__form--input-email" placeholder="E-mail">
-                <input type="text" class="index__left__newsletter__form--input-name" placeholder="Ime i prezime">
-                <button type="submit" class="index__left__newsletter__form--submit">PRIJAVI SE</button>
-            </form>
-        </div>
-
-        <div class="index__left__product-card">
-            <img class="index__left__product-card__img" src="src/images/makita.jpg" alt="Makita alat">
-            <div class="index__left__product-card__info">
-                <h3 class="index__left__product-card__info__title">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h3>
-                <p class="index__left__product-card__info__description">
-                    Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.
-                </p>
-                <button class="index__left__product-card__info__button">OPŠIRNIJE</button>
-            </div>
-        </div>
-
-        <div class="index__left__product-card">
-            <img src="src/images/raznecipele.png" alt="Radne cipele" class="index__left__product-card__img">
-            <div class="index__left__product-card__info">
-                <h3 class="index__left__product-card__title">Lorem ipsum dolor sit amet,</h3>
-                <p class="index__left__product-card__description">
-                    Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Maecenas vehicula efficitur magna eget tempus. Vivamus tempus.
-                </p>
-                <button class="btn-primary index__left__product-card__info__button">OPŠIRNIJE</button>
-            </div>
-        </div>
-
-        <div class="index__left__brand-promo">
-            <div class="index__left__brand-promo__commercial">
-                <button class="index__left__brand-promo__commercial-close">&times;</button>
-                <img src="https://picsum.photos/400/600" alt="Fashion Shoes" class="index__left__brand-promo__commercial-image">
-                <div class="index__left__brand-promo__commercial-text">
-                    <span class="index__left__brand-promo__commercial-fashion">Fashion</span>
-                    <span class="index__left__brand-promo__commercial-shoes">shoes</span><br>
-                    <span class="index__left__brand-promo__commercial-veneno">VENENO</span>
-                </div>
-            </div>
-        </div>
+        {{> indexLeft/accordion}}
+        {{> indexLeft/brandPromo}}
+        {{> indexLeft/brandSearch}}
+        {{> indexLeft/newsletter}}
+        {{> indexLeft/productCard
+                imgSrc="/images/makita.jpg"
+                altText="Makita alat"
+                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                description="Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Vivamus tempus."}}
+        {{> indexLeft/productCard
+                imgSrc="/images/raznecipele.png"
+                altText="Radne cipele"
+                title="Lorem ipsum dolor sit amet,"
+                description="Etiam dolor tortor, facilisis id ante id, blandit convallis quam. Vivamus tempus."}}
+        {{> indexLeft/brandPromo}}
     </div>
 
     <div class="index__right">
-        <div class="slider">
-            <div class="slider__track">
-                <div class="slider__slide">
-                    <img class="slider__image" src="dist/images/sega.jpg" alt="motorna šega"/>
-                    <div class="slider__content">
-                        <span class="slider__label slider__label--line1">motorna</span>
-                        <span class="slider__label slider__label--line2">šega</span>
-                        <a href="#" class="slider__button">VIDI PROIZVOD</a>
-                    </div>
-                </div>
-                <div class="slider__slide">
-                    <img class="slider__image" src="dist/images/sega.jpg" alt="motorna šega"/>
-                    <div class="slider__content">
-                        <span class="slider__label slider__label--line1">motorna</span>
-                        <span class="slider__label slider__label--line2">šega</span>
-                        <a href="#" class="slider__button">VIDI PROIZVOD</a>
-                    </div>
-                </div>
-                <div class="slider__slide">
-                    <img class="slider__image" src="dist/images/sega.jpg" alt="motorna šega"/>
-                    <div class="slider__content">
-                        <span class="slider__label slider__label--line1">motorna</span>
-                        <span class="slider__label slider__label--line2">šega</span>
-                        <a href="#" class="slider__button">VIDI PROIZVOD</a>
-                    </div>
-                </div>
-                <div class="slider__slide">
-                    <img class="slider__image" src="dist/images/sega.jpg" alt="motorna šega"/>
-                    <div class="slider__content">
-                        <span class="slider__label slider__label--line1">motorna</span>
-                        <span class="slider__label slider__label--line2">šega</span>
-                        <a href="#" class="slider__button">VIDI PROIZVOD</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slider__pagination"></div>
-        </div>
+        {{> indexRight/slider}}
+        {{> indexRight/previewPartial
+                section="hot-offer"
+                iconClass="index__right__hot-offer__fire-icon fa fa-fire"
+                headerText="VRUĆA PONUDA"
+                footerButtonText="POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE"}}
 
-        <div class="index__right__hot-offer">
-            <div class="index__right__hot-offer__header">
-                <i class="index__right__hot-offer__fire-icon fa fa-fire"></i>
-                <span class="index__right__hot-offer__header-text">VRUĆA PONUDA</span>
-            </div>
-            <div class="index__right__hot-offer__product-list">
-                {{#each products}}
-                    <div class="index__right__hot-offer__product">
-                        <span class="index__right__hot-offer__product__discount">{{this.discount}}</span>
-                        <a href="/products/{{this.id}}">
-                            <img src="{{this.image}}" alt="{{this.title}}" class="index__right__hot-offer__product__img">
-                        </a>
-                        <h3 class="index__right__hot-offer__product__title">{{this.title}}</h3>
-                        <p class="index__right__hot-offer__product__timer">{{this.timer}}</p>
-                        <p class="index__right__hot-offer__product__price">
-                            <span class="index__right__hot-offer__product__old-price">{{this.oldPrice}}</span>
-                            <span class="index__right__hot-offer__product__new-price">{{this.newPrice}}</span>
-                        </p>
-                    </div>
-                {{/each}}
-            </div>
-            <div class="index__right__hot-offer__footer">
-                <button class="index__right__hot-offer__footer__button">
-                    POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE
-                </button>
-            </div>
-        </div>
+        {{> indexRight/previewPartial
+                section="action"
+                iconClass="index__right__action__action-icon fa fa-tag"
+                headerText="AKCIJA - POPUSTI"
+                footerButtonText="POGLEDAJTE SVE PROIZVODE IZ AKCIJE"}}
 
-        <div class="index__right__action">
-            <div class="index__right__action__header">
-                <i class="index__right__action__action-icon fa fa-tag"></i>
-                <span class="index__right__action__header-text">AKCIJA - POPUSTI</span>
-            </div>
-            <div class="index__right__action__product-list">
-                <div class="index__right__action__product">
-                    <span class="index__right__action__product__discount">70%</span>
-                    <img src="src/images/frizider.png" alt="Frižider 1" class="index__right__action__product__img">
-                    <h3 class="index__right__action__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__action__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__action__product__price">
-                        <span class="index__right__action__product__old-price">€135.00</span>
-                        <span class="index__right__action__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__action__product">
-                    <span class="index__right__action__product__discount">20%</span>
-                    <img src="src/images/1.png" alt="Ledomat" class="index__right__action__product__img">
-                    <h3 class="index__right__action__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__action__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__action__product__price">
-                        <span class="index__right__action__product__old-price">€135.00</span>
-                        <span class="index__right__action__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__action__product">
-                    <span class="index__right__action__product__discount">40%</span>
-                    <img src="src/images/2.png" alt="Frižider 2" class="index__right__action__product__img">
-                    <h3 class="index__right__action__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__action__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__action__product__price">
-                        <span class="index__right__action__product__old-price">€135.00</span>
-                        <span class="index__right__action__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__action__product">
-                    <span class="index__right__action__product__discount">30%</span>
-                    <img src="src/images/3.png" alt="Mikrotalasna" class="index__right__action__product__img">
-                    <h3 class="index__right__action__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__action__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__action__product__price">
-                        <span class="index__right__action__product__old-price">€135.00</span>
-                        <span class="index__right__action__product__new-price">€90.00</span>
-                    </p>
-                </div>
-            </div>
-            <div class="index__right__action__footer">
-                <button class="index__right__action__footer__button">
-                    POGLEDAJTE SVE PROIZVODE IZ AKCIJE
-                </button>
-            </div>
-        </div>
+        {{> indexRight/previewPartial
+                section="recommended"
+                iconClass="index__right__recommended__recommended-icon fa fa-star"
+                headerText="PREPORUČUJEMO"
+                footerButtonText="POGLEDAJTE SVE PROIZVODE IZ PREPORUČENIH"}}
 
-        <div class="index__right__recommended">
-            <div class="index__right__recommended__header">
-                <i class="index__right__recommended__recommended-icon fa fa-star"></i>
-                <span class="index__right__recommended__header-text">PREPORUČUJEMO</span>
-            </div>
-            <div class="index__right__recommended__product-list">
-                <div class="index__right__recommended__product">
-                    <span class="index__right__recommended__product__discount">70%</span>
-                    <img src="src/images/frizider.png" alt="Frižider 1" class="index__right__recommended__product__img">
-                    <h3 class="index__right__recommended__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__recommended__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__recommended__product__price">
-                        <span class="index__right__recommended__product__old-price">€135.00</span>
-                        <span class="index__right__recommended__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__recommended__product">
-                    <span class="index__right__recommended__product__discount">20%</span>
-                    <img src="src/images/1.png" alt="Ledomat" class="index__right__recommended__product__img">
-                    <h3 class="index__right__recommended__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__recommended__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__recommended__product__price">
-                        <span class="index__right__recommended__product__old-price">€135.00</span>
-                        <span class="index__right__recommended__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__recommended__product">
-                    <span class="index__right__recommended__product__discount">40%</span>
-                    <img src="src/images/2.png" alt="Frižider 2" class="index__right__recommended__product__img">
-                    <h3 class="index__right__recommended__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__recommended__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__recommended__product__price">
-                        <span class="index__right__recommended__product__old-price">€135.00</span>
-                        <span class="index__right__recommended__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__recommended__product">
-                    <span class="index__right__recommended__product__discount">30%</span>
-                    <img src="src/images/3.png" alt="Mikrotalasna" class="index__right__recommended__product__img">
-                    <h3 class="index__right__recommended__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__recommended__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__recommended__product__price">
-                        <span class="index__right__recommended__product__old-price">€135.00</span>
-                        <span class="index__right__recommended__product__new-price">€90.00</span>
-                    </p>
-                </div>
-            </div>
-            <div class="index__right__recommended__footer">
-                <button class="index__right__recommended__footer__button">
-                    POGLEDAJTE SVE PROIZVODE IZ PREPORUČENIH
-                </button>
-            </div>
-        </div>
+        {{> indexRight/previewPartial
+                section="new"
+                iconClass="index__right__new__news-icon fa fa-heart"
+                headerText="NOVO U PONUDI"
+                footerButtonText="POGLEDAJTE SVE PROIZVODE IZ NOVIH"}}
 
-        <div class="index__right__new">
-            <div class="index__right__new__header">
-                <i class="index__right__new__news-icon fa fa-heart"></i>
-                <span class="index__right__new__header-text">NOVO U PONUDI</span>
-            </div>
-            <div class="index__right__new__product-list">
-                <div class="index__right__new__product">
-                    <span class="index__right__new__product__discount">70%</span>
-                    <img src="src/images/frizider.png" alt="Frižider 1" class="index__right__new__product__img">
-                    <h3 class="index__right__new__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__new__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__new__product__price">
-                        <span class="index__right__new__product__old-price">€135.00</span>
-                        <span class="index__right__new__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__new__product">
-                    <span class="index__right__new__product__discount">20%</span>
-                    <img src="src/images/1.png" alt="Ledomat" class="index__right__new__product__img">
-                    <h3 class="index__right__new__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__new__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__new__product__price">
-                        <span class="index__right__new__product__old-price">€135.00</span>
-                        <span class="index__right__new__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__new__product">
-                    <span class="index__right__new__product__discount">40%</span>
-                    <img src="src/images/2.png" alt="Frižider 2" class="index__right__new__product__img">
-                    <h3 class="index__right__new__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__new__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__new__product__price">
-                        <span class="index__right__new__product__old-price">€135.00</span>
-                        <span class="index__right__new__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__new__product">
-                    <span class="index__right__new__product__discount">30%</span>
-                    <img src="src/images/3.png" alt="Mikrotalasna" class="index__right__new__product__img">
-                    <h3 class="index__right__new__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__new__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__new__product__price">
-                        <span class="index__right__new__product__old-price">€135.00</span>
-                        <span class="index__right__new__product__new-price">€90.00</span>
-                    </p>
-                </div>
-            </div>
-            <div class="index__right__new__footer">
-                <button class="index__right__new__footer__button">
-                    POGLEDAJTE SVE PROIZVODE IZ NOVIH
-                </button>
-            </div>
-        </div>
+        {{> indexRight/previewPartial
+                section="sale"
+                iconClass="index__right__sale__sale-icon fa fa-percent"
+                headerText="RASPRODAJA"
+                footerButtonText="POGLEDAJTE SVE PROIZVODE IZ RASPRODAJE"}}
 
-        <div class="index__right__sale">
-            <div class="index__right__sale__header">
-                <i class="index__right__sale__sale-icon fa fa-percent"></i>
-                <span class="index__right__sale__header-text">RASPRODAJA</span>
-            </div>
-            <div class="index__right__sale__product-list">
-                <div class="index__right__sale__product">
-                    <span class="index__right__sale__product__discount">70%</span>
-                    <img src="src/images/frizider.png" alt="Frižider 1" class="index__right__sale__product__img">
-                    <h3 class="index__right__sale__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__sale__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__sale__product__price">
-                        <span class="index__right__sale__product__old-price">€135.00</span>
-                        <span class="index__right__sale__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__sale__product">
-                    <span class="index__right__sale__product__discount">20%</span>
-                    <img src="src/images/1.png" alt="Ledomat" class="index__right__sale__product__img">
-                    <h3 class="index__right__sale__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__sale__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__sale__product__price">
-                        <span class="index__right__sale__product__old-price">€135.00</span>
-                        <span class="index__right__sale__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__sale__product">
-                    <span class="index__right__sale__product__discount">40%</span>
-                    <img src="src/images/2.png" alt="Frižider 2" class="index__right__sale__product__img">
-                    <h3 class="index__right__sale__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__sale__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__sale__product__price">
-                        <span class="index__right__sale__product__old-price">€135.00</span>
-                        <span class="index__right__sale__product__new-price">€90.00</span>
-                    </p>
-                </div>
-                <div class="index__right__sale__product">
-                    <span class="index__right__sale__product__discount">30%</span>
-                    <img src="src/images/3.png" alt="Mikrotalasna" class="index__right__sale__product__img">
-                    <h3 class="index__right__sale__product__title">Ugradni set frižider Gorenje</h3>
-                    <p class="index__right__sale__product__timer">10 dan 6 sat 15 min 10 sek</p>
-                    <p class="index__right__sale__product__price">
-                        <span class="index__right__sale__product__old-price">€135.00</span>
-                        <span class="index__right__sale__product__new-price">€90.00</span>
-                    </p>
-                </div>
-            </div>
-            <div class="index__right__sale__footer">
-                <button class="index__right__sale__footer__button">
-                    POGLEDAJTE SVE PROIZVODE IZ RASPRODAJE
-                </button>
-            </div>
-        </div>
-
-        <div class="index__right__brand">
-            <div class="index__right__brand__search">
-                <div class="index__right__brand__search__header">
-                    <i class="fa fa-envelope"></i>
-                    <span class="index__right__brand__search__header-text">PRETRAGA PO BRENDU</span>
-                </div>
-                <div class="index__right__brand__search__box">
-                    <input type="text" class="index__right__brand__search__box__input" placeholder="Unesite naziv brenda">
-                    <button type="submit" class="index__right__brand__search__box__button">
-                        <i class="index__right__brand__search__box__button__search-icon fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="index__right__newsletter">
-            <div class="index__right__newsletter__header">
-                <i class="index__right__newsletter__header__envelope fa fa-envelope"></i>
-                <span class="index__right__newsletter__header-text">PRIJAVI SE NA NEWSLETTER</span>
-            </div>
-            <form class="index__right__newsletter__form">
-                <input type="email" class="index__right__newsletter__form--input-email" placeholder="E-mail">
-                <input type="text" class="index__right__newsletter__form--input-name" placeholder="Ime i prezime">
-                <button type="submit" class="index__right__newsletter__form--submit">PRIJAVI SE</button>
-            </form>
-        </div>
+        {{> indexRight/brandSearchRight}}
+        {{> indexRight/newsletterRight}}
     </div>
 </main>
 
-<footer class="footer">
-    <div class="footer__slider">
-        <div class="footer__slider-inner">
-            <div class="footer__slider-track">
-                <div class="footer__slider-slide">
-                    <img src="src/images/sony.png" alt="Brand A" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/panasonic.png" alt="Brand B" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/gorenje.png" alt="Brand C" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/samsung.png" alt="Brand D" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/indesit.png" alt="Brand E" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/sony.png" alt="Brand A" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/panasonic.png" alt="Brand B" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/gorenje.png" alt="Brand C" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/samsung.png" alt="Brand D" class="footer__slider-img" />
-                </div>
-                <div class="footer__slider-slide">
-                    <img src="src/images/indesit.png" alt="Brand E" class="footer__slider-img" />
-                </div>
-            </div>
-        </div>
-        <div class="footer__buttons">
-            <button class="footer__buttons__slider-prev"></button>
-            <button class="footer__buttons__slider-next"></button>
-        </div>
-    </div>
-    <div class="footer__bottom">
-        <div class="footer__bottom-columns">
-            <div class="footer__bottom-column">
-                <h3 class="footer__bottom-title">informacije</h3>
-                <a href="#" class="footer__bottom-link">o nama</a>
-                <a href="#" class="footer__bottom-link">gdje kupiti</a>
-                <a href="#" class="footer__bottom-link">zapošljavanje</a>
-                <a href="#" class="footer__bottom-link">aktivnosti</a>
-            </div>
-            <div class="footer__bottom-column">
-                <h3 class="footer__bottom-title">aktivnosti</h3>
-                <a href="#" class="footer__bottom-link">akcije</a>
-                <a href="#" class="footer__bottom-link">noviteti</a>
-                <a href="#" class="footer__bottom-link">rasprodaja</a>
-                <a href="#" class="footer__bottom-link">marketing</a>
-            </div>
-            <div class="footer__bottom-column">
-                <h3 class="footer__bottom-title">moja strana</h3>
-                <a href="#" class="footer__bottom-link">registracija</a>
-                <a href="#" class="footer__bottom-link">prijava</a>
-                <a href="#" class="footer__bottom-link">korisnička strana</a>
-                <a href="#" class="footer__bottom-link">korpa</a>
-            </div>
-            <div class="footer__bottom-column">
-                <h3 class="footer__bottom-title">plaćanje i dostava</h3>
-                <a href="#" class="footer__bottom-link">načini plaćanja</a>
-                <a href="#" class="footer__bottom-link">sigurnost plaćanja</a>
-                <a href="#" class="footer__bottom-link">brza i pouzdana dostava</a>
-                <a href="#" class="footer__bottom-link">odaberite datum dostave</a>
-            </div>
-            <div class="footer__bottom-column">
-                <h3 class="footer__bottom-title">povrat i zamjena</h3>
-                <a href="#" class="footer__bottom-link">servis</a>
-                <a href="#" class="footer__bottom-link">reklamacije</a>
-            </div>
-        </div>
-    </div>
-    <div class="footer__copy">
-        <p class="footer__copy-text">
-            © 2016 Copyright by
-            <a href="#" class="footer__copy-link">centrometal.me</a> All Rights Reserved.
-        </p>
-    </div>
-</footer>
-
-<!-- inject:vendor -->
-<script id="saleTemplate" type="text/x-handlebars-template">
-    {{#each sale}}
-    <div class="index__right__sale__product">
-      <span class="index__right__sale__product__discount">{{discount}}</span>
-        <img src="{{image}}" alt="{{title}}" class="index__right__sale__product__img">
-        <h3 class="index__right__sale__product__title">{{title}}</h3>
-        <p class="index__right__sale__product__timer">{{timer}}</p>
-        <p class="index__right__sale__product__price">
-          <span class="index__right__sale__product__old-price">{{oldPrice}}</span>
-          <span class="index__right__sale__product__new-price">{{newPrice}}</span>
-        </p>
-      </div>
-{{/each}}
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="src/script-index.js"></script>
-<!-- endinject -->
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="/js/script-index.js"></script>
+<script src="/js/productLoader.js"></script>
 </body>
 </html>

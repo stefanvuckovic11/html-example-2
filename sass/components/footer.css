@@ -1,17 +1,106 @@
-/* Error: Undefined variable.
- *   ,
- * 3 |     background-color: $general-cyan;
- *   |                       ^^^^^^^^^^^^^
- *   '
- *   footer.scss 3:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 3 \2502      background-color: $general-cyan;\a   \2502                        ^^^^^^^^^^^^^\a   \2575 \a   footer.scss 3:23  root stylesheet";
+.footer {
+  position: relative;
 }
+.footer__bottom {
+  background-color: rgb(1, 173, 239);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  padding: 2px 4%;
+}
+.footer__bottom-columns {
+  display: flex;
+  width: 100%;
+  margin-left: 10%;
+}
+.footer__bottom-column {
+  flex: 1;
+  max-width: 200px;
+  border-right: 1px solid #CCCCCC;
+  padding-left: 10px;
+}
+.footer__bottom-column:first-child {
+  border-left: 1px solid #CCCCCC;
+  padding: 1px 4%;
+  margin-left: 2%;
+}
+.footer__bottom-title {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.footer__bottom-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+.footer__bottom-link:hover {
+  text-decoration: underline;
+}
+.footer__copy {
+  background-color: #004C75;
+  color: white;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.footer__copy-link {
+  color: #B3E5FC;
+  text-decoration: none;
+}
+.footer__copy-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+  .footer__bottom {
+    background-color: rgb(1, 173, 239);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+  .footer__bottom-columns {
+    margin: auto !important;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .footer__bottom-column {
+    flex: 1;
+    border-right: none !important;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.68);
+    max-width: 1000px;
+    width: 100%;
+  }
+  .footer__bottom-column:first-child {
+    border-left: none;
+    padding: 0 !important;
+    margin-left: 2% !important;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .footer__bottom-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .footer__bottom-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .footer__bottom-link:hover {
+    text-decoration: underline;
+  }
+  .footer__copy {
+    font-size: 40px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */
