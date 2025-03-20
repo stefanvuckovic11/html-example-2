@@ -2,12 +2,9 @@ var express = require('express');
 var path = require('path');
 var exphbs = require('express-handlebars');
 var productRoutes = require('./src/routes/productRoutes');
-const productController = require('./src/controllers/productController');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-
 
 app.engine('handlebars', exphbs.engine({
     defaultLayout: 'main',
@@ -19,11 +16,7 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/api', productRoutes);
-
-
-app.get('/products/:id', productController.getProductById);
-
+app.use('/', productRoutes);
 
 app.get('/', (req, res) => {
     res.render('index');
