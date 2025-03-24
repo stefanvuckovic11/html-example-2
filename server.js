@@ -3,8 +3,8 @@ var path = require('path');
 var exphbs = require('express-handlebars');
 var productRoutes = require('./src/routes/productRoutes');
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+var app = express();
+var PORT = process.env.PORT || 3002;
 
 app.engine('handlebars', exphbs.engine({
     defaultLayout: 'main',

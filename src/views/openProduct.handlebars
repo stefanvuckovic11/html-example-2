@@ -1,3 +1,4 @@
+
 <div class="product-detail">
     <div class="product-detail__content">
         {{> openProductLeft/productBreadcrumb}}
@@ -6,8 +7,23 @@
             {{> openProductLeft/productInfo}}
             {{> openProductLeft/productAdditional}}
             {{> openProductLeft/productSimilar}}
+
+
+
+
+            <script id="product-card-template" type="text/x-handlebars-template">
+                <div class="product-card">
+                  <img src="{{mainImage}}" alt="{{title}}" class="product-card__image" />
+          <div class="product-card__info">
+            <h3 class="product-card__title">{{title}}</h3>
+            <p class="product-card__description">{{description}}</p>
+            <p class="product-card__price">{{price.new}}</p>
+          </div>
+        </div>
+            </script>
         </div>
     </div>
+
     <aside class="product-detail__sidebar">
         {{> openProductRight/sidebarVideo1}}
         {{> openProductRight/sidebarVideo2}}
@@ -19,19 +35,6 @@
         <img class="product-detail__modal__image" id="modalImage" src="" alt="Full Screen Image">
     </div>
 </div>
-
-<script id="product-card-template" type="text/x-handlebars-template">
-    <div class="product-card">
-        <div class="product-card__img-wrapper">
-            <img src="{{mainImage}}" alt="{{title}}" class="product-card__img">
-      </div>
-      <h3 class="product-card__title">{{title}}</h3>
-      <p class="product-card__description">{{description}}</p>
-  </div>
-</script>
-
-
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

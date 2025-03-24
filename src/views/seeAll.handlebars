@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>See All Products - {{filter}}</title>
+    <link rel="stylesheet" href="/css/main.css?v=1548800917231"/>
+</head>
+<body>
+{{> header}}
+<main class="see-all">
+    <h1>All Products: {{filter}}</h1>
+    <div class="product-list">
+        {{#each products}}
+            {{> general/productCard
+                    imgSrc=mainImage
+                    altText=altText
+                    title=title
+                    description=description}}
+        {{/each}}
+    </div>
+</main>
+{{> footer}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</body>
+</html>
