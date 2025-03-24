@@ -12,24 +12,17 @@
         </div>
 
         <div class="product-detail__gallery__slider__thumbnails">
-            <button class="product-detail__gallery__slider__thumbnails-arrow
-                           product-detail__gallery__slider__thumbnails-arrow--prev"
-                    aria-label="Previous slide">
+            <button class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--prev" aria-label="Previous slide">
                 &lt;
             </button>
             {{#each product.images}}
-                <div class="product-detail__gallery__slider__thumbnails-item
-                           {{#if @first}}product-detail__gallery__slider__thumbnails-item--active{{/if}}">
-                    <img src="/{{this}}"
-                         alt="Thumbnail {{@index}}"
-                         class="product-detail__gallery__slider__thumbnails-item-img" />
+                <div class="product-detail__gallery__slider__thumbnails-item {{#if @first}}product-detail__gallery__slider__thumbnails-item--active{{/if}}">
+                    <img src="/{{this}}" alt="Thumbnail {{@index}}" class="product-detail__gallery__slider__thumbnails-item-img" />
                 </div>
             {{/each}}
-            <button class="product-detail__gallery__slider__thumbnails-arrow
-                           product-detail__gallery__slider__thumbnails-arrow--next"
-                    aria-label="Next slide">
+            <button class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--next" aria-label="Next slide">
                 &gt;
             </button>
         </div>
-    </div>
+</div>
 </div>

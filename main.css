@@ -2477,10 +2477,113 @@ footer .slider-controls a {
   .product-detail__gallery__slider__thumbnails {
     border: none;
   }
+  .product-detail__gallery__slider__thumbnails__arrow {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+  }
   .product-detail__gallery__slider__thumbnails-item-img {
     max-width: 150px;
     height: 150px;
   }
 }
+
+/* Similar Products Container */
+.index__right__similar {
+  margin: 20px auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.index__right__similar__header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #f00; /* red border */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.index__right__similar__header .index__right__similar__header-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Product List Container */
+.index__right__similar__product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Footer */
+.index__right__similar__footer {
+  margin-top: 20px;
+}
+
+.index__right__similar__footer__button {
+  padding: 10px 20px;
+  border: 3px solid #f00;
+  background: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.index__right__similar__footer__button:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.product-card__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-card__info {
+  margin-top: 10px;
+}
+
+.product-card__title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-card__description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-card__price {
+  font-size: 1.1em;
+  color: #0192eb;
+  font-weight: bold;
+}
+
 
 /*# sourceMappingURL=main.css.map */

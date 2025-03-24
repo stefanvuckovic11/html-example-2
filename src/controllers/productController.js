@@ -1,3 +1,4 @@
+
 var path = require('path');
 var data = require(path.join(__dirname, '..', 'models', 'products.json'));
 
@@ -35,7 +36,7 @@ exports.getProductByIdApi = function(req, res) {
     });
 
     if (!product) {
-        return res.status(404).json({ error: 'Product not found' });
+        return res.status(404).json({ error: 'prozvod nije nadjen' });
     }
 
     var similarProducts = data.products.filter(function(p) {
@@ -43,4 +44,15 @@ exports.getProductByIdApi = function(req, res) {
     }).slice(0, 4);
 
     res.json({ product: product, similarProducts: similarProducts });
+};
+exports.getProductsByFilter = function(req, res) {
+    var filter = req.params.filter;
+    var products = data.products.filter(function(p) {
+        return p.category.toLowerCase() === filter.toLowerCase() ||
+            p.type.toLowerCase() === filter.toLowerCase();
+    });
+    res.render('seeAll', {
+        filter: filter,
+        products: products
+    });
 };
