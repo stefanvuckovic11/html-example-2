@@ -14,7 +14,7 @@
     "sass": "sass --watch main.scss dist/css/main.css",
     "start": "gulp serve"
   },
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/lindon88/sass-play-ground.git"
   },
@@ -24,21 +24,9 @@
     "url": "https://github.com/lindon88/sass-play-ground/issues"
   },
   "homepage": "https://github.com/lindon88/sass-play-ground#readme",
-  "dependencies": {
-    "@boxslider/slider": "^2.12.1",
-    "bxslider": "^4.2.17",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "express-handlebars": "^8.0.1",
-    "gulp-clean": "^0.4.0",
-    "handlebars": "^4.7.8",
-    "json-server": "^1.0.0-beta.3",
-    "main-bower-files": "^2.13.1",
-    "run-sequence": "^2.2.1",
-    "video.js": "^8.21.0"
-  },
   "devDependencies": {
     "bower": "^1.8.14",
+    "live-server": "^1.2.2",
     "sass": "^1.85.1"
   },
   "keywords": []
