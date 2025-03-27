@@ -1,11 +1,18 @@
 <div class="index__right__similar">
-    <div class="index__right__similar__header" style="border-bottom: 1px solid rgba(128,128,128,0.6);">
-        <span class="index__right__similar__header-text">Slični proizvodi</span>
+    <div class="index__right__similar__header">
+        <i class="index__right__similar__icon fa {{#if similarConfig.iconClass}}{{similarConfig.iconClass}}{{else}}fa-thumbs-up{{/if}}"></i>
+        <span class="index__right__similar__header-text">
+            {{#if similarConfig.headerText}}{{similarConfig.headerText}}{{else}}Slični proizvodi{{/if}}
+        </span>
     </div>
-    <div class="index__right__similar__product-list" id="similarProductList"></div>
+    <div class="index__right__similar__product-list" id="similarProductList">
+        {{#each product.similarProducts}}
+            {{> general/productCard imgSrc=mainImage altText=altText title=title description=description}}
+        {{/each}}
+    </div>
     <div class="index__right__similar__footer">
-        <button class="index__right__similar__footer__button">
-            Pogledaj sve
-        </button>
+        <a href="/seeAll/similar" class="index__right__similar__footer__button" style="border-color: {{#if similarConfig.buttonBorderColor}}{{similarConfig.buttonBorderColor}}{{else}}#ccc{{/if}};">
+            {{#if similarConfig.footerButtonText}}{{similarConfig.footerButtonText}}{{else}}Pogledaj sve{{/if}}
+        </a>
     </div>
 </div>
