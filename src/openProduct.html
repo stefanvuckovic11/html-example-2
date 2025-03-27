@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="loader" class="loader">
+    <div class="loader__spinner"></div>
+</div>
+<div id="app"></div>
+
+<script id="mainLayoutTemplate" type="text/x-handlebars-template">
+    {{> main}}
+  </script>
+
+<script id="openProductTemplate" type="text/x-handlebars-template">
+    {{> openProduct}}
+  </script>
+
+<script>
+    var partials = [
+        { name: "openProduct", url: "views/openProduct.handlebars" },
+        { name: "openProductLeft/productBreadcrumb", url: "views/partials/openProductLeft/productBreadcrumb.handlebars" },
+        { name: "openProductLeft/productGallery", url: "views/partials/openProductLeft/productGallery.handlebars" },
+        { name: "openProductLeft/productInfo", url: "views/partials/openProductLeft/productInfo.handlebars" },
+        { name: "openProductLeft/productAdditional", url: "views/partials/openProductLeft/productAdditional.handlebars" },
+        { name: "openProductLeft/productSimilar", url: "views/partials/openProductLeft/productSimilar.handlebars" },
+        { name: "openProductRight/sidebarVideo1", url: "views/partials/openProductRight/sidebarVideo1.handlebars" },
+        { name: "openProductRight/sidebarVideo2", url: "views/partials/openProductRight/sidebarVideo2.handlebars" },
+        { name: "openProductRight/sidebarNews", url: "views/partials/openProductRight/sidebarNews.handlebars" },
+        { name: "main", url: "views/layouts/main.handlebars" }
+    ];
+    var partialsLoaded = [];
+    partials.forEach(function(partial) {
+        partialsLoaded.push($.get(partial.url, function(template) {
+            Handlebars.registerPartial(partial.name, template);
+        }));
+    });
+    $.when.apply($, partialsLoaded).done(function() {
+        var params = new URLSearchParams(window.location.search);
+        var productId = params.get("productId");
+        axios.get("http://localhost:3000/products/" + productId)
+            .then(function(response) {
+                var productData = response.data;
+                axios.get("http://localhost:3000/products?type=" + productData.type)
+                    .then(function(similarResponse) {
+                        var similar = similarResponse.data.filter(function(p) {
+                            return p.id !== productData.id;
+                        }).slice(0,4);
+                        productData.similarProducts = similar;
+                        var productSource = document.getElementById("openProductTemplate").innerHTML;
+                        var productTemplate = Handlebars.compile(productSource);
+                        var productHTML = productTemplate({ product: productData });
+                        var mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
+                        var mainTemplate = Handlebars.compile(mainSource);
+                        var finalHTML = mainTemplate({ title: "Product Details", body: productHTML });
+                        document.getElementById("app").innerHTML = finalHTML;
+                        var loader = document.getElementById("loader");
+                        if (loader) loader.style.display = "none";
+                        if (window.initOpenProductInteractions) window.initOpenProductInteractions();
+                    })
+                    .catch(function(error) {
+                        console.error("Error fetching similar products", error);
+                        var loader = document.getElementById("loader");
+                        if (loader) loader.style.display = "none";
+                    });
+            })
+            .catch(function(error) {
+                console.error("Error fetching product", error);
+                var loader = document.getElementById("loader");
+                if (loader) loader.style.display = "none";
+            });
+    });
+</script>
+<script src="js/script-openproduct.js"></script>
+</body>
+</html>
