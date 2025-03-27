@@ -45,38 +45,65 @@
         </div>
     </div>
 </script>
-
 <script>
-    var partials = [
-        { name: "indexLeft/accordion", url: "views/partials/indexLeft/accordion.handlebars" },
-        { name: "indexLeft/brandPromo", url: "views/partials/indexLeft/brandPromo.handlebars" },
-        { name: "indexLeft/brandSearch", url: "views/partials/indexLeft/brandSearch.handlebars" },
-        { name: "indexLeft/newsletter", url: "views/partials/indexLeft/newsletter.handlebars" },
-        { name: "indexLeft/productCard", url: "views/partials/indexLeft/productCard.handlebars" },
-        { name: "indexRight/slider", url: "views/partials/indexRight/slider.handlebars" },
-        { name: "indexRight/previewPartial", url: "views/partials/indexRight/previewPartial.handlebars" },
-        { name: "indexRight/brandSearchRight", url: "views/partials/indexRight/brandSearchRight.handlebars" },
-        { name: "indexRight/newsletterRight", url: "views/partials/indexRight/newsletterRight.handlebars" },
-        { name: "main", url: "views/layouts/main.handlebars" }
-    ];
-    var partialsLoaded = [];
-    partials.forEach(function(partial) {
-        partialsLoaded.push($.get(partial.url, function(template) {
-            Handlebars.registerPartial(partial.name, template);
-        }));
-    });
-    $.when.apply($, partialsLoaded).done(function() {
-        var indexSource = document.getElementById("indexTemplate").innerHTML;
-        var indexTemplate = Handlebars.compile(indexSource);
-        var indexHTML = indexTemplate({});
-        var mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
-        var mainTemplate = Handlebars.compile(mainSource);
-        var finalHTML = mainTemplate({ title: "Example App", body: indexHTML });
-        document.getElementById("app").innerHTML = finalHTML;
-        window.initIndexScripts();
-        window.initAccordion();
-        window.initProductLoader();
-    });
+    const content = document.getElementById("app");
+
+    axios.get("views/layouts/main.handlebars")
+        .then(res => {
+            Handlebars.registerPartial("main", res.data);
+            return axios.get("views/partials/indexLeft/accordion.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexLeft/accordion", res.data);
+            return axios.get("views/partials/indexLeft/brandPromo.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexLeft/brandPromo", res.data);
+            return axios.get("views/partials/indexLeft/brandSearch.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexLeft/brandSearch", res.data);
+            return axios.get("views/partials/indexLeft/newsletter.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexLeft/newsletter", res.data);
+            return axios.get("views/partials/indexLeft/productCard.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexLeft/productCard", res.data);
+            return axios.get("views/partials/indexRight/slider.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexRight/slider", res.data);
+            return axios.get("views/partials/indexRight/previewPartial.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexRight/previewPartial", res.data);
+            return axios.get("views/partials/indexRight/brandSearchRight.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexRight/brandSearchRight", res.data);
+            return axios.get("views/partials/indexRight/newsletterRight.handlebars");
+        })
+        .then(res => {
+            Handlebars.registerPartial("indexRight/newsletterRight", res.data);
+            const indexSource = document.getElementById("indexTemplate").innerHTML;
+            const indexTemplate = Handlebars.compile(indexSource);
+            const indexHTML = indexTemplate({});
+
+            const mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
+            const mainTemplate = Handlebars.compile(mainSource);
+            const finalHTML = mainTemplate({ title: "Example App", body: indexHTML });
+
+            content.innerHTML = finalHTML;
+            window.initIndexScripts();
+            window.initAccordion();
+            window.initProductLoader();
+        })
+        .catch(err => {
+            console.error("Error loading partials or rendering templates:", err);
+        });
 </script>
+
 </body>
 </html>
