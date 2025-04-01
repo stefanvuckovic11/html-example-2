@@ -25,11 +25,11 @@
             });
         });
     }
-    initAdditionalTabs();
+    window.initAdditionalTabs = initAdditionalTabs;
     function initVideoEvents() {
         var videoBoxes = document.querySelectorAll(".product-detail__sidebar__video-box");
         if (videoBoxes.length) {
-            videoBoxes.forEach(function(box) {
+            videoBoxes.forEach(function (box) {
                 var playButton = box.querySelector(".product-detail__sidebar__video-box__play-button");
                 var video = box.querySelector(".product-detail__sidebar__video-box__content");
                 var thumbnail = box.querySelector(".product-detail__sidebar__video-box__thumbnail");
@@ -55,6 +55,7 @@
             });
         }
     }
+    window.initVideoEvents = initVideoEvents;
     function initFooterSlider() {
         var footerSlider = document.querySelector(".footer__slider");
         if (footerSlider) {
@@ -105,6 +106,7 @@
             window.addEventListener("resize", updateStylesMediaQuery);
         }
     }
+    window.initFooterSlider = initFooterSlider;
     function initModal() {
         var modal = document.getElementById("imageModal");
         var modalImg = document.getElementById("modalImage");
@@ -126,6 +128,7 @@
             });
         }
     }
+    window.initModal = initModal;
     function initGallerySlider() {
         var slider = document.querySelector(".product-detail__gallery__slider");
         if (!slider) return;
@@ -161,20 +164,12 @@
             sliderProperties.sliderThumbnails[activeIndex].classList.add("product-detail__gallery__slider__thumbnails-item--active");
         }
         function moveRightThumb() {
-            if (activeIndex === sliderProperties.sliderThumbnails.length - 1) {
-                activeIndex = 0;
-            } else {
-                activeIndex++;
-            }
+            activeIndex = (activeIndex + 1) % thumbsArray.length;
             updateActiveThumbnail();
             updateActiveSlide();
         }
         function moveLeftThumb() {
-            if (activeIndex === 0) {
-                activeIndex = sliderProperties.sliderThumbnails.length - 1;
-            } else {
-                activeIndex--;
-            }
+            activeIndex = (activeIndex - 1 + thumbsArray.length) % thumbsArray.length;
             updateActiveThumbnail();
             updateActiveSlide();
         }
@@ -196,17 +191,20 @@
         updateActiveSlide();
         updateActiveThumbnail();
     }
+    window.initGallerySlider = initGallerySlider;
     function getQueryParam(param) {
         var urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
-    window.initOpenProductInteractions = function() {
-        initAdditionalTabs();
-        initVideoEvents();
-        initFooterSlider();
-        initModal();
-        initGallerySlider();
+
+    window.initOpenProductInteractions = function () {
+        window.initAdditionalTabs();
+        window.initVideoEvents();
+        window.initFooterSlider();
+        window.initModal();
+        window.initGallerySlider();
     };
+
     document.addEventListener("DOMContentLoaded", function () {
         var productId = getQueryParam("productId");
         console.log("Product ID:", productId);
@@ -223,143 +221,45 @@
                 '<div class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--next">Next</div>' +
                 "</div>";
         }
-        axios
-            .get("/api/products/" + productId)
+        axios.get("http://localhost:3000/products/" + productId)
             .then(function (response) {
-                var product = response.data.product;
-                var similarProducts = response.data.similarProducts;
-                if (loader) {
-                    loader.style.display = "none";
-                }
-                var breadcrumbCurrent = document.querySelector(".product-detail__breadcrumb__current");
-                if (breadcrumbCurrent && product.title) {
-                    breadcrumbCurrent.textContent = product.title;
-                }
-                var galleryTrack = document.querySelector(".product-detail__gallery__slider__track");
-                if (galleryTrack && product.images && product.images.length) {
-                    var galleryHTML = "";
-                    for (var i = 0; i < product.images.length; i++) {
-                        var img = product.images[i];
-                        galleryHTML +=
-                            '<div class="product-detail__gallery__slider__track-slide' +
-                            (i === 0 ? " product-detail__gallery__slider__track-slide--active" : "") +
-                            '">' +
-                            '<img src="/' + img + '" alt="Image ' + (i + 1) + ' for ' + product.title + '" class="product-detail__gallery__slider__track-slide-img">' +
-                            "</div>";
-                    }
-                    galleryTrack.innerHTML = galleryHTML;
-                }
-                var thumbnailsContainer = document.querySelector(".product-detail__gallery__slider__thumbnails");
-                if (thumbnailsContainer && product.images && product.images.length) {
-                    var existingThumbs = thumbnailsContainer.querySelectorAll(".product-detail__gallery__slider__thumbnails-item");
-                    Array.prototype.forEach.call(existingThumbs, function (thumb) {
-                        thumb.parentNode.removeChild(thumb);
+                var product = response.data;
+                axios.get("http://localhost:3000/products?type=" + product.type)
+                    .then(function (similarResponse) {
+                        var allSimilar = similarResponse.data;
+                        var similarProducts = allSimilar.filter(function (p) {
+                            return p.id !== product.id;
+                        }).slice(0, 4);
+                        product.similarProducts = similarProducts;
+                        product.similarConfig = {
+                            trapezoidColor: "#ccc",
+                            headerText: "Slični proizvodi",
+                            footerButtonText: "Pogledaj sve",
+                            buttonBorderColor: "#ccc"
+                        };
+                        var productSource = document.getElementById("openProductTemplate").innerHTML;
+                        var productTemplate = Handlebars.compile(productSource);
+                        var productHTML = productTemplate({ product: product });
+                        var mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
+                        var mainTemplate = Handlebars.compile(mainSource);
+                        var finalHTML = mainTemplate({ title: "Product Details", body: productHTML });
+                        document.getElementById("app").innerHTML = finalHTML;
+                        if (loader) {
+                            loader.style.display = "none";
+                        }
+                        if (window.initOpenProductInteractions) {
+                            window.initOpenProductInteractions();
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error("Error fetching similar products", error);
+                        if (loader) {
+                            loader.style.display = "none";
+                        }
                     });
-                    var nextArrow = thumbnailsContainer.querySelector(".product-detail__gallery__slider__thumbnails-arrow--next");
-                    for (var ti = 0; ti < product.images.length; ti++) {
-                        var thumbDiv = document.createElement("div");
-                        thumbDiv.className =
-                            "product-detail__gallery__slider__thumbnails-item" +
-                            (ti === 0 ? " product-detail__gallery__slider__thumbnails-item--active" : "");
-                        thumbDiv.innerHTML =
-                            '<img src="/' + product.images[ti] + '" alt="Thumbnail ' + ti + '" class="product-detail__gallery__slider__thumbnails-item-img">';
-                        if (nextArrow) {
-                            thumbnailsContainer.insertBefore(thumbDiv, nextArrow);
-                        } else {
-                            thumbnailsContainer.appendChild(thumbDiv);
-                        }
-                    }
-                }
-                var productInfoEl = document.querySelector(".product-detail__info");
-                if (productInfoEl) {
-                    var infoHTML =
-                        '<div class="product-detail__info__name">' +
-                        '<h1 class="product-detail__info__name__title">' + product.title + "</h1>" +
-                        "</div>" +
-                        '<div class="product-detail__info__price-code">' +
-                        '<h2 class="product-detail__info__price-code__price">' + product.price.new + "</h2>" +
-                        '<h3 class="product-detail__info__price-code__sku">' +
-                        '<span class="product-detail__info__price-code__sku__number">' + product.id + "</span><br>" +
-                        "Sifra artikla" +
-                        "</h3>" +
-                        "</div>" +
-                        '<div class="product-detail__info__general">' +
-                        '<span class="product-detail__info__general__spec">' + product.description + "</span><br>";
-                    if (product.specifications && product.specifications.features) {
-                        for (var f = 0; f < product.specifications.features.length; f++) {
-                            infoHTML +=
-                                '<span class="product-detail__info__general__spec">• ' +
-                                product.specifications.features[f] +
-                                "</span><br>";
-                        }
-                    }
-                    infoHTML += "</div>";
-                    productInfoEl.innerHTML = infoHTML;
-                }
-                var similarContainer = document.getElementById("similarProductList");
-                if (similarContainer && similarProducts && similarProducts.length) {
-                    var similarHTML = "";
-                    for (var j = 0; j < similarProducts.length; j++) {
-                        similarHTML +=
-                            '<div class="product-card">' +
-                            '<img src="/' + similarProducts[j].mainImage + '" alt="' + similarProducts[j].title + '" class="product-card__image" />' +
-                            '<div class="product-card__info">' +
-                            '<h3 class="product-card__title">' + similarProducts[j].title + "</h3>" +
-                            '<p class="product-card__description">' + similarProducts[j].description + "</p>" +
-                            '<p class="product-card__price">' + similarProducts[j].price.new + "</p>" +
-                            "</div>" +
-                            "</div>";
-                    }
-                    similarContainer.innerHTML = similarHTML;
-                } else {
-                    console.log("No similar products found or container not found.");
-                }
-                if (product.tabs) {
-                    var tabProductionList = document.getElementById("proizvodna-lista");
-                    if (tabProductionList && product.tabs.productionList) {
-                        tabProductionList.innerHTML =
-                            '<ul class="product-detail__additional__tab-content__list">' +
-                            '<li class="product-detail__additional__tab-content__list__item">' +
-                            product.tabs.productionList.replace(/\n/g, "<br>") +
-                            "</li>" +
-                            "</ul>";
-                    }
-                    var tabGuide = document.getElementById("guide");
-                    if (tabGuide && product.tabs.guide) {
-                        tabGuide.innerHTML =
-                            '<p class="product-detail__additional__tab-content__paragraph">' +
-                            product.tabs.guide +
-                            "</p>";
-                    }
-                    var tabRating = document.getElementById("rating");
-                    if (tabRating && product.tabs.rating) {
-                        var avg = product.tabs.rating.averageStars;
-                        var votes = product.tabs.rating.votes;
-                        var votesList = "";
-                        if (votes && votes.length) {
-                            for (var v = 0; v < votes.length; v++) {
-                                votesList += "<li>" + votes[v].user + ": " + votes[v].stars + " stars</li>";
-                            }
-                        }
-                        tabRating.innerHTML =
-                            '<p class="product-detail__additional__tab-content__paragraph">' +
-                            "Prosječna ocjena: " + avg + " / 5" +
-                            "</p>" +
-                            "<ul>" + votesList + "</ul>";
-                    }
-                    var tabEmail = document.getElementById("email");
-                    if (tabEmail && product.tabs.email) {
-                        tabEmail.innerHTML =
-                            '<p class="product-detail__additional__tab-content__paragraph">' +
-                            product.tabs.email +
-                            "</p>";
-                    }
-                }
-                initGallerySlider();
-                window.initOpenProductInteractions && window.initOpenProductInteractions();
             })
             .catch(function (error) {
-                console.error("An error occurred:", error);
+                console.error("Error fetching product", error);
                 if (loader) {
                     loader.style.display = "none";
                 }
@@ -376,3 +276,141 @@
         }
     });
 })();
+
+
+var startTime = performance.now();
+var loader = document.getElementById("loader");
+Promise.all([
+    axios.get("./views/partials/openProductLeft/productBreadcrumb.handlebars"),
+    axios.get("./views/partials/openProductLeft/productGallery.handlebars"),
+    axios.get("./views/partials/openProductLeft/productInfo.handlebars"),
+    axios.get("./views/partials/openProductLeft/productAdditional.handlebars"),
+    axios.get("./views/partials/openProductLeft/productSimilar.handlebars"),
+    axios.get("./views/partials/openProductRight/sidebarVideo1.handlebars"),
+    axios.get("./views/partials/openProductRight/sidebarVideo2.handlebars"),
+    axios.get("./views/partials/openProductRight/sidebarNews.handlebars"),
+    axios.get("./views/partials/general/productCard.handlebars"),
+    axios.get("./views/layouts/main.handlebars"),
+    axios.get("./views/partials/general/skeletonLoader.handlebars")
+])
+    .then(function (responses) {
+        var breadcrumbRes     = responses[0];
+        var galleryRes        = responses[1];
+        var infoRes           = responses[2];
+        var additionalRes     = responses[3];
+        var similarRes        = responses[4];
+        var video1Res         = responses[5];
+        var video2Res         = responses[6];
+        var newsRes           = responses[7];
+        var productCardRes    = responses[8];
+        var mainLayoutRes     = responses[9];
+        var skeletonLoaderRes = responses[10];
+
+        Handlebars.registerPartial("openProductLeft/productBreadcrumb", breadcrumbRes.data);
+        Handlebars.registerPartial("openProductLeft/productGallery",     galleryRes.data);
+        Handlebars.registerPartial("openProductLeft/productInfo",        infoRes.data);
+        Handlebars.registerPartial("openProductLeft/productAdditional",  additionalRes.data);
+        Handlebars.registerPartial("openProductLeft/productSimilar",     similarRes.data);
+        Handlebars.registerPartial("openProductRight/sidebarVideo1",     video1Res.data);
+        Handlebars.registerPartial("openProductRight/sidebarVideo2",     video2Res.data);
+        Handlebars.registerPartial("openProductRight/sidebarNews",       newsRes.data);
+        Handlebars.registerPartial("general/productCard",                productCardRes.data);
+        Handlebars.registerPartial("main",                               mainLayoutRes.data);
+        Handlebars.registerPartial("general/skeletonLoader",             skeletonLoaderRes.data);
+
+        var params = new URLSearchParams(window.location.search);
+        var productId = params.get("productId");
+
+        axios.get("http://localhost:3000/products/" + productId)
+            .then(function (productResponse) {
+                var productData = productResponse.data;
+
+                axios.get("http://localhost:3000/products?type=" + productData.type)
+                    .then(function (similarResponse) {
+                        var allSimilar = similarResponse.data;
+                        var filteredSimilar = [];
+                        for (var i = 0; i < allSimilar.length; i++) {
+                            if (allSimilar[i].id !== productData.id) {
+                                filteredSimilar.push(allSimilar[i]);
+                            }
+                        }
+                        var similar = filteredSimilar.slice(0, 4);
+
+                        productData.similarProducts = similar;
+                        productData.similarConfig = {
+                            trapezoidColor: "#ccc",
+                            iconClass: "fa-thumbs-up",
+                            headerText: "Slični proizvodi",
+                            footerButtonText: "Pogledaj sve",
+                            buttonBorderColor: "#ccc"
+                        };
+
+                        var productSource = document.getElementById("openProductTemplate").innerHTML;
+                        var productTemplate = Handlebars.compile(productSource);
+                        var productHTML = productTemplate({ product: productData });
+
+                        var mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
+                        var mainTemplate = Handlebars.compile(mainSource);
+                        var finalHTML = mainTemplate({
+                            title: "Product Details",
+                            body: productHTML
+                        });
+
+                        document.getElementById("app").innerHTML = finalHTML;
+
+                        var gallerySkeletonRef    = document.getElementById("gallerySkeleton");
+                        var galleryRealRef        = document.getElementById("realGalleryContainer");
+
+                        var infoSkeletonRef       = document.getElementById("infoSkeleton");
+                        var realInfoRef           = document.getElementById("realInfoContainer");
+
+                        var additionalSkeletonRef = document.getElementById("additionalSkeleton");
+                        var realAdditionalRef     = document.getElementById("realAdditionalContainer");
+
+                        var similarSkeletonRef    = document.getElementById("similarSkeleton");
+                        var realSimilarRef        = document.getElementById("realSimilarContainer");
+
+                        var endTime = performance.now();
+                        var fetchDuration = endTime - startTime;
+                        var totalDuration = fetchDuration + 2000; // add 2 seconds
+
+                        setTimeout(function () {
+                            if (gallerySkeletonRef)    gallerySkeletonRef.style.display    = "none";
+                            if (infoSkeletonRef)       infoSkeletonRef.style.display       = "none";
+                            if (additionalSkeletonRef) additionalSkeletonRef.style.display = "none";
+                            if (similarSkeletonRef)    similarSkeletonRef.style.display    = "none";
+
+                            if (galleryRealRef)        galleryRealRef.style.display        = "block";
+                            if (realInfoRef)           realInfoRef.style.display           = "block";
+                            if (realAdditionalRef)     realAdditionalRef.style.display     = "block";
+                            if (realSimilarRef)        realSimilarRef.style.display        = "block";
+
+                            if (loader) {
+                                loader.style.display = "none";
+                            }
+
+                            if (window.initOpenProductInteractions) {
+                                window.initOpenProductInteractions();
+                            }
+                        }, totalDuration);
+                    })
+                    .catch(function (similarErr) {
+                        console.error("Error fetching similar products:", similarErr);
+                        if (loader) {
+                            loader.style.display = "none";
+                        }
+                    });
+            })
+            .catch(function (prodErr) {
+                console.error("Error fetching product:", prodErr);
+                if (loader) {
+                    loader.style.display = "none";
+                }
+            });
+    })
+    .catch(function (partialsErr) {
+        console.error("Error fetching partials:", partialsErr);
+        if (loader) {
+            loader.style.display = "none";
+        }
+    });

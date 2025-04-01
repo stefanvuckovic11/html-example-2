@@ -227,7 +227,8 @@
         border-bottom: 50px solid $navbar-dark-blue;
         transform: rotateX(180deg);
       }
-      &__fire-icon {
+
+      &__icon {
         margin-right: 10px;
         align-self: center;
         justify-self: center;
@@ -345,7 +346,7 @@
         border-bottom: 50px solid $general-cyan;
         transform: rotateX(180deg);
       }
-      &__action-icon {
+      &__icon {
         margin-right: 10px;
         align-self: center;
         justify-self: center;
@@ -463,7 +464,7 @@
         border-bottom: 50px solid $general-cyan;
         transform: rotateX(180deg);
       }
-      &__recommended-icon{
+      &__icon{
         margin-right: 10px;
         align-self: center;
         justify-self: center;
@@ -584,7 +585,7 @@
         border-bottom: 50px solid $general-cyan;
         transform: rotateX(180deg);
       }
-      &__news-icon {
+      &__icon {
         margin-right: 10px;
         align-self: center;
         justify-self: center;
@@ -705,7 +706,7 @@
         border-bottom: 50px solid orange;
         transform: rotateX(180deg);
       }
-      &__sale-icon {
+      &__icon {
         margin-right: 10px;
         align-self: center;
         justify-self: center;
@@ -1061,7 +1062,7 @@ footer .slider-controls a {
               padding: 8px;
               cursor: pointer;
 
-              &__search-icon {
+              &__icon {
                 color: $general-cyan;
                 font-size: 20px;
               }

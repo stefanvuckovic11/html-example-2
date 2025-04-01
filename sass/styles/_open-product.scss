@@ -1,10 +1,20 @@
-
 .product-detail {
   display: flex;
   flex-direction: row;
   padding-left: 10%;
   padding-right: 10%;
   gap: 1px;
+
+  &__body {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  #realGalleryContainer{
+    width: 45%;
+  }
+
   &__content {
     width: 80%;
     display: flex;
@@ -15,23 +25,17 @@
     font-weight: lighter;
     font-size: 18px;
     margin-bottom: 10px;
+    margin-left: 10%;
 
     &__current{
       color: $general-cyan;
     }
   }
-  &__body {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 50px;
-  }
   &__gallery {
     flex: 1;
     min-width: 300px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
     max-width: 100%;
 
@@ -107,7 +111,7 @@
   }
   &__info {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     margin-left: 2%;

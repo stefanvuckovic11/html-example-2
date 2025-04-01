@@ -129,6 +129,61 @@ function initBrandPromos() {
         }
     }
 }
+const content = document.getElementById("app");
+
+axios.get("views/layouts/main.handlebars")
+    .then(res => {
+        Handlebars.registerPartial("main", res.data);
+        return axios.get("views/partials/indexLeft/accordion.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexLeft/accordion", res.data);
+        return axios.get("views/partials/indexLeft/brandPromo.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexLeft/brandPromo", res.data);
+        return axios.get("views/partials/indexLeft/brandSearch.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexLeft/brandSearch", res.data);
+        return axios.get("views/partials/indexLeft/newsletter.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexLeft/newsletter", res.data);
+        return axios.get("views/partials/indexLeft/productCard.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexLeft/productCard", res.data);
+        return axios.get("views/partials/indexRight/slider.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexRight/slider", res.data);
+        return axios.get("views/partials/indexRight/previewPartial.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexRight/previewPartial", res.data);
+        return axios.get("views/partials/indexRight/brandSearchRight.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexRight/brandSearchRight", res.data);
+        return axios.get("views/partials/indexRight/newsletterRight.handlebars");
+    })
+    .then(res => {
+        Handlebars.registerPartial("indexRight/newsletterRight", res.data);
+        const indexSource = document.getElementById("indexTemplate").innerHTML;
+        const indexTemplate = Handlebars.compile(indexSource);
+        const indexHTML = indexTemplate({});
+        const mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
+        const mainTemplate = Handlebars.compile(mainSource);
+        const finalHTML = mainTemplate({ title: "Example App", body: indexHTML });
+        content.innerHTML = finalHTML;
+        window.initIndexScripts();
+        window.initAccordion();
+        window.initProductLoader();
+    })
+    .catch(err => {
+        console.error("greska u ucitavanju parsala", err);
+    });
 
 
 window.initIndexScripts = function() {

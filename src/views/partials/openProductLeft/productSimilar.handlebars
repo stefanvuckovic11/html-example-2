@@ -1,18 +1,41 @@
-<div class="index__right__similar">
-    <div class="index__right__similar__header">
-        <i class="index__right__similar__icon fa {{#if similarConfig.iconClass}}{{similarConfig.iconClass}}{{else}}fa-thumbs-up{{/if}}"></i>
-        <span class="index__right__similar__header-text">
-            {{#if similarConfig.headerText}}{{similarConfig.headerText}}{{else}}Slični proizvodi{{/if}}
+<div class="index__right__hot-offer">
+    <div class="index__right__hot-offer__header" style="border-bottom-color: rgb(1, 173, 239);">
+        <span class="index__right__hot-offer__header-text">
+            {{#if product.similarConfig.headerText}}
+                {{product.similarConfig.headerText}}
+            {{else}}
+                Slični proizvodi
+            {{/if}}
         </span>
     </div>
-    <div class="index__right__similar__product-list" id="similarProductList">
+
+    <div class="index__right__hot-offer__product-list" id="similarProductList">
         {{#each product.similarProducts}}
-            {{> general/productCard imgSrc=mainImage altText=altText title=title description=description}}
+            <a href="openProduct.html?productId={{id}}" class="similar-product-link" style="text-decoration: none; color=black">
+            {{> general/productCard
+                    imgSrc=mainImage
+                    altText=altText
+                    title=title
+                    description=description
+                    id=id
+                    discount=discount
+                    timer=timer
+                    price=price
+                    section="hot-offer"
+            }}
+            </a>
         {{/each}}
     </div>
-    <div class="index__right__similar__footer">
-        <a href="/seeAll/similar" class="index__right__similar__footer__button" style="border-color: {{#if similarConfig.buttonBorderColor}}{{similarConfig.buttonBorderColor}}{{else}}#ccc{{/if}};">
-            {{#if similarConfig.footerButtonText}}{{similarConfig.footerButtonText}}{{else}}Pogledaj sve{{/if}}
+
+    <div class="index__right__hot-offer__footer">
+        <a href="/src/seeAll.html?section=hot-offer"
+           class="index__right__hot-offer__footer__button"
+           style="border-color: {{#if product.similarConfig.buttonBorderColor}}{{product.similarConfig.buttonBorderColor}}{{else}}#ccc{{/if}};">
+            {{#if product.similarConfig.footerButtonText}}
+                {{product.similarConfig.footerButtonText}}
+            {{else}}
+                Pogledaj sve
+            {{/if}}
         </a>
     </div>
 </div>

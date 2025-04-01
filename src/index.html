@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Example App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/script-index.js"></script>
-    <script src="js/accordion.js"></script>
-    <script src="js/productLoader.js"></script>
+
 </head>
 <body>
 <div id="loader" class="loader">
@@ -21,7 +18,6 @@
 <script id="mainLayoutTemplate" type="text/x-handlebars-template">
     {{> main}}
   </script>
-
 <script id="indexTemplate" type="text/x-handlebars-template">
     <div class="index">
         <div class="index__left">
@@ -46,64 +42,10 @@
     </div>
 </script>
 <script>
-    const content = document.getElementById("app");
 
-    axios.get("views/layouts/main.handlebars")
-        .then(res => {
-            Handlebars.registerPartial("main", res.data);
-            return axios.get("views/partials/indexLeft/accordion.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexLeft/accordion", res.data);
-            return axios.get("views/partials/indexLeft/brandPromo.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexLeft/brandPromo", res.data);
-            return axios.get("views/partials/indexLeft/brandSearch.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexLeft/brandSearch", res.data);
-            return axios.get("views/partials/indexLeft/newsletter.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexLeft/newsletter", res.data);
-            return axios.get("views/partials/indexLeft/productCard.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexLeft/productCard", res.data);
-            return axios.get("views/partials/indexRight/slider.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexRight/slider", res.data);
-            return axios.get("views/partials/indexRight/previewPartial.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexRight/previewPartial", res.data);
-            return axios.get("views/partials/indexRight/brandSearchRight.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexRight/brandSearchRight", res.data);
-            return axios.get("views/partials/indexRight/newsletterRight.handlebars");
-        })
-        .then(res => {
-            Handlebars.registerPartial("indexRight/newsletterRight", res.data);
-            const indexSource = document.getElementById("indexTemplate").innerHTML;
-            const indexTemplate = Handlebars.compile(indexSource);
-            const indexHTML = indexTemplate({});
-
-            const mainSource = document.getElementById("mainLayoutTemplate").innerHTML;
-            const mainTemplate = Handlebars.compile(mainSource);
-            const finalHTML = mainTemplate({ title: "Example App", body: indexHTML });
-
-            content.innerHTML = finalHTML;
-            window.initIndexScripts();
-            window.initAccordion();
-            window.initProductLoader();
-        })
-        .catch(err => {
-            console.error("Error loading partials or rendering templates:", err);
-        });
 </script>
-
+<script src="js/script-index.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/productLoader.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   "scripts": {
     "postinstall": "bower install && gulp build",
     "prestart": "npm install",
-    "sass": "sass --watch main.scss dist/css/main.css",
+    "sass": "sass --watch main.scss src/css/main.css",
     "start": "gulp serve"
   },
   "repository": {
