@@ -1,0 +1,804 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "hotOffer",
+      "discount": "70%",
+      "type": "fridge",
+      "mainImage": "images/frizider.png",
+      "images": [
+        "images/frizider.png",
+        "images/frizider_side.png",
+        "images/frizider_back.png"
+      ],
+      "title": "Ugradni set frižider Gorenje",
+      "description": "A premium built-in refrigerator set by Gorenje with modern design, energy efficiency, and ample storage capacity.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€99999999.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++",
+        "features": [
+          "Multi-zone cooling",
+          "Touch screen controls",
+          "Adjustable shelving"
+        ]
+      },
+      "reviews": [
+        {
+          "user": "John Doe",
+          "rating": 4,
+          "comment": "Great product with modern features."
+        },
+        {
+          "user": "Jane Smith",
+          "rating": 5,
+          "comment": "Highly recommend for families."
+        }
+      ],
+      "relatedProducts": [2, 3, 4],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 2,
+      "category": "hotOffer",
+      "discount": "20%",
+      "type": "fridge",
+      "mainImage": "images/frizider2.png",
+      "images": [
+        "images/frizider2.png",
+        "images/frizider2_side.png",
+        "images/frizider2_back.png"
+      ],
+      "title": "Ugradni set frižider Gorenje",
+      "description": "A reliable built-in refrigerator with energy-saving features and a stylish design, perfect for modern kitchens.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€696969.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [1, 3, 4],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Stefan", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 3,
+      "category": "hotOffer",
+      "discount": "40%",
+      "type": "microwave",
+      "mainImage": "images/microwave.png",
+      "images": [
+        "images/microwave.png",
+        "images/microwave_side.jpg",
+        "images/microwave_back.png"
+      ],
+      "title": "Ugradni set frižider Gorenje",
+      "description": "Known for its durability and efficiency, this refrigerator set is ideal for modern kitchens.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [1, 2, 4],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 4,
+      "category": "hotOffer",
+      "discount": "30%",
+      "type": "fridge + microwave",
+      "mainImage": "images/microwave2.jpg",
+      "images": [
+        "images/microwave2.jpg",
+        "images/microwave2_side.png",
+        "images/microwave2_back.png"
+      ],
+      "title": "Ugradni set frižider Gorenje + Microwave",
+      "description": "Combines a built-in refrigerator with an integrated microwave for space-saving convenience.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "power": "1200W",
+        "capacity": "32L (microwave)",
+        "dimensions": "45x35x30 cm (microwave)"
+      },
+      "reviews": [],
+      "relatedProducts": [1, 2, 3],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+
+    {
+      "id": 5,
+      "category": "action",
+      "discount": "70%",
+      "type": "fridge",
+      "mainImage": "images/frizider.png",
+      "images": [
+        "images/frizider.png",
+        "images/frizider_side.png",
+        "images/frizider_back.png"
+      ],
+      "title": "Action: Ugradni set frižider Gorenje",
+      "description": "A top-performing refrigerator available at an action price. Perfect for budget-conscious buyers.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [6, 7, 8],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 6,
+      "category": "action",
+      "discount": "20%",
+      "type": "fridge",
+      "mainImage": "images/frizider2.png",
+      "images": [
+        "images/frizider2.png",
+        "images/frizider2_side.png",
+        "images/frizider2_back.png"
+      ],
+      "title": "Action: Ugradni set frižider Gorenje",
+      "description": "An efficient refrigerator with modern features offered at a discounted price.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [5, 7, 8],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 7,
+      "category": "action",
+      "discount": "40%",
+      "type": "microwave",
+      "mainImage": "images/microwave.png",
+      "images": [
+        "images/microwave.png",
+        "images/microwave_side.jpg",
+        "images/microwave_back.png"
+      ],
+      "title": "Action: Ugradni set frižider Gorenje",
+      "description": "Durable and energy efficient, this refrigerator is now available with a substantial discount.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [5, 6, 8],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 8,
+      "category": "action",
+      "discount": "30%",
+      "type": "microwave",
+      "mainImage": "images/microwave2.jpg",
+      "images": [
+        "images/microwave2.jpg",
+        "images/microwave2_side.png",
+        "images/microwave2_back.png"
+      ],
+      "title": "Action: Ugradni set frižider Gorenje",
+      "description": "A stylish and modern refrigerator offered at an attractive action price.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [5, 6, 7],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+
+    {
+      "id": 9,
+      "category": "recommended",
+      "discount": "70%",
+      "type": "fridge",
+      "mainImage": "images/frizider.png",
+      "images": [
+        "images/frizider.png",
+        "images/frizider_side.png",
+        "images/frizider_back.png"
+      ],
+      "title": "Recommended Product 1",
+      "description": "A highly recommended refrigerator with top-notch performance and energy efficiency.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [10, 11, 12],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 10,
+      "category": "recommended",
+      "discount": "20%",
+      "type": "fridge",
+      "mainImage": "images/frizider2.png",
+      "images": [
+        "images/frizider2.png",
+        "images/frizider2_side.png",
+        "images/frizider2_back.png"
+      ],
+      "title": "Recommended Product 2",
+      "description": "An excellent choice for its efficiency and design, recommended by experts.",
+      "timer": "8 dan 5 sat 10 min 25 sek",
+      "price": {
+        "old": "€150.00",
+        "new": "€120.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [9, 11, 12],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 11,
+      "category": "recommended",
+      "discount": "40%",
+      "type": "microwave",
+      "mainImage": "images/microwave.png",
+      "images": [
+        "images/microwave.png",
+        "images/microwave_side.jpg",
+        "images/microwave_back.png"
+      ],
+      "title": "Recommended Product 3",
+      "description": "Offers a perfect blend of performance and value, making it a top recommendation.",
+      "timer": "9 dan 3 sat 25 min 5 sek",
+      "price": {
+        "old": "€160.00",
+        "new": "€96.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [9, 10, 12],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 12,
+      "category": "recommended",
+      "discount": "30%",
+      "type": "microwave",
+      "mainImage": "images/microwave2.jpg",
+      "images": [
+        "images/microwave2.jpg",
+        "images/microwave2_side.png",
+        "images/microwave2_back.png"
+      ],
+      "title": "Recommended Product 4",
+      "description": "A modern refrigerator with innovative features and great design.",
+      "timer": "10 dan 2 sat 50 min 30 sek",
+      "price": {
+        "old": "€140.00",
+        "new": "€98.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [9, 10, 11],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+
+    {
+      "id": 13,
+      "category": "new",
+      "discount": "70%",
+      "type": "fridge",
+      "mainImage": "images/frizider.png",
+      "images": [
+        "images/frizider.png",
+        "images/frizider_side.png",
+        "images/frizider_back.png"
+      ],
+      "title": "New Product 1",
+      "description": "A brand new refrigerator offering the latest in technology and design.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [14, 15, 16],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 14,
+      "category": "new",
+      "discount": "20%",
+      "type": "fridge",
+      "mainImage": "images/frizider2.png",
+      "images": [
+        "images/frizider2.png",
+        "images/frizider2_side.png",
+        "images/frizider2_back.png"
+      ],
+      "title": "New Product 2",
+      "description": "A cutting-edge refrigerator with advanced features and a sleek design.",
+      "timer": "9 dan 4 sat 20 min 15 sek",
+      "price": {
+        "old": "€145.00",
+        "new": "€116.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [13, 15, 16],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 15,
+      "category": "new",
+      "discount": "40%",
+      "type": "microwave",
+      "mainImage": "images/microwave.png",
+      "images": [
+        "images/microwave.png",
+        "images/microwave_side.jpg",
+        "images/microwave_back.png"
+      ],
+      "title": "New Product 3",
+      "description": "Combines modern technology with a stylish look, perfect for any kitchen.",
+      "timer": "8 dan 7 sat 15 min 10 sek",
+      "price": {
+        "old": "€130.00",
+        "new": "€78.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [13, 14, 16],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 16,
+      "category": "new",
+      "discount": "30%",
+      "type": "microwave",
+      "mainImage": "images/microwave2.jpg",
+      "images": [
+        "images/microwave2.jpg",
+        "images/microwave2_side.png",
+        "images/microwave2_back.png"
+      ],
+      "title": "New Product 4",
+      "description": "A highly efficient new model with modern features and an attractive design.",
+      "timer": "7 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€120.00",
+        "new": "€84.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [13, 14, 15],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+
+    {
+      "id": 17,
+      "category": "sale",
+      "discount": "70%",
+      "type": "fridge",
+      "mainImage": "images/frizider.png",
+      "images": [
+        "images/frizider.png",
+        "images/frizider_side.png",
+        "images/frizider_back.png"
+      ],
+      "title": "Sale Product 1",
+      "description": "A sale product offering excellent value with all the key features.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [18, 19, 20],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 18,
+      "category": "sale",
+      "discount": "20%",
+      "type": "fridge",
+      "mainImage": "images/frizider2.png",
+      "images": [
+        "images/frizider2.png",
+        "images/frizider2_side.png",
+        "images/frizider2_back.png"
+      ],
+      "title": "Sale Product 2",
+      "description": "This sale product is a great option for customers looking for performance at a reduced price.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [17, 19, 20],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 19,
+      "category": "sale",
+      "discount": "40%",
+      "type": "microwave",
+      "mainImage": "images/microwave.png",
+      "images": [
+        "images/microwave.png",
+        "images/microwave_side.jpg",
+        "images/microwave_back.png"
+      ],
+      "title": "Sale Product 3",
+      "description": "A feature-rich sale product that delivers on efficiency and design.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "80x60x180 cm",
+        "capacity": "300L",
+        "energyRating": "A++"
+      },
+      "reviews": [],
+      "relatedProducts": [17, 18, 20],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    },
+    {
+      "id": 20,
+      "category": "sale",
+      "discount": "30%",
+      "type": "microwave",
+      "mainImage": "images/microwave2.jpg",
+      "images": [
+        "images/microwave2.jpg",
+        "images/microwave2_side.png",
+        "images/microwave2_back.png"
+      ],
+      "title": "Sale Product 4",
+      "description": "A final sale product that combines affordability with the latest design trends.",
+      "timer": "10 dan 6 sat 15 min 10 sek",
+      "price": {
+        "old": "€135.00",
+        "new": "€90.00"
+      },
+      "brand": "Gorenje",
+      "specifications": {
+        "dimensions": "78x58x175 cm",
+        "capacity": "280L",
+        "energyRating": "A+"
+      },
+      "reviews": [],
+      "relatedProducts": [17, 18, 19],
+      "tabs": {
+        "productionList": "Samostojeći: DA\nDodatne stavke: ...",
+        "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
+        "rating": {
+          "averageStars": 4.5,
+          "votes": [
+            { "user": "Alice", "stars": 5 },
+            { "user": "Bob",   "stars": 4 }
+          ]
+        },
+        "email": "Kontaktirajte nas za više informacija: info@company.com"
+      }
+    }
+  ]
+}

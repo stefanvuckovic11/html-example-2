@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="loader" class="loader">
+    <div class="loader__spinner"></div>
+</div>
+<div id="app"></div>
+
+<script id="mainLayoutTemplate" type="text/x-handlebars-template">
+    {{> main}}
+</script>
+
+<script id="openProductTemplate" type="text/x-handlebars-template">
+    {{> openProductLeft/productBreadcrumb}}
+
+    <div class="product-detail">
+        <div class="product-detail__body">
+            <div id="gallerySkeleton">
+                {{> general/skeletonLoader}}
+            </div>
+            <div id="realGalleryContainer" style="display: none;">
+                {{> openProductLeft/productGallery}}
+            </div>
+
+            {{> openProductLeft/productInfo}}
+
+            {{> openProductLeft/productAdditional}}
+            {{> openProductLeft/productSimilar}}
+        </div>
+        <aside class="product-detail__sidebar">
+            {{> openProductRight/sidebarVideo1}}
+            {{> openProductRight/sidebarVideo2}}
+            {{> openProductRight/sidebarNews}}
+        </aside>
+        <div class="product-detail__modal" id="imageModal">
+            <button class="product-detail__modal__close">&times;</button>
+            <img class="product-detail__modal__image" id="modalImage" src="" alt="Full Screen Image">
+        </div>
+    </div>
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/skeleton.js"></script>
+<script src="js/script-openproduct.js"></script>
+</body>
+</html>

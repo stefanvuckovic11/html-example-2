@@ -1,8 +1,43 @@
-.wrapper{
-  margin-top: 3%;
-  margin-left: 5%;
-  margin-right: 5%;
-  .seeAll_left{
-    margin-right: 5%;
+@import "../base/variables";
+@import "../base/fonts";
+
+.see-all {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 1rem;
+
+  &__left {
+    width: 30% !important;
+    background-color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    .accordion,
+    .brand-promo,
+    .brand-search,
+    .newsletter {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__right {
+    width: 70%;
+    background-color: #f7f7f7;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    &__product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+      .product-card {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+      }
+    }
   }
 }

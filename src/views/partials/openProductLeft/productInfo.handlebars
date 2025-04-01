@@ -1,83 +1,78 @@
-<div class="product-detail__info">
-    <div class="product-detail__info__name">
-        <h1 class="product-detail__info__name__title">
-            {{product.title}}
-        </h1>
+<div id="productInfoContainer">
+    <div id="infoSkeleton" class="product-detail__info-skeleton">
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__title"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__price"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__sku"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__description"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__cart"></div>
     </div>
 
-    <div class="product-detail__info__price-code">
-        <h2 class="product-detail__info__price-code__price">
-            {{product.price.new}}
-        </h2>
-        <h3 class="product-detail__info__price-code__sku">
-            <span class="product-detail__info__price-code__sku__number">
-                {{product.id}}
-            </span>
-            <br>
-            Sifra artikla
-        </h3>
-    </div>
-
-    <div class="product-detail__info__general">
-        <span class="product-detail__info__general__spec">
-            {{product.description}}
-        </span><br>
-
-        {{#if product.specifications.features}}
-            {{#each product.specifications.features}}
-                <span class="product-detail__info__general__spec">
-                    • {{this}}
-                </span><br>
-            {{/each}}
-        {{/if}}
-    </div>
-
-    <div class="product-detail__info__slider-cart">
-        <div class="product-detail__info__slider-cart__cart">
-            <div class="product-detail__info__slider-cart__cart__upper">
-                <div class="product-detail__info__slider-cart__cart__upper__num">
-                    <p class="product-detail__info__slider-cart__cart__upper__num__label">
-                        Kolicina:
-                    </p>
-                    <input type="number"
-                           class="product-detail__info__slider-cart__cart__upper__num__input"
-                           id="numInput"
-                           value="0" min="0" max="100">
-                    <button class="product-detail__info__slider-cart__cart__upper__num__btn"
-                            onclick="increase()">+
-                    </button>
-                </div>
-                <div class="product-detail__info__slider-cart__cart__upper__share">
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon">
-                        <i class="icon fa fa-plus"></i>
-                    </div>
-                    <span class="product-detail__info__slider-cart__cart__upper__share__label">
-                        Share:
-                    </span>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--fb">
-                        <i class="icon fa fa-facebook-f"></i>
-                    </div>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--tw">
-                        <i class="icon fa fa-twitter"></i>
-                    </div>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--mail">
-                        <i class="icon fa fa-envelope"></i>
-                    </div>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--gmail">
-                        <i class="icon fa fa-google"></i>
-                    </div>
-                </div>
+    <div id="realInfoContainer" style="display: none;">
+        <div class="product-detail__info">
+            <div class="product-detail__info__name">
+                <h1 class="product-detail__info__name__title">{{product.title}}</h1>
             </div>
-            <div class="product-detail__info__slider-cart__cart__lower">
-                <div class="product-detail__info__slider-cart__cart__lower__add">
-                    <button class="product-detail__info__slider-cart__cart__lower__add__btn">
-                        <i class="fa fa-shopping-cart"></i> Dodaj u korpu
-                    </button>
-                </div>
-                <div class="product-detail__info__slider-cart__cart__lower__view">
-                    <button class="product-detail__info__slider-cart__cart__lower__view__btn">
-                        Pregledaj korpu
-                    </button>
+
+            <div class="product-detail__info__price-code">
+                <h2 class="product-detail__info__price-code__price">{{product.price.new}}</h2>
+                <h3 class="product-detail__info__price-code__sku">
+                    <span class="product-detail__info__price-code__sku__number">{{product.id}}</span>
+                    <br>
+                    Sifra artikla
+                </h3>
+            </div>
+
+            <div class="product-detail__info__general">
+                <span class="product-detail__info__general__spec">{{product.description}}</span><br>
+                {{#if product.specifications.features}}
+                    {{#each product.specifications.features}}
+                        <span class="product-detail__info__general__spec">• {{this}}</span><br>
+                    {{/each}}
+                {{/if}}
+            </div>
+
+            <div class="product-detail__info__slider-cart">
+                <div class="product-detail__info__slider-cart__cart">
+                    <div class="product-detail__info__slider-cart__cart__upper">
+                        <div class="product-detail__info__slider-cart__cart__upper__num">
+                            <p class="product-detail__info__slider-cart__cart__upper__num__label">Kolicina:</p>
+                            <input type="number"
+                                   class="product-detail__info__slider-cart__cart__upper__num__input"
+                                   id="numInput"
+                                   value="0" min="0" max="100">
+                            <button class="product-detail__info__slider-cart__cart__upper__num__btn" onclick="increase()">+</button>
+                        </div>
+                        <div class="product-detail__info__slider-cart__cart__upper__share">
+                            <div class="product-detail__info__slider-cart__cart__upper__share__icon">
+                                <i class="icon fa fa-plus"></i>
+                            </div>
+                            <span class="product-detail__info__slider-cart__cart__upper__share__label">Share:</span>
+                            <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--fb">
+                                <i class="icon fa fa-facebook-f"></i>
+                            </div>
+                            <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--tw">
+                                <i class="icon fa fa-twitter"></i>
+                            </div>
+                            <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--mail">
+                                <i class="icon fa fa-envelope"></i>
+                            </div>
+                            <div class="product-detail__info__slider-cart__cart__upper__share__icon product-detail__info__slider-cart__cart__upper__share__icon--gmail">
+                                <i class="icon fa fa-google"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-detail__info__slider-cart__cart__lower">
+                        <div class="product-detail__info__slider-cart__cart__lower__add">
+                            <button class="product-detail__info__slider-cart__cart__lower__add__btn">
+                                <i class="fa fa-shopping-cart"></i> Dodaj u korpu
+                            </button>
+                        </div>
+                        <div class="product-detail__info__slider-cart__cart__lower__view">
+                            <button class="product-detail__info__slider-cart__cart__lower__view__btn">
+                                Pregledaj korpu
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

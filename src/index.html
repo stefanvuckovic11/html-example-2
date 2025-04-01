@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+<div id="loader" class="loader">
+    <div class="loader__spinner"></div>
+</div>
+<div id="app"></div>
+
+<script id="mainLayoutTemplate" type="text/x-handlebars-template">
+    {{> main}}
+  </script>
+<script id="indexTemplate" type="text/x-handlebars-template">
+    <div class="index">
+        <div class="index__left">
+            {{> indexLeft/accordion}}
+            {{> indexLeft/brandPromo}}
+            {{> indexLeft/brandSearch}}
+            {{> indexLeft/newsletter}}
+            {{> indexLeft/productCard}}
+            {{> indexLeft/productCard}}
+            {{> indexLeft/brandPromo}}
+        </div>
+        <div class="index__right">
+            {{> indexRight/slider}}
+            {{> indexRight/previewPartial section="hot-offer" iconClass="fa fa-fire" headerText="VRUĆA PONUDA" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE"}}
+            {{> indexRight/previewPartial section="action" iconClass="fa fa-tag" headerText="AKCIJA - POPUSTI" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ AKCIJE"}}
+            {{> indexRight/previewPartial section="recommended" iconClass="fa fa-star" headerText="PREPORUČUJEMO" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ PREPORUČENIH"}}
+            {{> indexRight/previewPartial section="new" iconClass="fa fa-heart" headerText="NOVO U PONUDI" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ NOVIH"}}
+            {{> indexRight/previewPartial section="sale" iconClass="fa fa-percent" headerText="RASPRODAJA" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ RASPRODAJE"}}
+            {{> indexRight/brandSearchRight}}
+            {{> indexRight/newsletterRight}}
+        </div>
+    </div>
+</script>
+<script>
+
+</script>
+<script src="js/script-index.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/productLoader.js"></script>
+</body>
+</html>

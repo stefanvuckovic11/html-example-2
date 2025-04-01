@@ -1,8 +1,31 @@
-<div class="index__left__product-card">
-    <img class="index__left__product-card__img" src="{{imgSrc}}" alt="{{altText}}">
-    <div class="index__left__product-card__info">
-        <h3 class="index__left__product-card__info__title">{{title}}</h3>
-        <p class="index__left__product-card__info__description">{{description}}</p>
-        <button class="index__left__product-card__info__button">OPŠIRNIJE</button>
+<div class="index__right__{{section}}__product">
+    {{#if discount}}
+        <div class="index__right__{{section}}__product__discount">
+            {{discount}} OFF
+        </div>
+    {{/if}}
+
+    {{#if timer}}
+        <div class="index__right__{{section}}__product__timer">
+            {{timer}}
+        </div>
+    {{/if}}
+
+    <img class="index__right__{{section}}__product__img" src="{{imgSrc}}" alt="{{altText}}" />
+
+    <h3 class="index__right__{{section}}__product__title">{{title}}</h3>
+    <p class="index__right__{{section}}__product__description">{{description}}</p>
+
+    <div class="index__right__{{section}}__product__price">
+        <span class="index__right__{{section}}__product__old-price">
+            {{price.old}}
+        </span>
+        <span class="index__right__{{section}}__product__new-price">
+            {{price.new}}
+        </span>
     </div>
+
+    <a href="openProduct.html?productId={{id}}" class="index__right__{{section}}__product__button">
+    OPŠIRNIJE
+    </a>
 </div>

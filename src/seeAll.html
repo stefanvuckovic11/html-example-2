@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>See All Products</title>
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="loader" class="loader">
+    <div class="loader__spinner"></div>
+</div>
+<div id="app"></div>
+
+<script id="mainLayoutTemplate" type="text/x-handlebars-template">
+    {{> main}}
+  </script>
+
+<script id="seeAllTemplate" type="text/x-handlebars-template">
+    <div class="see-all">
+        <div class="see-all__left">
+            {{> indexLeft/accordion}}
+            {{> indexLeft/brandPromo}}
+            {{> indexLeft/brandSearch}}
+            {{> indexLeft/newsletter}}
+        </div>
+        <div class="index__right__hot-offer">
+            <div class="index__right__hot-offer__header" style="border-bottom-color: rgb(1, 173, 239);">
+        <span class="index__right__hot-offer__header-text">
+          Svi proizvodi
+        </span>
+            </div>
+            <div class="index__right__hot-offer__product-list" id="similarProductList">
+                {{#each products}}
+                    <a href="openProduct.html?productId={{id}}" class="similar-product-link" style="text-decoration: none; color:black;">
+                    {{> general/productCard
+                            imgSrc=mainImage
+                            altText=altText
+                            title=title
+                            description=description
+                            id=id
+                            discount=discount
+                            timer=timer
+                            price=price
+                            section="hot-offer"
+                    }}
+                    </a>
+                {{/each}}
+            </div>
+            <div class="index__right__hot-offer__footer">
+                <a href="/src/seeAll.html?section=hot-offer"
+                   class="index__right__hot-offer__footer__button"
+                   style="border-color: #ccc;">
+                    Pogledaj sve
+                </a>
+            </div>
+        </div>
+        </div>
+</script>
+
+<script src="js/seeAll.js"></script>
+</body>
+</html>
