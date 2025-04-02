@@ -7,6 +7,33 @@ function initProductLoader() {
     axios.get("http://localhost:3000/products")
         .then(function(response) {
             var data = response.data;
+
+            data.forEach(function(product) {
+                if (product.discount && product.price && product.price.old) {
+                    var discountStr = product.discount
+                        .toString()
+                        .replace(/[^\d.]/g, '')
+                        .trim();
+                    var discountValue = parseFloat(discountStr);
+
+                    var oldPriceStr = product.price.old
+                        .toString()
+                        .replace(/[^\d.]/g, '')
+                        .trim();
+                    var oldPrice = parseFloat(oldPriceStr);
+
+                    if (!isNaN(discountValue) && !isNaN(oldPrice)) {
+                        var newPrice = oldPrice - (oldPrice * discountValue / 100);
+                        product.price.new = newPrice.toFixed(2);
+                    } else {
+                        product.price.new = product.price.old;
+                    }
+                }
+                else if (product.price && product.price.old) {
+                    product.price.new = product.price.old;
+                }
+            });
+
             setTimeout(function() {
                 if (loader) {
                     loader.style.display = "none";
@@ -124,12 +151,11 @@ function initProductLoader() {
             loadSection("#saleProductList", sale, buildSaleHTML);
         })
         .catch(function(error) {
-            console.error("greska u ucitavnju produkta: ", error);
+            console.error("Error loading products: ", error);
             if (loader) {
                 loader.style.display = "none";
             }
         });
 }
-
 
 window.initProductLoader = initProductLoader;

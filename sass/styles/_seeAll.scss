@@ -3,17 +3,17 @@
 
 .see-all {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   width: 100%;
   margin: 2rem 0;
   padding: 0 1rem;
+  box-sizing: border-box;
 
   &__left {
-    width: 30% !important;
+    flex: 0 0 15%;
     background-color: #fff;
-    padding: 1rem;
     box-sizing: border-box;
+    margin: 0 6rem;
+    margin-right: 1rem;
 
     .accordion,
     .brand-promo,
@@ -24,20 +24,33 @@
   }
 
   &__right {
-    width: 70%;
-    background-color: #f7f7f7;
+    flex: 1;
+    margin-right: 4rem;
     padding: 1rem;
     box-sizing: border-box;
 
-    &__product-list {
-      display: flex;
-      flex-wrap: wrap;
+
+    .index__right__hot-offer__product-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      justify-content: flex-start;
+
       .product-card {
-        flex: 0 0 calc(33.333% - 20px);
-        max-width: calc(33.333% - 20px);
+        width: 100%;
+        box-sizing: border-box;
       }
     }
   }
+}
+
+@media screen and (max-width: 1300px) {
+    .see-all{
+      &__left{
+        display: none;
+      }
+      &__right{
+        justify-content: center;
+        margin-left: 4%;
+      }
+    }
 }

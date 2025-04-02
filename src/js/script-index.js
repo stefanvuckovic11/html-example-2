@@ -191,3 +191,143 @@ window.initIndexScripts = function() {
     initFooterSlider();
     initBrandPromos();
 };
+var npSource = document.getElementById("new-product-template").innerHTML;
+var npTemplate = Handlebars.compile(npSource);
+var npHTML = npTemplate({});
+document.body.insertAdjacentHTML('beforeend', npHTML);
+
+document.addEventListener("DOMContentLoaded", function () {
+    var loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+        loggedInUser = JSON.parse(loggedInUser);
+        if (loggedInUser.privilege === "admin") {
+            var cheatCode = "admin";
+            var inputSequence = "";
+            document.addEventListener("keydown", function (e) {
+                inputSequence += e.key.toLowerCase();
+                console.log("Key pressed: " + e.key.toLowerCase() + ", sequence: " + inputSequence);
+                if (inputSequence.length >= cheatCode.length) {
+                    var recentSequence = inputSequence.substr(-cheatCode.length);
+                    if (recentSequence === cheatCode) {
+                        openNewProductPopup();
+                        inputSequence = "";
+                    }
+                }
+                if (inputSequence.length > 10) {
+                    inputSequence = inputSequence.substr(-10);
+                }
+            });
+        }
+    }
+
+    function openNewProductPopup() {
+        var popup = document.querySelector(".new-product");
+        if (popup) {
+            popup.classList.remove("new-product--hidden");
+            console.log("New product popup opened.");
+        } else {
+            console.error("New product popup element not found.");
+        }
+    }
+
+    var closeBtn = document.querySelector(".new-product__close");
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            var popup = document.querySelector(".new-product");
+            if (popup) {
+                popup.classList.add("new-product--hidden");
+                console.log("New product popup closed.");
+            }
+        });
+    }
+
+    function processField(fieldId) {
+        var value = document.getElementById(fieldId).value.trim();
+        return (value === "/") ? null : value;
+    }
+    var newProductForm = document.querySelector(".new-product__form");
+    if (newProductForm) {
+        newProductForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var title = processField("product-title");
+            var category = processField("product-category");
+            var discount = processField("product-discount");
+            var type = processField("product-type");
+            var mainImage = processField("product-mainImage");
+            var imagesStr = processField("product-images");
+            var description = processField("product-description");
+            var timer = processField("product-timer");
+            var priceOld = processField("product-price-old");
+            var priceNew = processField("product-price-new");
+            var brand = processField("product-brand");
+
+            var dimensions = processField("product-dimensions");
+            var capacity = processField("product-capacity");
+            var energyRating = processField("product-energyRating");
+            var featuresStr = processField("product-features");
+            var relatedProductsStr = processField("product-relatedProducts");
+            var productionList = processField("product-productionList");
+            var guide = processField("product-guide");
+            var email = processField("product-email");
+
+            if (!title || !category) {
+                alert("Molimo, popunite obavezna polja (naziv i kategorija).");
+                return;
+            }
+            var images = imagesStr ? imagesStr.split(",").map(function(item) { return item.trim(); }) : [];
+            var features = featuresStr ? featuresStr.split(",").map(function(item) { return item.trim(); }) : [];
+            var relatedProducts = relatedProductsStr ? relatedProductsStr.split(",").map(function(item) { return parseInt(item.trim(), 10); }) : [];
+
+            var newProduct = {
+                title: title,
+                category: category,
+                discount: discount,
+                type: type,
+                mainImage: mainImage,
+                images: images,
+                description: description,
+                timer: timer,
+                price: {
+                    old: priceOld,
+                    new: priceNew
+                },
+                brand: brand,
+                specifications: {
+                    dimensions: dimensions,
+                    capacity: capacity,
+                    energyRating: energyRating,
+                    features: features
+                },
+                reviews: [],
+                relatedProducts: relatedProducts,
+                tabs: {
+                    productionList: productionList,
+                    guide: guide,
+                    email: email
+                }
+            };
+
+            console.log("New product data:", newProduct);
+
+            var xhrPost = new XMLHttpRequest();
+            xhrPost.open("POST", "http://localhost:3000/products", true);
+            xhrPost.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhrPost.onreadystatechange = function () {
+                if (xhrPost.readyState === 4) {
+                    if (xhrPost.status >= 200 && xhrPost.status < 300) {
+                        alert("Novi proizvod je uspješno dodat!");
+                        newProductForm.reset();
+                        var popup = document.querySelector(".new-product");
+                        if (popup) {
+                            popup.classList.add("new-product--hidden");
+                        }
+                    } else {
+                        alert("Došlo je do greške prilikom dodavanja proizvoda.");
+                    }
+                }
+            };
+            xhrPost.send(JSON.stringify(newProduct));
+        });
+    }
+});
+

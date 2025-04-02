@@ -1,0 +1,22 @@
+<div class="filter-bar">
+    <div class="filter-bar__sort">
+        <label for="sortType" class="filter-bar__label">Sort By</label>
+        <select id="sortType" class="filter-bar__select">
+            <option value="">No Sort</option>
+            <option value="priceAsc">Price: Low to High</option>
+            <option value="priceDesc">Price: High to Low</option>
+            <option value="nameAsc">Name: A to Z</option>
+            <option value="nameDesc">Name: Z to A</option>
+        </select>
+    </div>
+
+    <div class="filter-bar__price">
+        <label for="minPrice" class="filter-bar__label">Min Price</label>
+        <input type="number" id="minPrice" class="filter-bar__input" />
+
+        <label for="maxPrice" class="filter-bar__label">Max Price</label>
+        <input type="number" id="maxPrice" class="filter-bar__input" />
+    </div>
+
+    <button id="applyFilter" class="filter-bar__button">Apply</button>
+</div>

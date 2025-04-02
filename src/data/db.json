@@ -41,15 +41,25 @@
           "comment": "Highly recommend for families."
         }
       ],
-      "relatedProducts": [2, 3, 4],
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -80,15 +90,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [1, 3, 4],
+      "relatedProducts": [
+        1,
+        3,
+        4
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Stefan", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Stefan",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -119,15 +139,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [1, 2, 4],
+      "relatedProducts": [
+        1,
+        2,
+        4
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -158,21 +188,30 @@
         "dimensions": "45x35x30 cm (microwave)"
       },
       "reviews": [],
-      "relatedProducts": [1, 2, 3],
+      "relatedProducts": [
+        1,
+        2,
+        3
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
       }
     },
-
     {
       "id": 5,
       "category": "action",
@@ -198,15 +237,25 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [6, 7, 8],
+      "relatedProducts": [
+        6,
+        7,
+        8
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -237,15 +286,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [5, 7, 8],
+      "relatedProducts": [
+        5,
+        7,
+        8
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -276,15 +335,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [5, 6, 8],
+      "relatedProducts": [
+        5,
+        6,
+        8
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -315,21 +384,30 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [5, 6, 7],
+      "relatedProducts": [
+        5,
+        6,
+        7
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
       }
     },
-
     {
       "id": 9,
       "category": "recommended",
@@ -355,15 +433,25 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [10, 11, 12],
+      "relatedProducts": [
+        10,
+        11,
+        12
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -394,15 +482,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [9, 11, 12],
+      "relatedProducts": [
+        9,
+        11,
+        12
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -433,15 +531,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [9, 10, 12],
+      "relatedProducts": [
+        9,
+        10,
+        12
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -472,21 +580,30 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [9, 10, 11],
+      "relatedProducts": [
+        9,
+        10,
+        11
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
       }
     },
-
     {
       "id": 13,
       "category": "new",
@@ -512,15 +629,25 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [14, 15, 16],
+      "relatedProducts": [
+        14,
+        15,
+        16
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -551,15 +678,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [13, 15, 16],
+      "relatedProducts": [
+        13,
+        15,
+        16
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -590,15 +727,25 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [13, 14, 16],
+      "relatedProducts": [
+        13,
+        14,
+        16
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -629,21 +776,30 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [13, 14, 15],
+      "relatedProducts": [
+        13,
+        14,
+        15
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
       }
     },
-
     {
       "id": 17,
       "category": "sale",
@@ -669,15 +825,25 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [18, 19, 20],
+      "relatedProducts": [
+        18,
+        19,
+        20
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -708,15 +874,25 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [17, 19, 20],
+      "relatedProducts": [
+        17,
+        19,
+        20
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -747,15 +923,25 @@
         "energyRating": "A++"
       },
       "reviews": [],
-      "relatedProducts": [17, 18, 20],
+      "relatedProducts": [
+        17,
+        18,
+        20
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
@@ -786,19 +972,52 @@
         "energyRating": "A+"
       },
       "reviews": [],
-      "relatedProducts": [17, 18, 19],
+      "relatedProducts": [
+        17,
+        18,
+        19
+      ],
       "tabs": {
         "productionList": "Samostojeći: DA\nDodatne stavke: ...",
         "guide": "Detailed instructions for usage, installation, and maintenance. Lorem ipsum...",
         "rating": {
           "averageStars": 4.5,
           "votes": [
-            { "user": "Alice", "stars": 5 },
-            { "user": "Bob",   "stars": 4 }
+            {
+              "user": "Alice",
+              "stars": 5
+            },
+            {
+              "user": "Bob",
+              "stars": 4
+            }
           ]
         },
         "email": "Kontaktirajte nas za više informacija: info@company.com"
       }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "privilege": "admin"
+    },
+    {
+      "id": 2,
+      "username": "stefan",
+      "email": "stefan@gmail.com",
+      "password": "stefan",
+      "privilege": "user"
+    },
+    {
+      "id": "7d9c",
+      "username": "stefke",
+      "email": "stefke@gmail.com",
+      "password": "stefke",
+      "privilege": "user"
     }
   ]
 }
