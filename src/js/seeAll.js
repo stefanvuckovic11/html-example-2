@@ -1,4 +1,5 @@
 var content = document.getElementById("app");
+var allProducts = [];
 
 function renderProducts(products) {
     var seeAllSource = document.getElementById("seeAllTemplate").innerHTML;
@@ -8,10 +9,17 @@ function renderProducts(products) {
     var mainTemplate = Handlebars.compile(mainSource);
     var finalHTML = mainTemplate({ title: "See All Products", body: seeAllHTML });
     content.innerHTML = finalHTML;
+
     var loader = document.getElementById("loader");
     if (loader) {
         loader.style.display = "none";
     }
+
+    if (typeof initAccordion === "function") {
+        initAccordion();
+    }
+
+    attachFilterListener();
 }
 
 axios.get("./views/layouts/main.handlebars")
@@ -37,58 +45,61 @@ axios.get("./views/layouts/main.handlebars")
     })
     .then(function(res) {
         Handlebars.registerPartial("general/productCard", res.data);
-        return Promise.resolve();
+        return axios.get("./views/partials/seeAllRight/filterBar.handlebars");
     })
-    .then(function() {
-        axios.get("http://localhost:3000/products")
-            .then(function(response) {
-                var products = response.data;
-                var params = new URLSearchParams(window.location.search);
-                var productId = params.get("productId");
-                var typeParam = params.get("type");
-                var section = params.get("section");
-
-                if (productId) {
-                    axios.get("http://localhost:3000/products/" + productId)
-                        .then(function(productResponse) {
-                            var currentType = productResponse.data.type;
-                            products = products.filter(function(p) {
-                                return p.type === currentType;
-                            });
-                            renderProducts(products);
-                        })
-                        .catch(function(error) {
-                            console.error("Error fetching current product", error);
-                            renderProducts(products);
-                        });
-                } else if (typeParam) {
-                    products = products.filter(function(p) {
-                        return p.type === typeParam;
-                    });
-                    renderProducts(products);
-                } else if (section) {
-                    if (section === "hot-offer") {
-                        products = products.filter(function(p) {
-                            return p.category === "hotOffer";
-                        });
-                    } else {
-                        products = products.filter(function(p) {
-                            return p.category === section;
-                        });
-                    }
-                    renderProducts(products);
-                } else {
-                    renderProducts(products);
-                }
-            })
-            .catch(function(error) {
-                console.error("Error loading products", error);
-                var loader = document.getElementById("loader");
-                if (loader) {
-                    loader.style.display = "none";
-                }
-            });
+    .then(function(res) {
+        Handlebars.registerPartial("seeAllRight/filterBar", res.data);
+        return axios.get("http://localhost:3000/products");
+    })
+    .then(function(response) {
+        allProducts = response.data;
+        var products = response.data;
+        renderProducts(products);
     })
     .catch(function(err) {
-        console.error("Error loading partials", err);
+        console.error("Error:", err);
     });
+
+function attachFilterListener() {
+    var applyBtn = document.getElementById("applyFilter");
+    if (!applyBtn) return;
+
+    applyBtn.addEventListener("click", function() {
+        var sortType = document.getElementById("sortType").value;
+        var minPrice = parseFloat(document.getElementById("minPrice").value) || 0;
+        var maxPrice = parseFloat(document.getElementById("maxPrice").value) || Infinity;
+        var filtered = allProducts.filter(function(product) {
+            var price = parseFloat(product.price.new.replace(/[^0-9.]/g, ""));
+            return price >= minPrice && price <= maxPrice;
+        });
+
+        switch (sortType) {
+            case "priceAsc":
+                filtered.sort(function(a, b) {
+                    return parseFloat(a.price.new.replace(/[^0-9.]/g, "")) -
+                        parseFloat(b.price.new.replace(/[^0-9.]/g, ""));
+                });
+                break;
+            case "priceDesc":
+                filtered.sort(function(a, b) {
+                    return parseFloat(b.price.new.replace(/[^0-9.]/g, "")) -
+                        parseFloat(a.price.new.replace(/[^0-9.]/g, ""));
+                });
+                break;
+            case "nameAsc":
+                filtered.sort(function(a, b) {
+                    return a.title.localeCompare(b.title);
+                });
+                break;
+            case "nameDesc":
+                filtered.sort(function(a, b) {
+                    return b.title.localeCompare(a.title);
+                });
+                break;
+            default:
+                break;
+        }
+
+        renderProducts(filtered);
+    });
+}

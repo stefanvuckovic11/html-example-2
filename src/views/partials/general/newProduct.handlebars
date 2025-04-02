@@ -1,0 +1,98 @@
+<div class="new-product new-product--hidden">
+    <div class="new-product__overlay"></div>
+    <div class="new-product__popup">
+        <h2 class="new-product__title">Dodaj novi proizvod</h2>
+        <form class="new-product__form">
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-title">Naziv proizvoda</label>
+                <input type="text" id="product-title" class="new-product__input" placeholder="Unesite naziv proizvoda">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-category">Kategorija</label>
+                <input type="text" id="product-category" class="new-product__input" placeholder="Unesite kategoriju">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-discount">Popust</label>
+                <input type="text" id="product-discount" class="new-product__input" placeholder="Unesite popust">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-type">Tip</label>
+                <input type="text" id="product-type" class="new-product__input" placeholder="Unesite tip">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-mainImage">Glavna slika (URL)</label>
+                <input type="text" id="product-mainImage" class="new-product__input" placeholder="URL glavne slike">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-images">Dodatne slike (odvojene zarezom)</label>
+                <input type="text" id="product-images" class="new-product__input" placeholder="URL-ovi dodatnih slika">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-description">Opis</label>
+                <textarea id="product-description" class="new-product__input" placeholder="Unesite opis proizvoda"></textarea>
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-timer">Timer</label>
+                <input type="text" id="product-timer" class="new-product__input" placeholder="Unesite timer">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-price-old">Stara cijena</label>
+                <input type="text" id="product-price-old" class="new-product__input" placeholder="Unesite staru cijenu">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-price-new">Nova cijena</label>
+                <input type="text" id="product-price-new" class="new-product__input" placeholder="Unesite novu cijenu">
+            </div>
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-brand">Brend</label>
+                <input type="text" id="product-brand" class="new-product__input" placeholder="Unesite brend">
+            </div>
+
+            <fieldset class="new-product__fieldset">
+                <legend class="new-product__legend">Specifikacije</legend>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-dimensions">Dimenzije</label>
+                    <input type="text" id="product-dimensions" class="new-product__input" placeholder="Unesite dimenzije">
+                </div>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-capacity">Kapacitet</label>
+                    <input type="text" id="product-capacity" class="new-product__input" placeholder="Unesite kapacitet">
+                </div>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-energyRating">Energetska klasa</label>
+                    <input type="text" id="product-energyRating" class="new-product__input" placeholder="Unesite energetsku klasu">
+                </div>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-features">Funkcije (odvojene zarezom)</label>
+                    <input type="text" id="product-features" class="new-product__input" placeholder="Unesite funkcije">
+                </div>
+            </fieldset>
+
+            <div class="new-product__form-group">
+                <label class="new-product__label" for="product-relatedProducts">Povezani proizvodi (ID-ovi, odvojeni zarezom)</label>
+                <input type="text" id="product-relatedProducts" class="new-product__input" placeholder="Unesite ID-ove povezanih proizvoda">
+            </div>
+
+            <fieldset class="new-product__fieldset">
+                <legend class="new-product__legend">Tabs</legend>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-productionList">Proizvodnja</label>
+                    <textarea id="product-productionList" class="new-product__input" placeholder="Unesite informacije o proizvodnji"></textarea>
+                </div>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-guide">Uputstvo</label>
+                    <textarea id="product-guide" class="new-product__input" placeholder="Unesite uputstvo"></textarea>
+                </div>
+                <div class="new-product__form-group">
+                    <label class="new-product__label" for="product-email">Kontakt Email</label>
+                    <input type="email" id="product-email" class="new-product__input" placeholder="Unesite kontakt email">
+                </div>
+            </fieldset>
+
+            <div class="new-product__form-actions">
+                <button type="submit" class="new-product__submit">Dodaj proizvod</button>
+                <button type="button" class="new-product__close">Zatvori</button>
+            </div>
+        </form>
+    </div>
+</div>

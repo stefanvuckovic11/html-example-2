@@ -252,14 +252,14 @@
                         }
                     })
                     .catch(function (error) {
-                        console.error("Error fetching similar products", error);
+                        console.error("greska", error);
                         if (loader) {
                             loader.style.display = "none";
                         }
                     });
             })
             .catch(function (error) {
-                console.error("Error fetching product", error);
+                console.error("greska", error);
                 if (loader) {
                     loader.style.display = "none";
                 }
@@ -372,7 +372,7 @@ Promise.all([
 
                         var endTime = performance.now();
                         var fetchDuration = endTime - startTime;
-                        var totalDuration = fetchDuration + 2000; // add 2 seconds
+                        var totalDuration = fetchDuration + 2000;
 
                         setTimeout(function () {
                             if (gallerySkeletonRef)    gallerySkeletonRef.style.display    = "none";
@@ -395,21 +395,21 @@ Promise.all([
                         }, totalDuration);
                     })
                     .catch(function (similarErr) {
-                        console.error("Error fetching similar products:", similarErr);
+                        console.error("greska", similarErr);
                         if (loader) {
                             loader.style.display = "none";
                         }
                     });
             })
             .catch(function (prodErr) {
-                console.error("Error fetching product:", prodErr);
+                console.error("greska", prodErr);
                 if (loader) {
                     loader.style.display = "none";
                 }
             });
     })
     .catch(function (partialsErr) {
-        console.error("Error fetching partials:", partialsErr);
+        console.error("greska", partialsErr);
         if (loader) {
             loader.style.display = "none";
         }
