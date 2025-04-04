@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Example App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
+
 <div id="loader" class="loader">
     <div class="loader__spinner"></div>
 </div>
@@ -17,7 +18,8 @@
 
 <script id="mainLayoutTemplate" type="text/x-handlebars-template">
     {{> main}}
-  </script>
+</script>
+
 <script id="indexTemplate" type="text/x-handlebars-template">
     <div class="index">
         <div class="index__left">
@@ -25,13 +27,11 @@
             {{> indexLeft/brandPromo}}
             {{> indexLeft/brandSearch}}
             {{> indexLeft/newsletter}}
-            {{> indexLeft/productCard}}
-            {{> indexLeft/productCard}}
             {{> indexLeft/brandPromo}}
         </div>
         <div class="index__right">
             {{> indexRight/slider}}
-            {{> indexRight/previewPartial section="hot-offer" iconClass="fa fa-fire" headerText="VRUĆA PONUDA" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE"}}
+            {{> indexRight/previewPartial section="hotOffer" iconClass="fa fa-fire" headerText="VRUĆA PONUDA" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ VRUĆE PONUDE"}}
             {{> indexRight/previewPartial section="action" iconClass="fa fa-tag" headerText="AKCIJA - POPUSTI" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ AKCIJE"}}
             {{> indexRight/previewPartial section="recommended" iconClass="fa fa-star" headerText="PREPORUČUJEMO" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ PREPORUČENIH"}}
             {{> indexRight/previewPartial section="new" iconClass="fa fa-heart" headerText="NOVO U PONUDI" footerButtonText="POGLEDAJTE SVE PROIZVODE IZ NOVIH"}}
@@ -42,105 +42,28 @@
     </div>
 </script>
 
-<script id="new-product-template" type="text/x-handlebars-template">
-    <div class="new-product new-product--hidden">
-        <div class="new-product__overlay"></div>
-        <div class="new-product__popup">
-            <h2 class="new-product__title">Dodaj novi proizvod</h2>
-            <form class="new-product__form">
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-title">Naziv proizvoda</label>
-                    <input type="text" id="product-title" class="new-product__input" placeholder="Unesite naziv proizvoda">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-category">Kategorija</label>
-                    <input type="text" id="product-category" class="new-product__input" placeholder="Unesite kategoriju">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-discount">Popust</label>
-                    <input type="text" id="product-discount" class="new-product__input" placeholder="Unesite popust">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-type">Tip</label>
-                    <input type="text" id="product-type" class="new-product__input" placeholder="Unesite tip">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-mainImage">Glavna slika (URL)</label>
-                    <input type="text" id="product-mainImage" class="new-product__input" placeholder="URL glavne slike">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-images">Dodatne slike (odvojene zarezom)</label>
-                    <input type="text" id="product-images" class="new-product__input" placeholder="URL-ovi dodatnih slika">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-description">Opis</label>
-                    <textarea id="product-description" class="new-product__input" placeholder="Unesite opis proizvoda"></textarea>
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-timer">Timer</label>
-                    <input type="text" id="product-timer" class="new-product__input" placeholder="Unesite timer">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-price-old">Stara cijena</label>
-                    <input type="text" id="product-price-old" class="new-product__input" placeholder="Unesite staru cijenu">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-price-new">Nova cijena</label>
-                    <input type="text" id="product-price-new" class="new-product__input" placeholder="Unesite novu cijenu">
-                </div>
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-brand">Brend</label>
-                    <input type="text" id="product-brand" class="new-product__input" placeholder="Unesite brend">
-                </div>
-
-                <fieldset class="new-product__fieldset">
-                    <legend class="new-product__legend">Specifikacije</legend>
-                    <div class="new-product__form-group">
-                        <label class="new-product__label" for="product-dimensions">Dimenzije</label>
-                        <input type="text" id="product-dimensions" class="new-product__input" placeholder="Unesite dimenzije">
-                    </div>
-                    <div class="new-product__form-group">
-                        <label class="new-product__label" for="product-capacity">Kapacitet</label>
-                        <input type="text" id="product-capacity" class="new-product__input" placeholder="Unesite kapacitet">
-                    </div>
-                    <div class="new-product__form-group">
-                        <label class="new-product__label" for="product-energyRating">Energetska klasa</label>
-                        <input type="text" id="product-energyRating" class="new-product__input" placeholder="Unesite energetsku klasu">
-                    </div>
-                    <div class="new-product__form-group">
-                        <label class="new-product__label" for="product-features">Funkcije (odvojene zarezom)</label>
-                        <input type="text" id="product-features" class="new-product__input" placeholder="Unesite funkcije">
-                    </div>
-                </fieldset>
-
-                <div class="new-product__form-group">
-                    <label class="new-product__label" for="product-relatedProducts">Povezani proizvodi (ID-ovi, odvojeni zarezom)</label>
-                    <input type="text" id="product-relatedProducts" class="new-product__input" placeholder="Unesite ID-ove povezanih proizvoda">
-                </div>
-
-                <fieldset class="new-product__fieldset">
-                    <legend class="new-product__legend">Tabs</legend>
-                    <div class="new-product__form-group">
-                        <label class="new-product__label" for="product-productionList">Proizvodnja</label>
-                        <textarea id="product-productionList" class="new-product__input" placeholder="Unesite informacije o proizvodnji"></textarea>
-                    </div>
-                    <div class="new-product__form-group">
-                        <label class="new-product__label" for="product-guide">Uputstvo</label>
-                        <textarea id="product-guide" class="new-product__input" placeholder="Unesite uputstvo"></textarea>
-                    </div>
-                </fieldset>
-
-                <div class="new-product__form-actions">
-                    <button type="submit" class="new-product__submit">Spremi</button>
-                    <button type="button" class="new-product__close">Zatvori</button>
-                </div>
-            </form>
-        </div>
+<script id="product-template" type="text/x-handlebars-template">
+    <div class="index__right__{{category}}__product">
+        {{#if discount}}
+            <span class="index__right__{{category}}__product__discount">{{discount}}</span>
+        {{/if}}
+        <a href="openProduct.html?productId={{id}}">
+        <img src="{{mainImage}}" alt="{{title}}" class="index__right__{{category}}__product__img" />
+        <h3 class="index__right__{{category}}__product__title">{{title}}</h3>
+        </a>
+        {{#if timer}}
+            <p class="index__right__{{category}}__product__timer">{{timer}}</p>
+        {{/if}}
+        <p class="index__right__{{category}}__product__price">
+            <span class="index__right__{{category}}__product__old-price">{{price.old}}</span>
+            <span class="index__right__{{category}}__product__new-price">{{price.new}}</span>
+        </p>
     </div>
 </script>
 
 <script src="js/script-index.js"></script>
 <script src="js/accordion.js"></script>
 <script src="js/productLoader.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,13 @@
 var content = document.getElementById("app");
 var allProducts = [];
 
+var urlParams = new URLSearchParams(window.location.search);
+var categoryType = urlParams.get("type");
+
+function normalize(str) {
+    return str.toLowerCase().replace(/-/g, '');
+}
+
 function renderProducts(products) {
     var seeAllSource = document.getElementById("seeAllTemplate").innerHTML;
     var seeAllTemplate = Handlebars.compile(seeAllSource);
@@ -54,6 +61,15 @@ axios.get("./views/layouts/main.handlebars")
     .then(function(response) {
         allProducts = response.data;
         var products = response.data;
+
+        if (categoryType) {
+            var normalizedQuery = normalize(categoryType);
+            products = products.filter(function(product) {
+                var normalizedCategory = normalize(product.category);
+                var normalizedType = normalize(product.type);
+                return normalizedCategory === normalizedQuery || normalizedType === normalizedQuery;
+            });
+        }
         renderProducts(products);
     })
     .catch(function(err) {

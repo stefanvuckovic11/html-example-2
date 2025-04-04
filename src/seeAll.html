@@ -26,15 +26,15 @@
             {{> indexLeft/newsletter}}
         </div>
         <div class="see-all__right">
-            <div class="index__right__hot-offer">
-                <div class="index__right__hot-offer__header" style="border-bottom-color: rgb(1, 173, 239);">
-        <span class="index__right__hot-offer__header-text">
+            <div class="index__right__hotOffer">
+                <div class="index__right__hotOffer__header" style="border-bottom-color: rgb(1, 173, 239);">
+        <span class="index__right__hotOffer__header-text">
           Svi proizvodi
         </span>
                 </div>
                 {{> seeAllRight/filterBar}}
 
-                <div class="index__right__hot-offer__product-list" id="similarProductList">
+                <div class="index__right__hotOffer__product-list" id="similarProductList">
                     {{#each products}}
                         <a href="openProduct.html?productId={{id}}" class="similar-product-link" style="text-decoration: none; color:black;">
                         {{> general/productCard
@@ -46,14 +46,14 @@
                                 discount=discount
                                 timer=timer
                                 price=price
-                                section="hot-offer"
+                                section="hotOffer"
                         }}
                         </a>
                     {{/each}}
                 </div>
-                <div class="index__right__hot-offer__footer">
+                <div class="index__right__hotOffer__footer">
                     <a href="/src/"
-                       class="index__right__hot-offer__footer__button"
+                       class="index__right__hotOffer__footer__button"
                        style="border-color: #ccc;">
                         Nazad
                     </a>

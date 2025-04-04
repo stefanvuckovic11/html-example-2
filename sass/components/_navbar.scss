@@ -308,11 +308,12 @@
         display: flex !important;
         flex-direction: column;
         cursor: pointer;
-        width: 50px;
-        height: 50px;
+        width: 0px;
+        height: 0px;
         position: absolute;
+        font-size: 18px;
         left: 45%;
-        top: 10px;
+        top: 20px;
         transform: translateX(-50%);
         z-index: 1000;
 

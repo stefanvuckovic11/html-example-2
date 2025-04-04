@@ -1,3 +1,4 @@
+
 (function () {
     function increase() {
         var input = document.getElementById("numInput");
