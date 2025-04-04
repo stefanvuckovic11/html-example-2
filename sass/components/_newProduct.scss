@@ -36,10 +36,46 @@
     overflow-y: auto;
   }
 
+  /* Header and CRUD Tabs */
+  &__header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+  }
+  &__tabs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  &__tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  &__tab:hover {
+    border-color: #ccc;
+  }
+  &__tab--active {
+    border-color: #28a745;
+    color: #28a745;
+  }
+
   &__title {
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  /* Content Sections */
+  &__content {
+    display: none;
+  }
+  .new-product__content.active {
+    display: block;
   }
 
   &__form {

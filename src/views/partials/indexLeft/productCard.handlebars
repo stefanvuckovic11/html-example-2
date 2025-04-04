@@ -5,17 +5,16 @@
         </div>
     {{/if}}
 
-    {{#if timer}}
-        <div class="index__right__{{section}}__product__timer">
-            {{timer}}
-        </div>
-    {{/if}}
 
     <img class="index__right__{{section}}__product__img" src="{{imgSrc}}" alt="{{altText}}" />
 
     <h3 class="index__right__{{section}}__product__title">{{title}}</h3>
     <p class="index__right__{{section}}__product__description">{{description}}</p>
-
+    {{#if timer}}
+        <div class="index__right__{{section}}__product__timer">
+            {{timer}}
+        </div>
+    {{/if}}
     <div class="index__right__{{section}}__product__price">
         <span class="index__right__{{section}}__product__old-price">
             {{price.old}}

@@ -214,7 +214,7 @@
     width: 900px;
     max-width: 85%;
     flex-wrap: wrap;
-    &__hot-offer {
+    &__hotOffer {
       &__header {
         margin: 20px auto 5%;
         width: 95%;
@@ -285,8 +285,10 @@
         }
         &__img {
           width: 100%;
-          max-width: 150px;
-          aspect-ratio: 1/1.25;
+          max-width: 200px;
+          height: 250px;
+          object-fit: contain;
+          background-color: white;
         }
         &__title {
           font-size: 16px;
@@ -403,8 +405,10 @@
         }
         &__img {
           width: 100%;
-          max-width: 150px;
-          aspect-ratio: 1/1.25;
+          max-width: 200px;
+          height: 250px;
+          object-fit: contain;
+          background-color: white;
         }
         &__title {
           font-size: 16px;
@@ -524,8 +528,10 @@
         }
         &__img {
           width: 100%;
-          max-width: 150px;
-          aspect-ratio: 1/1.25;
+          max-width: 200px;
+          height: 250px;
+          object-fit: contain;
+          background-color: white;
         }
         &__title {
           font-size: 16px;
@@ -645,8 +651,10 @@
         }
         &__img {
           width: 100%;
-          max-width: 150px;
-          aspect-ratio: 1/1.25;
+          max-width: 200px;
+          height: 250px;
+          object-fit: contain;
+          background-color: white;
         }
         &__title {
           font-size: 16px;
@@ -763,8 +771,10 @@
         }
         &__img {
           width: 100%;
-          max-width: 150px;
-          aspect-ratio: 1/1.25;
+          max-width: 200px;
+          height: 250px;
+          object-fit: contain;
+          background-color: white;
         }
         &__title {
           font-size: 16px;
@@ -1076,7 +1086,7 @@ footer .slider-controls a {
           font-size: 25px;
         }
       }
-      &__hot-offer__product-list,
+      &__hotOffer__product-list,
       &__action__product-list,
       &__recommended__product-list,
       &__new__product-list,
@@ -1087,7 +1097,7 @@ footer .slider-controls a {
         gap: 20px;
       }
 
-      &__hot-offer__footer-button,
+      &__hotOffer__footer-button,
       &__action__footer-button,
       &__recommended__footer-button,
       &__new__footer-button,
@@ -1118,7 +1128,7 @@ footer .slider-controls a {
           }
         }
       }
-      &__hot-offer {
+      &__hotOffer {
         &__footer {
           &__button {
             font-size: 20px;
